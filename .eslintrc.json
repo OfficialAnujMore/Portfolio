@@ -1,0 +1,52 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:prettier/recommended",
+        "plugin:import/recommended"
+    ],
+    "overrides": [],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": ["react", "@typescript-eslint", "react-hooks", "import"],
+    "rules": {
+        "@typescript-eslint/explicit-function-return-type": [
+            "error",
+            { "allowExpressions": true }
+        ],
+
+        "@typescript-eslint/explicit-module-boundary-types": [
+            "error",
+            { "allowDirectConstAssertionInArrowFunctions": true }
+        ],
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            { "argsIgnorePattern": "^_" }
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/prop-types": ["warn"],
+        "no-unused-vars": "off",
+        "import/namespace": ["error", { "allowComputed": true }]
+    },
+    "settings": {
+        "version": "detect",
+        "import/resolver": {
+            "typescript": {}
+        },
+        "import/extensions": [".js", ".jsx", ".ts", ".tsx"]
+    }
+}
