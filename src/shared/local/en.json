@@ -1,0 +1,28 @@
+{
+    "proflePrimaryTxt": "Hello, It's Me",
+    "profileName": "Anuj More",
+    "profileTitle": "Software Developer",
+    "resume": "Resume",
+
+    "aboutMe": "About Me",
+    "description": "Anuj More, based in Mumbai, India, is a Solution Analyst at Sankey Solutions. Known for his passion for solving real-world problems, Anuj excels in building robust and scalable software. His commitment to excellence and innovative approach make him a valuable asset in the dynamic field of technology. With a keen eye for detail, Anuj's contributions extend beyond coding, demonstrating a deep understanding of complex issues and a knack for comprehensive solutions. In the vibrant landscape of Mumbai, Anuj stands out as a dedicated professional making a meaningful impact in the world of software development.",
+    "phoneNumber": "+91 8097277679",
+    "emailAddress": "moreanuj1307@gmail.com",
+
+    "skills": "Skills",
+    "toolsAndTechnologies": "Tools & Technology",
+    "pro": "Proficient",
+    "mid": "Mid",
+
+    "experience": "Experience",
+
+    "projects": "Projects",
+
+    "education": "Education & Certification",
+
+    "contact": "Contact Me",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
+}

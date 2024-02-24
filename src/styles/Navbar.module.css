@@ -1,0 +1,31 @@
+:root {
+    /* Color variables */
+    --primary-color: rgba(17, 17, 25, 1);
+    --primary-text-color: rgba(255, 255, 255, 1);
+    --secondary-text-color: rgba(172, 194, 254, 1);
+
+    /* Size varibales */
+    --extra-small: 0.5rem;
+    --small: 1rem;
+    --medium: 1.5rem;
+    --large: 2rem;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logoContainer{
+    flex: 1;
+}
+
+.primaryTextStyle {
+    color: var(--primary-text-color);
+    font-size: var(--small);
+    margin: 0rem var(--extra-small);
+}
+.sectionContainer{
+    display: flex;
+}

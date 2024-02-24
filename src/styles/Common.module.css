@@ -1,0 +1,22 @@
+:root {
+    /* Color variables */
+    --primary-color: rgba(0, 0, 0, 0.08);
+    --primary-text-color: rgba(255, 255, 255, 1);
+    --secondary-text-color: rgba(172, 194, 254, 1);
+
+    /* Size varibales */
+    --extra-small: 0.5rem;
+    --small: 1rem;
+    --medium: 1.5rem;
+    --large: 2rem;
+}
+
+.mainContainer {
+    background-color: var(--background-color);
+    margin: 2rem 0 0 0;
+    padding: 0 8rem 0 8rem;
+}
+.headingTxt{
+    color: var(--secondary-text-color);
+    border-bottom: 1px solid var(--secondary-text-color);
+}
