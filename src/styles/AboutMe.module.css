@@ -9,11 +9,14 @@
     --small: 1rem;
     --medium: 1.5rem;
     --large: 2rem;
+    --x-large: 2.5rem;
 }
 
 .mainContainer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 }
+.descriptionContainer{
+    padding: 1rem;
+}
+
+
