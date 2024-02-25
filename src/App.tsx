@@ -1,13 +1,13 @@
 import React from 'react'
 import './App.css'
 import CustomNavbar from 'shared/components/CustomNavbar'
-import LandingScreen from 'modules/LandingScreen'
+import LandingSection from 'modules/LandingSection'
 
 function App(): React.ReactElement {
     return (
         <div className="App">
             <CustomNavbar />
-            <LandingScreen />
+            <LandingSection />
         </div>
     )
 }
