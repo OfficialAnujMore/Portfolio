@@ -39,8 +39,7 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "react/prop-types": ["warn"],
-        "no-unused-vars": "off",
-        "import/namespace": ["error", { "allowComputed": true }]
+        "no-unused-vars": "off"
     },
     "settings": {
         "version": "detect",
