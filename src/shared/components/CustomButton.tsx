@@ -6,7 +6,10 @@ export const CustomButton: React.FC<{
     imgPath?: string
 }> = ({ text, imgPath }): React.ReactElement => {
     return (
-        <div className={commonStyles.buttonContainer}>
+        <div
+            className={commonStyles.buttonContainer}
+            onClick={() => console.log('Button clicked')}
+        >
             {text ? (
                 <p className={commonStyles.buttonTxt}>{text.toUpperCase()}</p>
             ) : (
