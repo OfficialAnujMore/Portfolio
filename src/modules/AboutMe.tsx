@@ -24,11 +24,13 @@ const AboutMe = (): React.ReactElement => {
                     description={enData.phoneNumber}
                     imgSrc={mobileIcon}
                     fontSize="1rem"
+                    padding="1rem"
                 />
                 <CustomDescription
                     description={enData.emailAddress}
                     imgSrc={emailIcon}
                     fontSize="1rem"
+                    padding="1rem"
                 />
             </div>
         </div>

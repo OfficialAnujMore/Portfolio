@@ -15,6 +15,7 @@ function App(): React.ReactElement {
             <AboutMe />
             <CustomDivider />
             <Skills />
+            <CustomDivider />
         </div>
     )
 }

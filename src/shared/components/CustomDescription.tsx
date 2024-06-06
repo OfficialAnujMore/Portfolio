@@ -2,10 +2,11 @@ import React from 'react'
 import commonStyles from '../../styles/Common.module.css'
 
 interface CustomDescriptionProps {
-    description: string
+    description: string | undefined
     fontSize?: string
     fontColor?: string
     imgSrc?: string
+    padding?: string
 }
 
 export const CustomDescription: React.FC<CustomDescriptionProps> = ({
@@ -13,6 +14,7 @@ export const CustomDescription: React.FC<CustomDescriptionProps> = ({
     fontSize,
     fontColor,
     imgSrc,
+    padding,
 }): React.ReactElement => {
     return (
         <div className={commonStyles.descriptionContainer}>
@@ -21,6 +23,7 @@ export const CustomDescription: React.FC<CustomDescriptionProps> = ({
                 style={{
                     fontSize: fontSize ? fontSize : '',
                     color: fontColor ? fontColor : '#fff',
+                    padding,
                 }}
                 className={commonStyles.descriptionTxt}
             >
