@@ -1,7 +1,7 @@
 import React from 'react'
 import commonStyles from '../../styles/Common.module.css'
 
-interface CustomHeadingProps {
+interface CustomTextProps {
     title: string
     fontSize?: string
     fontColor?: string
@@ -10,11 +10,11 @@ interface CustomHeadingProps {
     url?: string
 }
 
-export const CustomHeading: React.FC<CustomHeadingProps> = ({
+export const CustomText: React.FC<CustomTextProps> = ({
     title,
-    fontSize,
+    fontSize = '',
     fontColor,
-    fontWeight,
+    fontWeight = 'bold',
     maintainCase,
 
     url,
@@ -23,14 +23,13 @@ export const CustomHeading: React.FC<CustomHeadingProps> = ({
         window.open(url, '_blank')
     }
     return (
-        <div className={commonStyles.headingContainer}>
+        <div>
             <h1
                 style={{
-                    fontSize: fontSize ? fontSize : '',
-                    backgroundColor: fontColor,
-                    fontWeight: fontWeight ? fontWeight : 'bold',
+                    fontSize: fontSize,
+                    color: fontColor,
+                    fontWeight: fontWeight,
                 }}
-                className={commonStyles.headingTxt}
                 // onClick={url ? handleClick : undefined}
             >
                 {maintainCase ? title : title.toUpperCase()}

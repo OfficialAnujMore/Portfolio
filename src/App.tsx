@@ -5,6 +5,7 @@ import LandingSection from 'modules/LandingSection'
 import { CustomDivider } from 'shared/components/CustomDivider'
 import AboutMe from 'modules/AboutMe'
 import { Skills } from 'modules/Skills'
+import { EducationAndCertification } from 'modules/EducationAndCertification'
 
 function App(): React.ReactElement {
     return (
@@ -15,6 +16,8 @@ function App(): React.ReactElement {
             <AboutMe />
             <CustomDivider />
             <Skills />
+            <CustomDivider />
+            <EducationAndCertification />
             <CustomDivider />
         </div>
     )

@@ -1,0 +1,27 @@
+:root {
+    /* Color variables */
+    --primary-color: rgba(0, 0, 0, 0.08);
+    --primary-text-color: rgba(255, 255, 255, 1);
+    --secondary-text-color: rgba(172, 194, 254, 1);
+
+    /* Size varibales */
+    --extra-small: 0.5rem;
+    --small: 1rem;
+    --medium: 1.5rem;
+    --large: 2rem;
+    --x-large: 2.5rem;
+}
+
+.mainContainer {
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 1rem;
+    background-color: var(--background-color);
+    height: 13rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 var(--small) var(--medium) 0;
+}
+
+
