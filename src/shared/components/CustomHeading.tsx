@@ -7,21 +7,15 @@ interface CustomHeadingProps {
     fontColor?: string
     fontWeight?: string
     maintainCase?: boolean
-    url?: string
 }
 
 export const CustomHeading: React.FC<CustomHeadingProps> = ({
     title,
-    fontSize,
+    fontSize = '2rem',
     fontColor,
     fontWeight,
-    maintainCase,
-
-    url,
+    maintainCase = true,
 }): React.ReactElement => {
-    const handleClick = (): void => {
-        window.open(url, '_blank')
-    }
     return (
         <div className={commonStyles.headingContainer}>
             <h1
@@ -31,7 +25,6 @@ export const CustomHeading: React.FC<CustomHeadingProps> = ({
                     fontWeight: fontWeight ? fontWeight : 'bold',
                 }}
                 className={commonStyles.headingTxt}
-                // onClick={url ? handleClick : undefined}
             >
                 {maintainCase ? title : title.toUpperCase()}
             </h1>

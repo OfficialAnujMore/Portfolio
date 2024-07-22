@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../../styles/Skills.module.css'
 import { CustomHeading } from './CustomHeading'
 import { CustomDescription } from './CustomDescription'
+import { CustomText } from './CustomText'
 
 export const CustomSkills: React.FC<{
     title: string
@@ -13,7 +14,7 @@ export const CustomSkills: React.FC<{
         <div className={styles.skillsContainer}>
             <div
                 className={styles.primarySkillDetails}
-                style={{ width: maxWidth ? maxWidth : '25rem' }}
+                // style={{ width: maxWidth ? maxWidth : '25rem' }}
             >
                 <div style={{ display: 'flex' }}>
                     <div
@@ -28,16 +29,22 @@ export const CustomSkills: React.FC<{
                         }}
                     />
                 </div>
-                <CustomHeading
+                <CustomText
                     title={title}
                     fontSize="1rem"
                     fontColor="#fff"
                     maintainCase={true}
                 />
             </div>
-            <div className={styles.secondarySkillDetails}>
-                <CustomDescription description={skills} fontSize="1rem" />
-            </div>
+            {skills ? (
+                <div className={styles.secondarySkillDetails}>
+                    <CustomText
+                        title={skills}
+                        fontSize="1rem"
+                        fontColor="#fff"
+                    />
+                </div>
+            ) : null}
         </div>
     )
 }

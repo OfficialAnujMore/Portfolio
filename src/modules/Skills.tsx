@@ -8,21 +8,9 @@ export const Skills = (): React.ReactElement => {
     return (
         <div className={styles.mainContainer}>
             <div className={styles.headingContainer}>
-                <CustomHeading
-                    title={enData.skills}
-                    fontSize={'2rem'}
-                    fontColor="#fff"
-                    maintainCase={false}
-                />
-                <CustomHeading
-                    title={enData.toolsAndTechnologies}
-                    fontSize={'1.2rem'}
-                    fontColor="#fff"
-                    fontWeight={'500'}
-                    maintainCase={true}
-                />
-                <CustomSkills title={enData.pro} maxWidth={'10rem'} />
-                <CustomSkills title={enData.mid} level={1} maxWidth={'10rem'} />
+                <CustomHeading title={enData.skills} maintainCase={false} />
+                <CustomSkills title={enData.pro} />
+                <CustomSkills title={enData.mid} level={1} />
             </div>
             <div className={styles.skillInfoContainer}>
                 {skillsInfo.map((item, index) => (

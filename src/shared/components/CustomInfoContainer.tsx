@@ -6,36 +6,44 @@ export const CustomInfoContainer: React.FC<{
     timespan: string
     title: string
     platform: string
-    description: string
+    // description: string
     url?: string
-}> = ({ timespan, title, platform, description, url }): React.ReactElement => {
+}> = ({ timespan, title, platform, url }): React.ReactElement => {
     return (
         <div className={styles.mainContainer}>
             <div className={styles.primaryContainer}>
+                {/* <div
+                    className={styles.customText}
+                    dangerouslySetInnerHTML={{
+                        __html: title.replace('\n', '<br/>'),
+                    }}
+                /> */}
                 <CustomText
                     title={timespan}
                     fontSize="1rem"
                     fontColor="#fff"
                     maintainCase={true}
                 />
+
                 <CustomText
                     title={title}
                     fontSize="1rem"
                     fontColor="#fff"
                     maintainCase={true}
                 />
+
                 <CustomText
                     title={platform}
                     fontSize="1rem"
                     fontColor="#fff"
                     maintainCase={true}
                 />
-                <CustomText
+                {/* <CustomText
                     title={description}
                     fontSize="1rem"
                     fontColor="#fff"
                     maintainCase={true}
-                />
+                /> */}
             </div>
             {url && (
                 <div className={styles.secondaryContainer}>

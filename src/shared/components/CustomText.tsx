@@ -2,7 +2,8 @@ import React from 'react'
 import commonStyles from '../../styles/Common.module.css'
 
 interface CustomTextProps {
-    title: string
+    title?: string
+    imgSrc?: string
     fontSize?: string
     fontColor?: string
     fontWeight?: string
@@ -12,10 +13,11 @@ interface CustomTextProps {
 
 export const CustomText: React.FC<CustomTextProps> = ({
     title,
+    imgSrc,
     fontSize = '',
     fontColor,
-    fontWeight = 'bold',
-    maintainCase,
+    fontWeight,
+    maintainCase = true,
 
     url,
 }): React.ReactElement => {
@@ -23,7 +25,8 @@ export const CustomText: React.FC<CustomTextProps> = ({
         window.open(url, '_blank')
     }
     return (
-        <div>
+        <div className={commonStyles.descriptionContainer}>
+            <img src={imgSrc} />
             <h1
                 style={{
                     fontSize: fontSize,
@@ -32,7 +35,7 @@ export const CustomText: React.FC<CustomTextProps> = ({
                 }}
                 // onClick={url ? handleClick : undefined}
             >
-                {maintainCase ? title : title.toUpperCase()}
+                {maintainCase ? title : title?.toUpperCase()}
             </h1>
         </div>
     )

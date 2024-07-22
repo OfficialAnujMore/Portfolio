@@ -6,7 +6,7 @@ export const CustomDivider: React.FC<{
 }> = ({ customWdith }): React.ReactElement => {
     return (
         <hr
-            style={{ width: customWdith ?? '100%' }}
+            style={{ width: customWdith }}
             className={commonStyles.dividerContainer}
         ></hr>
     )

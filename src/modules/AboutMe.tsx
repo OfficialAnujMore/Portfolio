@@ -6,6 +6,7 @@ import mobileIcon from '../assets/images/mobile.png'
 import enData from '../shared/local/en.json'
 import { CustomHeading } from 'shared/components/CustomHeading'
 import { CustomDescription } from 'shared/components/CustomDescription'
+import { CustomText } from 'shared/components/CustomText'
 
 const AboutMe = (): React.ReactElement => {
     return (
@@ -14,23 +15,37 @@ const AboutMe = (): React.ReactElement => {
                 <img src={profileImg} alt={enData.profileName} />
             </div>
             <div className={styles.descriptionContainer}>
-                <CustomHeading
-                    title={enData.aboutMe}
-                    fontSize={'2rem'}
+                <CustomHeading title={enData.aboutMe} fontWeight="bold" />
+                <CustomText
+                    title={enData.descriptionOne}
+                    fontSize="1.2rem"
                     fontColor="#fff"
+                    fontWeight="500"
                 />
-                <CustomDescription description={enData.description} />
-                <CustomDescription
-                    description={enData.phoneNumber}
+                <CustomText
+                    title={enData.descriptionTwo}
+                    fontSize="1.2rem"
+                    fontColor="#fff"
+                    fontWeight="500"
+                />
+                <CustomText
+                    title={enData.descriptionThree}
+                    fontSize="1.2rem"
+                    fontColor="#fff"
+                    fontWeight="500"
+                />
+                <CustomText
+                    title={enData.phoneNumber}
                     imgSrc={mobileIcon}
                     fontSize="1rem"
-                    padding="1rem"
+                    maintainCase={false}
+                    fontColor="#fff"
                 />
-                <CustomDescription
-                    description={enData.emailAddress}
+                <CustomText
+                    title={enData.emailAddress}
                     imgSrc={emailIcon}
                     fontSize="1rem"
-                    padding="1rem"
+                    fontColor="#fff"
                 />
             </div>
         </div>

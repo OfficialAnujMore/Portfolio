@@ -15,20 +15,28 @@
 .mainContainer {
     display: flex;
     justify-content: center;
-    height:100vh;
+    /* height: 100vh; */
 }
-.descriptionContainer{
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
+    justify-content: center;
 }
 
-.imgContainer{
+.imgContainer {
     display: flex;
     align-items: center;
 }
-.imgContainer >img{
+.imgContainer > img {
     width: 25rem;
-    border-radius: 50%;
-    
+    border-radius: 5%;
 }
 
-
+/* Media query for mobile devices */
+@media (max-width: 1100px) {
+    .mainContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

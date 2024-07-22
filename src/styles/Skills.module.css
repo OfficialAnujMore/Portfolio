@@ -14,20 +14,28 @@
 
 .mainContainer {
     display: flex;
+    align-items: start;
     flex-direction: column;
 }
 .headingContainer {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
 }
 
 .skillsContainer {
-    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .skillInfoContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 
 .primarySkillDetails {
@@ -45,4 +53,10 @@
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
+}
+
+@media (max-width: 1100px) {
+    .mainContainer {
+        align-items: center;
+    }
 }

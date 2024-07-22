@@ -1,6 +1,6 @@
 :root {
     /* Color variables */
-    --primary-color: rgba(17, 17, 25, 1);
+    --primary-color: rgb(17, 17, 25,1);
     --primary-text-color: rgba(255, 255, 255, 1);
     --secondary-text-color: rgba(172, 194, 254, 1);
 
@@ -16,11 +16,12 @@
     flex-direction: row;
     align-items: center;
     position: sticky;
-    top: 0; /* Adjust as needed based on your layout */
-    z-index: 100; 
+    top: 0;
+    z-index: 100;
+    background-color: rgb(17, 17, 25,1);
 }
 
-.logoContainer{
+.logoContainer {
     flex: 1;
 }
 
@@ -29,6 +30,6 @@
     font-size: var(--small);
     margin: 0rem var(--extra-small);
 }
-.sectionContainer{
+.sectionContainer {
     display: flex;
 }

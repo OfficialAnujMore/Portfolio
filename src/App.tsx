@@ -5,19 +5,19 @@ import LandingSection from 'modules/LandingSection'
 import { CustomDivider } from 'shared/components/CustomDivider'
 import AboutMe from 'modules/AboutMe'
 import { Skills } from 'modules/Skills'
-import { EducationAndCertification } from 'modules/EducationAndCertification'
+import { Education } from 'modules/Education'
 
 function App(): React.ReactElement {
     return (
         <div className="App">
-            <CustomNavbar />
+            {/* <CustomNavbar /> */}
             <LandingSection />
             <CustomDivider />
             <AboutMe />
-            <CustomDivider />
+            {/* <CustomDivider /> */}
             <Skills />
             <CustomDivider />
-            <EducationAndCertification />
+            <Education />
             <CustomDivider />
         </div>
     )

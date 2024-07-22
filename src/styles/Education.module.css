@@ -19,13 +19,30 @@
     align-items: center;
     background-color: var(--background-color);
     /* background-color: red; */
-    margin: 0 5rem;
+    /* margin: 0 2rem; */
 }
 
-.contentDisplayContainer{
+.contentDisplayContainer {
     display: flex;
-    /* background-color: rebeccapurple; */
+    background-color: rebeccapurple;
     justify-content: center;
     /* flex-direction: row; */
     flex-wrap: wrap;
+}
+
+@media (max-width: 1120px) {
+    .mainContainer {
+        /* margin: 0 2rem; */
+        background-color: red;
+    }
+    .contentDisplayContainer {
+        background-color: green;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 900px) {
+    .mainContainer {
+        /* margin: 0 2rem; */
+    }
 }

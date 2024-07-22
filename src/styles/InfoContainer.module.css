@@ -13,15 +13,31 @@
 }
 
 .mainContainer {
-    border: 1px solid var(--secondary-text-color);
-    border-radius: 1rem;
-    background-color: var(--background-color);
-    height: 13rem;
-    width: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 var(--small) var(--medium) 0;
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 1rem;
+    background-color: var(--background-color);
+    height: 12rem;
+    width: 25%;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
 
+@media (max-width: 1200px) {
+    .mainContainer {
+        width: 40%;
+    }
+}
 
+@media (max-width: 992px) {
+    .mainContainer {
+        width: 40%;
+    }
+}
+@media (max-width: 768px) {
+    .mainContainer {
+        width: 90%;
+    }
+}

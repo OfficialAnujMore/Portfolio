@@ -2,6 +2,8 @@ import React from 'react'
 import styles from '../../styles/Navbar.module.css'
 import logo from '../../assets/images/my-logo.png'
 import enData from '../local/en.json'
+import { navInfo } from 'utils/navInfo'
+import { CustomNavElements } from './CustomNavElements'
 
 const CustomNavbar = (): React.ReactElement => {
     return (
@@ -10,15 +12,9 @@ const CustomNavbar = (): React.ReactElement => {
                 <img alt={enData.profileName} src={logo} />
             </div>
             <div className={styles.sectionContainer}>
-                <div className={styles.primaryTextStyle}>{enData.aboutMe}</div>
-                <div className={styles.primaryTextStyle}>{enData.skills}</div>
-                <div className={styles.primaryTextStyle}>
-                    {enData.experience}
-                </div>
-                <div className={styles.primaryTextStyle}>
-                    {enData.education}
-                </div>
-                <div className={styles.primaryTextStyle}>{enData.contact}</div>
+                {navInfo.map((item, key) => {
+                    return <CustomNavElements key={key} title={item.title} />
+                })}
             </div>
         </div>
     )
