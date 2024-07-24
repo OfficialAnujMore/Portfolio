@@ -6,6 +6,8 @@ import { CustomDivider } from 'shared/components/CustomDivider'
 import AboutMe from 'modules/AboutMe'
 import { Skills } from 'modules/Skills'
 import { Education } from 'modules/Education'
+import Experience from 'modules/Experience'
+import ContactForm from 'modules/ContactForm'
 
 function App(): React.ReactElement {
     return (
@@ -19,6 +21,9 @@ function App(): React.ReactElement {
             <CustomDivider />
             <Education />
             <CustomDivider />
+            <Experience />
+            <CustomDivider />
+            <ContactForm />
         </div>
     )
 }
