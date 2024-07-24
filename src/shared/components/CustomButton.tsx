@@ -1,16 +1,27 @@
 import React from 'react'
 import commonStyles from '../../styles/Common.module.css'
 
-export const CustomButton: React.FC<{
+interface CustomButtonProps {
     text?: string
     imgPath?: string
-}> = ({ text, imgPath }): React.ReactElement => {
+    customComponent?: React.ReactNode
+    actionItem?: string
+}
+
+export const CustomButton: React.FC<CustomButtonProps> = ({
+    text,
+    imgPath,
+    customComponent,
+    actionItem,
+}): React.ReactElement => {
     return (
         <div
             className={commonStyles.buttonContainer}
-            onClick={() => console.log('Button clicked')}
+            onClick={() => window.open(actionItem, '_blank')}
         >
-            {text ? (
+            {customComponent ? (
+                customComponent
+            ) : text ? (
                 <p className={commonStyles.buttonTxt}>{text.toUpperCase()}</p>
             ) : (
                 <img className={commonStyles.imgStyle} src={imgPath} />

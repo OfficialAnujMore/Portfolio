@@ -1,83 +1,98 @@
-/* src/components/ContactForm.css */
-.mainContainer {
-    background-color: red;
+:root {
+    /* Color variables */
+    --black: #acc2fe00;
+    --primary-color: rgba(0, 0, 0, 0.08);
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #acc2fe;
+
+    /* Size variables */
+    --extra-small: 0.5rem;
+    --small: 1rem;
+    --medium: 1.5rem;
+    --large: 2rem;
+    --x-large: 2.5rem;
+}
+
+.bodyContainer {
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 1rem;
     color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    width: 70%;
 }
 
-.mainContainer h2 {
-    margin-bottom: 20px;
+.formContainer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
 }
 
-.mainContainer form {
+.iconContainer {
+    align-items: center;
+    display: flex;
+    flex-basis: 5vw;
+    flex-direction: column;
+    flex-grow: 0;
+    justify-content: space-evenly;
+}
+
+.mainContainer {
+    align-items: center;
     display: flex;
     flex-direction: column;
 }
 
-.mainContainer label {
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-.mainContainer input,
-.mainContainer textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background: #222;
-    color: #fff;
-}
-
 .mainContainer button {
-    padding: 10px;
+    background: #8ab4f8;
     border: none;
     border-radius: 5px;
-    background: #8ab4f8;
     color: #000;
-    font-weight: bold;
     cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
     transition: background 0.3s;
+    width: 100%;
 }
 
 .mainContainer button:hover {
     background: #669cf1;
 }
 
-.iconContainer {
+.mainContainer form {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    flex-direction: column;
+    width: calc(40%);
 }
 
-.iconContainer a {
-    margin: 0 10px;
+.mainContainer input,
+.mainContainer textarea {
+    background-color: transparent;
+    border-radius: 0.5rem;
+    color: var(--secondary-text-color);
+    height: 5vh;
+    width: 100%;
+    font-size: var(--medium);
 }
 
-.iconContainer img {
-    width: 24px;
-    height: 24px;
+.mainContainer label {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 600px) {
-    .mainContainer {
-        width: 100%;
-        padding: 15px;
-    }
-
     .iconContainer {
         flex-direction: column;
     }
 
     .iconContainer a {
         margin: 10px 0;
+    }
+
+    .mainContainer {
+        padding: 15px;
+        width: 100%;
     }
 }

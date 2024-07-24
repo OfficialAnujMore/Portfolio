@@ -18,22 +18,26 @@ export const CustomText: React.FC<CustomTextProps> = ({
     fontColor,
     fontWeight,
     maintainCase = true,
-
     url,
 }): React.ReactElement => {
     const handleClick = (): void => {
         window.open(url, '_blank')
     }
+
+    // Determine class names
+    const textClassName = url ? commonStyles.customUnderline : ''
+
     return (
         <div className={commonStyles.descriptionContainer}>
-            <img src={imgSrc} />
+            {imgSrc && <img src={imgSrc} alt="" />}
             <h1
                 style={{
                     fontSize: fontSize,
                     color: fontColor,
                     fontWeight: fontWeight,
                 }}
-                // onClick={url ? handleClick : undefined}
+                className={textClassName}
+                onClick={url ? handleClick : undefined}
             >
                 {maintainCase ? title : title?.toUpperCase()}
             </h1>

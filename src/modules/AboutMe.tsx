@@ -14,7 +14,7 @@ const AboutMe = (): React.ReactElement => {
                 <img src={profileImg} alt={enData.profileName} />
             </div>
             <div className={styles.descriptionContainer}>
-                <CustomHeading title={enData.aboutMe} fontWeight="bold" />
+                <CustomHeading title={enData.aboutMe} />
                 <CustomText
                     title={enData.descriptionOne}
                     fontSize="1.2rem"

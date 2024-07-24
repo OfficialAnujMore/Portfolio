@@ -1,7 +1,18 @@
 // src/components/ContactForm.tsx
 import React, { useState } from 'react'
 import style from '../styles/ContactForm.module.css'
-
+import {
+    AiFillGithub,
+    AiFillLinkedin,
+    AiOutlineX,
+    AiTwotoneMail,
+} from 'react-icons/ai'
+import { TbBrandLeetcode } from 'react-icons/tb'
+import { FaGithub } from 'react-icons/fa'
+import { CustomButton } from 'shared/components/CustomButton'
+import { CustomHeading } from 'shared/components/CustomHeading'
+import enData from '../shared/local/en.json'
+import { CustomText } from 'shared/components/CustomText'
 const ContactForm: React.FC = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -15,46 +26,89 @@ const ContactForm: React.FC = () => {
 
     return (
         <div className={style.mainContainer}>
-            <h2>Contact Me</h2>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Name
-                    <input
-                        type="text"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+            <CustomHeading title={enData.contact} />
+            <div className={style.bodyContainer}>
+                <div className={style.iconContainer}>
+                    <CustomButton
+                        customComponent={
+                            <AiFillLinkedin size={'1.5rem'} title="LinkedIn" />
+                        }
+                        actionItem={'https://www.linkedin.com/in/anuj-more/'}
                     />
-                </label>
-                <label>
-                    Email
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                    <CustomButton
+                        customComponent={
+                            <FaGithub size={'1.5rem'} title="Github" />
+                        }
+                        actionItem={'https://github.com/OfficialAnujMore'}
                     />
-                </label>
-                <label>
-                    Message
-                    <textarea
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                    ></textarea>
-                </label>
-                <button type="submit">Send</button>
-            </form>
-            <div className={style.iconContainer}>
-                <a href="https://www.linkedin.com/in/yourprofile">
-                    <img src="/linkedin-icon.png" alt="LinkedIn" />
-                </a>
-                <a href="https://github.com/yourprofile">
-                    <img src="/github-icon.png" alt="GitHub" />
-                </a>
-                <a href="https://twitter.com/yourprofile">
-                    <img src="/twitter-icon.png" alt="Twitter" />
-                </a>
-                <a href="mailto:your.email@example.com">
+                    <CustomButton
+                        customComponent={
+                            <AiOutlineX size={'1.5rem'} title="X" />
+                        }
+                        actionItem={'https://x.com/AnujMore1307'}
+                    />
+                    <CustomButton
+                        customComponent={
+                            <AiTwotoneMail size={'1.5rem'} title="Email" />
+                        }
+                        actionItem={'mailTo:moreanuj1307@gmail.com'}
+                    />
+                    <CustomButton
+                        customComponent={
+                            <TbBrandLeetcode size={'1.5rem'} title="Leetcode" />
+                        }
+                        actionItem={'https://leetcode.com/u/anujmore/'}
+                    />
+
+                    {/* <a href="mailto:your.email@example.com">
                     <img src="/email-icon.png" alt="Email" />
-                </a>
+                    </a> */}
+                </div>
+
+                <div className={style.formContainer}>
+                    <form onSubmit={handleSubmit}>
+                        <label>
+                            <CustomText
+                                title={enData.name}
+                                fontSize="1.2rem"
+                                fontColor="#fff"
+                                fontWeight="500"
+                            />
+                            <input
+                                type="text"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            />
+                        </label>
+                        <label>
+                            <CustomText
+                                title={enData.email}
+                                fontSize="1.2rem"
+                                fontColor="#fff"
+                                fontWeight="500"
+                            />
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                        </label>
+                        <label>
+                            <CustomText
+                                title={enData.message}
+                                fontSize="1.2rem"
+                                fontColor="#fff"
+                                fontWeight="400"
+                            />
+                            <textarea
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                                maxLength={200}
+                            />
+                        </label>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
             </div>
         </div>
     )

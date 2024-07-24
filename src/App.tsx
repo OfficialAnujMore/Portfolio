@@ -12,16 +12,15 @@ import ContactForm from 'modules/ContactForm'
 function App(): React.ReactElement {
     return (
         <div className="App">
-            <CustomNavbar />
+            {/* <CustomNavbar /> */}
             <LandingSection />
             <CustomDivider />
             <AboutMe />
-            {/* <CustomDivider /> */}
             <Skills />
             <CustomDivider />
-            <Education />
-            <CustomDivider />
             <Experience />
+            <CustomDivider />
+            <Education />
             <CustomDivider />
             <ContactForm />
         </div>

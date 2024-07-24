@@ -6,7 +6,7 @@ import enData from '../shared/local/en.json'
 const Experience = (): React.ReactElement => {
     return (
         <div className={style.mainContainer}>
-            <CustomHeading title={enData.experience} fontWeight="bold" />
+            <CustomHeading title={enData.experience} />
             <CustomTimeline />
         </div>
     )

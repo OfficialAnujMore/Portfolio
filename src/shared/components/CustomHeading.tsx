@@ -13,7 +13,7 @@ export const CustomHeading: React.FC<CustomHeadingProps> = ({
     title,
     fontSize = '2rem',
     fontColor,
-    fontWeight,
+    fontWeight = 'bold',
     maintainCase = true,
 }): React.ReactElement => {
     return (

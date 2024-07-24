@@ -22,6 +22,7 @@ export const CustomInfoContainer: React.FC<{
                     title={timespan}
                     fontSize="1rem"
                     fontColor="#fff"
+                    fontWeight={'600'}
                     maintainCase={true}
                 />
 
@@ -29,6 +30,7 @@ export const CustomInfoContainer: React.FC<{
                     title={title}
                     fontSize="1rem"
                     fontColor="#fff"
+                    fontWeight={'600'}
                     maintainCase={true}
                 />
 
@@ -36,6 +38,7 @@ export const CustomInfoContainer: React.FC<{
                     title={platform}
                     fontSize="1rem"
                     fontColor="#fff"
+                    fontWeight={'600'}
                     maintainCase={true}
                 />
                 {/* <CustomText
