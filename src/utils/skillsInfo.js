@@ -10,16 +10,6 @@ export const skillsInfo = [
         skills: 'Typescript, React, React native, Redux',
     },
     {
-        title: 'Version Control',
-        level: 2,
-        skills: 'Git, GitHub, GitLab',
-    },
-    {
-        title: 'Tools',
-        level: 2,
-        skills: 'SSMS, Jira, Xcode, Android Studio',
-    },
-    {
         title: 'Backend',
         level: 1,
         skills: 'NodeJS, ExpressJS, Mongoose, Prisma, JWT, REST API',
@@ -28,5 +18,15 @@ export const skillsInfo = [
         title: 'Databases',
         level: 1,
         skills: 'MYSQL, MongoDB',
+    },
+    {
+        title: 'Version Control',
+        level: 2,
+        skills: 'Git, GitHub, GitLab',
+    },
+    {
+        title: 'Tools',
+        level: 2,
+        skills: 'SSMS, Jira, Xcode, Android Studio',
     },
 ]

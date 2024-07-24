@@ -5,7 +5,6 @@ import emailIcon from '../assets/images/email.png'
 import mobileIcon from '../assets/images/mobile.png'
 import enData from '../shared/local/en.json'
 import { CustomHeading } from 'shared/components/CustomHeading'
-import { CustomDescription } from 'shared/components/CustomDescription'
 import { CustomText } from 'shared/components/CustomText'
 
 const AboutMe = (): React.ReactElement => {

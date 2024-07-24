@@ -35,7 +35,6 @@
     font-size: var(--x-large);
     font-weight: 600;
     background: linear-gradient(var(--secondary-text-color), var(--black));
-    /* linear-gradient(#acc2fe, #acc2fe00) */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;

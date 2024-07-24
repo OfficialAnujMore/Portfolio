@@ -1,7 +1,5 @@
 import React from 'react'
 import styles from '../../styles/Skills.module.css'
-import { CustomHeading } from './CustomHeading'
-import { CustomDescription } from './CustomDescription'
 import { CustomText } from './CustomText'
 
 export const CustomSkills: React.FC<{

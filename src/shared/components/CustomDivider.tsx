@@ -8,6 +8,6 @@ export const CustomDivider: React.FC<{
         <hr
             style={{ width: customWdith }}
             className={commonStyles.dividerContainer}
-        ></hr>
+        />
     )
 }
