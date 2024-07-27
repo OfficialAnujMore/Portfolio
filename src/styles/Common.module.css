@@ -41,7 +41,8 @@
 }
 
 .buttonContainer {
-    border: 1px solid var(--secondary-text-color);
+    display: flex;
+    align-items: center;
     border-radius: var(--extra-small);
     cursor: pointer;
 }

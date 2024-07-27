@@ -1,16 +1,13 @@
-export const edInfo = [
+export const EDUCATION = [
     {
         timespan: '2024-Present',
-        title: `Masters Of Science \n - Computer Science`,
+        title: `Masters Of Science - Computer Science`,
         platform: 'California State University, Fullerton',
-
-        url: 'http://github.com/OfficialAnujMore',
     },
     {
         timespan: '2017-21',
         title: `Bachelor of engineering - Information Technology`,
         platform: 'University of Mumbai 3.4/4 CGPA',
-        url: 'http://github.com/OfficialAnujMore',
     },
     {
         timespan: 'Oct 2022',

@@ -1,4 +1,4 @@
-export const navInfo = [
+export const NAVBAR = [
     {
         title: 'Home',
     },

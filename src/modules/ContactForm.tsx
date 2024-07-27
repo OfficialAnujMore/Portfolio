@@ -1,4 +1,3 @@
-// src/components/ContactForm.tsx
 import React, { useState } from 'react'
 import style from '../styles/ContactForm.module.css'
 import {
@@ -11,8 +10,9 @@ import { TbBrandLeetcode } from 'react-icons/tb'
 import { FaGithub } from 'react-icons/fa'
 import { CustomButton } from 'shared/components/CustomButton'
 import { CustomHeading } from 'shared/components/CustomHeading'
-import enData from '../shared/local/en.json'
+import WORD_DIR from '../shared/local/en.js'
 import { CustomText } from 'shared/components/CustomText'
+import { SOCIAL_URL, FONT_SIZE, COLOR_THEME } from 'shared/utils/constant'
 const ContactForm: React.FC = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -26,52 +26,62 @@ const ContactForm: React.FC = () => {
 
     return (
         <div className={style.mainContainer}>
-            <CustomHeading title={enData.contact} />
+            <CustomHeading title={WORD_DIR.contact} />
             <div className={style.bodyContainer}>
                 <div className={style.iconContainer}>
                     <CustomButton
                         customComponent={
-                            <AiFillLinkedin size={'1.5rem'} title="LinkedIn" />
+                            <AiFillLinkedin
+                                size={FONT_SIZE.large}
+                                title={WORD_DIR.linkedIn}
+                            />
                         }
-                        actionItem={'https://www.linkedin.com/in/anuj-more/'}
+                        actionItem={SOCIAL_URL.linkedIn}
                     />
                     <CustomButton
                         customComponent={
-                            <FaGithub size={'1.5rem'} title="Github" />
+                            <FaGithub
+                                size={FONT_SIZE.large}
+                                title={WORD_DIR.github}
+                            />
                         }
-                        actionItem={'https://github.com/OfficialAnujMore'}
+                        actionItem={SOCIAL_URL.github}
                     />
                     <CustomButton
                         customComponent={
-                            <AiOutlineX size={'1.5rem'} title="X" />
+                            <AiOutlineX
+                                size={FONT_SIZE.large}
+                                title={WORD_DIR.twitter}
+                            />
                         }
-                        actionItem={'https://x.com/AnujMore1307'}
+                        actionItem={SOCIAL_URL.twitter}
                     />
                     <CustomButton
                         customComponent={
-                            <AiTwotoneMail size={'1.5rem'} title="Email" />
+                            <AiTwotoneMail
+                                size={FONT_SIZE.large}
+                                title={WORD_DIR.email}
+                            />
                         }
-                        actionItem={'mailTo:moreanuj1307@gmail.com'}
+                        actionItem={SOCIAL_URL.email}
                     />
                     <CustomButton
                         customComponent={
-                            <TbBrandLeetcode size={'1.5rem'} title="Leetcode" />
+                            <TbBrandLeetcode
+                                size={FONT_SIZE.large}
+                                title={WORD_DIR.leetcode}
+                            />
                         }
-                        actionItem={'https://leetcode.com/u/anujmore/'}
+                        actionItem={SOCIAL_URL.leetcode}
                     />
-
-                    {/* <a href="mailto:your.email@example.com">
-                    <img src="/email-icon.png" alt="Email" />
-                    </a> */}
                 </div>
 
                 <div className={style.formContainer}>
                     <form onSubmit={handleSubmit}>
                         <label>
                             <CustomText
-                                title={enData.name}
-                                fontSize="1.2rem"
-                                fontColor="#fff"
+                                title={WORD_DIR.name}
+                                fontSize={FONT_SIZE.medium}
                                 fontWeight="500"
                             />
                             <input
@@ -82,9 +92,8 @@ const ContactForm: React.FC = () => {
                         </label>
                         <label>
                             <CustomText
-                                title={enData.email}
-                                fontSize="1.2rem"
-                                fontColor="#fff"
+                                title={WORD_DIR.email}
+                                fontSize={FONT_SIZE.medium}
                                 fontWeight="500"
                             />
                             <input
@@ -95,9 +104,8 @@ const ContactForm: React.FC = () => {
                         </label>
                         <label>
                             <CustomText
-                                title={enData.message}
-                                fontSize="1.2rem"
-                                fontColor="#fff"
+                                title={WORD_DIR.message}
+                                fontSize={FONT_SIZE.medium}
                                 fontWeight="400"
                             />
                             <textarea
@@ -106,7 +114,7 @@ const ContactForm: React.FC = () => {
                                 maxLength={200}
                             />
                         </label>
-                        <button type="submit">Send</button>
+                        <button type="submit">{WORD_DIR.send}</button>
                     </form>
                 </div>
             </div>

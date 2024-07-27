@@ -6,7 +6,13 @@ import downArrow from '../assets/images/down-arrow.png'
 const NavigatorSection = (): React.ReactElement => {
     return (
         <div className={commonStyles.navigatorContainer}>
-            <CustomButton imgPath={downArrow} />
+            <CustomButton
+                imgPath={downArrow}
+                enableBorder={true}
+                customComponent={
+                    <img className={commonStyles.imgStyle} src={downArrow} />
+                }
+            />
         </div>
     )
 }

@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from '../../styles/InfoContainer.module.css'
 import { CustomText } from './CustomText'
-import enData from '../../shared/local/en.json'
+import WORD_DIR from '../../shared/local/en.js'
+import { FONT_SIZE } from 'shared/utils/constant'
+
 export const CustomInfoContainer: React.FC<{
     timespan: string
     title: string
@@ -20,39 +22,39 @@ export const CustomInfoContainer: React.FC<{
                 /> */}
                 <CustomText
                     title={timespan}
-                    fontSize="1rem"
-                    fontColor="#fff"
+                    fontSize={FONT_SIZE.medium}
+                   
                     fontWeight={'600'}
                     maintainCase={true}
                 />
 
                 <CustomText
                     title={title}
-                    fontSize="1rem"
-                    fontColor="#fff"
+                    fontSize={FONT_SIZE.medium}
+                   
                     fontWeight={'600'}
                     maintainCase={true}
                 />
 
                 <CustomText
                     title={platform}
-                    fontSize="1rem"
-                    fontColor="#fff"
+                    fontSize={FONT_SIZE.medium}
+                   
                     fontWeight={'600'}
                     maintainCase={true}
                 />
                 {/* <CustomText
                     title={description}
-                    fontSize="1rem"
-                    fontColor="#fff"
+                    fontSize={FONT_SIZE.medium}
+                   
                     maintainCase={true}
                 /> */}
             </div>
             {url && (
                 <div className={styles.secondaryContainer}>
                     <CustomText
-                        title={enData.certificate}
-                        fontSize={'1rem'}
+                        title={WORD_DIR.certificate}
+                        fontSize={FONT_SIZE.medium}
                         fontColor={'white'}
                         maintainCase={true}
                         url={url}

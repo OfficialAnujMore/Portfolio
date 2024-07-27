@@ -1,5 +1,6 @@
 import React from 'react'
 import commonStyles from '../../styles/Common.module.css'
+import { FONT_SIZE } from 'shared/utils/constant'
 
 interface CustomHeadingProps {
     title: string
@@ -11,7 +12,7 @@ interface CustomHeadingProps {
 
 export const CustomHeading: React.FC<CustomHeadingProps> = ({
     title,
-    fontSize = '2rem',
+    fontSize = FONT_SIZE.xLarge,
     fontColor,
     fontWeight = 'bold',
     maintainCase = true,

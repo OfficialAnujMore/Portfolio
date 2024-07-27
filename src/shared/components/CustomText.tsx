@@ -1,9 +1,9 @@
 import React from 'react'
 import commonStyles from '../../styles/Common.module.css'
+import { COLOR_THEME } from 'shared/utils/constant'
 
 interface CustomTextProps {
     title?: string
-    imgSrc?: string
     fontSize?: string
     fontColor?: string
     fontWeight?: string
@@ -13,9 +13,8 @@ interface CustomTextProps {
 
 export const CustomText: React.FC<CustomTextProps> = ({
     title,
-    imgSrc,
     fontSize = '',
-    fontColor,
+    fontColor = COLOR_THEME.white,
     fontWeight,
     maintainCase = true,
     url,
@@ -29,7 +28,6 @@ export const CustomText: React.FC<CustomTextProps> = ({
 
     return (
         <div className={commonStyles.descriptionContainer}>
-            {imgSrc && <img src={imgSrc} alt="" />}
             <h1
                 style={{
                     fontSize: fontSize,

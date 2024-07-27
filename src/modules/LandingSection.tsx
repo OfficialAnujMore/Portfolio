@@ -1,35 +1,35 @@
 import React from 'react'
 import styles from '../styles/Landing.module.css'
-import enData from '../shared/local/en.json'
+import WORD_DIR from '../shared/local/en.js'
 import { CustomHeading } from 'shared/components/CustomHeading'
 import { CustomDivider } from 'shared/components/CustomDivider'
 import { CustomButton } from 'shared/components/CustomButton'
 import NavigatorSection from './NavigatorSection'
-import globalFontSize from '../shared/constants/globalFontSize.js'
+import { FONT_SIZE } from 'shared/utils/constant'
 // import CustomParticleContainer from 'shared/components/CustomParticleContainer'
 
 const LandingSection = (): React.ReactElement => {
     return (
         <div className={styles.mainContainer}>
             <CustomHeading
-                title={enData.proflePrimaryTxt}
-                fontSize={globalFontSize.xLarge}
+                title={WORD_DIR.proflePrimaryTxt}
+                fontSize={FONT_SIZE.xLarge}
             />
             <CustomDivider customWdith="20%" />
             <CustomHeading
-                title={enData.profileName}
-                fontSize={globalFontSize.xxLarge}
+                title={WORD_DIR.profileName}
+                fontSize={FONT_SIZE.xxLarge}
             />
             <CustomDivider customWdith="20%" />
             <CustomHeading
-                title={enData.profileTitle}
-                fontSize={globalFontSize.xxxLarge}
+                title={WORD_DIR.profileTitle}
+                fontSize={FONT_SIZE.xxxLarge}
             />
             <CustomHeading
-                title={enData.profileDescription}
-                fontSize={globalFontSize.xLarge}
+                title={WORD_DIR.profileDescription}
+                fontSize={FONT_SIZE.xLarge}
             />
-            <CustomButton text={enData.resume} />
+            <CustomButton text={WORD_DIR.resume} enableBorder={true} />
             <NavigatorSection />
             {/* <CustomParticleContainer /> */}
         </div>

@@ -1,4 +1,4 @@
-export const skillsInfo = [
+export const SKILLS = [
     {
         title: 'Languages',
         level: 2,

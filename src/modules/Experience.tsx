@@ -2,11 +2,11 @@ import React from 'react'
 import style from '../styles/Experience.module.css'
 import CustomTimeline from 'shared/components/CustomTimeline'
 import { CustomHeading } from 'shared/components/CustomHeading'
-import enData from '../shared/local/en.json'
+import WORD_DIR from '../shared/local/en.js'
 const Experience = (): React.ReactElement => {
     return (
         <div className={style.mainContainer}>
-            <CustomHeading title={enData.experience} />
+            <CustomHeading title={WORD_DIR.experience} />
             <CustomTimeline />
         </div>
     )

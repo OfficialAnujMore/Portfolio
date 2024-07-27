@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../../styles/Skills.module.css'
 import { CustomText } from './CustomText'
+import { FONT_SIZE } from 'shared/utils/constant'
 
 export const CustomSkills: React.FC<{
     title: string
@@ -10,10 +11,7 @@ export const CustomSkills: React.FC<{
 }> = ({ title, level, skills, maxWidth }): React.ReactElement => {
     return (
         <div className={styles.skillsContainer}>
-            <div
-                className={styles.primarySkillDetails}
-                // style={{ width: maxWidth ? maxWidth : '25rem' }}
-            >
+            <div className={styles.primarySkillDetails}>
                 <div style={{ display: 'flex' }}>
                     <div
                         className={styles.skillLevel}
@@ -29,8 +27,8 @@ export const CustomSkills: React.FC<{
                 </div>
                 <CustomText
                     title={title}
-                    fontSize="1rem"
-                    fontColor="#fff"
+                    fontSize={FONT_SIZE.medium}
+                   
                     maintainCase={true}
                 />
             </div>
@@ -38,8 +36,8 @@ export const CustomSkills: React.FC<{
                 <div className={styles.secondarySkillDetails}>
                     <CustomText
                         title={skills}
-                        fontSize="1rem"
-                        fontColor="#fff"
+                        fontSize={FONT_SIZE.medium}
+                       
                     />
                 </div>
             ) : null}
