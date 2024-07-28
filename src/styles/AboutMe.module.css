@@ -1,6 +1,6 @@
 :root {
     /* Color variables */
-    --primary-color: rgba(0, 0, 0, 0.08);
+    --primary-color: rgb(17, 17, 25,1);
     --primary-text-color: rgba(255, 255, 255, 1);
     --secondary-text-color: rgba(172, 194, 254, 1);
 

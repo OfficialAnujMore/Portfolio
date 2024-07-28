@@ -1,7 +1,7 @@
 :root {
     /* Color variables */
     --black: #acc2fe00;
-    --primary-color: rgba(0, 0, 0, 0.08);
+    --primary-color: rgb(17, 17, 25,1);
     --primary-text-color: #ffffff;
     --secondary-text-color: #acc2fe;
 
