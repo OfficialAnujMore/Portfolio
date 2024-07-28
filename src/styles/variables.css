@@ -1,0 +1,14 @@
+:root {
+    /* Color variables */
+    --primary-color: rgb(17, 17, 25, 1);
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #acc2fe;
+    --black: #acc2fe00;
+
+    /* Size varibales */
+    --extra-small: 0.5rem;
+    --small: 1rem;
+    --medium: 1.5rem;
+    --large: 2rem;
+    --x-large: 2.5rem;
+}
