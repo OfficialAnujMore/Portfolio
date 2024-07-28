@@ -1,16 +1,3 @@
-:root {
-    /* Color variables */
-    --primary-color: rgb(17, 17, 25,1);
-    --primary-text-color: rgba(255, 255, 255, 1);
-    --secondary-text-color: rgba(172, 194, 254, 1);
-
-    /* Size varibales */
-    --extra-small: 0.5rem;
-    --small: 1rem;
-    --medium: 1.5rem;
-    --large: 2rem;
-}
-
 .mainContainer {
     display: flex;
     flex-direction: column;

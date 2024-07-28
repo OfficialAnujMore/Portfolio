@@ -8,6 +8,7 @@ import { Skills } from 'modules/Skills'
 import { Education } from 'modules/Education'
 import Experience from 'modules/Experience'
 import ContactForm from 'modules/ContactForm'
+import './styles/variables.css'
 
 function App(): React.ReactElement {
     return (
