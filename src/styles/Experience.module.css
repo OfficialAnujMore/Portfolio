@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .timelineItem {
@@ -29,7 +30,9 @@
 }
 
 .timelineContent {
-    background: #333;
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
     padding: 10px 20px;
     border-radius: 8px;
     position: relative;

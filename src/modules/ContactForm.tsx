@@ -1,18 +1,13 @@
 import React, { useState } from 'react'
 import style from '../styles/ContactForm.module.css'
-import {
-    AiFillGithub,
-    AiFillLinkedin,
-    AiOutlineX,
-    AiTwotoneMail,
-} from 'react-icons/ai'
+import { AiFillLinkedin, AiOutlineX, AiTwotoneMail } from 'react-icons/ai'
 import { TbBrandLeetcode } from 'react-icons/tb'
 import { FaGithub } from 'react-icons/fa'
 import { CustomButton } from 'shared/components/CustomButton'
 import { CustomHeading } from 'shared/components/CustomHeading'
 import WORD_DIR from '../shared/local/en.js'
 import { CustomText } from 'shared/components/CustomText'
-import { SOCIAL_URL, FONT_SIZE, COLOR_THEME } from 'shared/utils/constant'
+import { SOCIAL_URL, FONT_SIZE, FONT_WEIGHT } from 'shared/utils/constant'
 const ContactForm: React.FC = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -82,7 +77,7 @@ const ContactForm: React.FC = () => {
                             <CustomText
                                 title={WORD_DIR.name}
                                 fontSize={FONT_SIZE.medium}
-                                fontWeight="500"
+                                fontWeight={FONT_WEIGHT.weight500}
                             />
                             <input
                                 type="text"
@@ -94,7 +89,7 @@ const ContactForm: React.FC = () => {
                             <CustomText
                                 title={WORD_DIR.email}
                                 fontSize={FONT_SIZE.medium}
-                                fontWeight="500"
+                                fontWeight={FONT_WEIGHT.weight500}
                             />
                             <input
                                 type="email"
@@ -106,7 +101,7 @@ const ContactForm: React.FC = () => {
                             <CustomText
                                 title={WORD_DIR.message}
                                 fontSize={FONT_SIZE.medium}
-                                fontWeight="400"
+                                fontWeight={FONT_WEIGHT.weight500}
                             />
                             <textarea
                                 value={message}

@@ -18,7 +18,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: rgb(17, 17, 25,1);
+    background-color: var(--primary-color);
 }
 
 .logoContainer {

@@ -2,13 +2,12 @@ import React from 'react'
 import styles from '../../styles/InfoContainer.module.css'
 import { CustomText } from './CustomText'
 import WORD_DIR from '../../shared/local/en.js'
-import { FONT_SIZE } from 'shared/utils/constant'
+import { COLOR_THEME, FONT_SIZE, FONT_WEIGHT } from 'shared/utils/constant'
 
 export const CustomInfoContainer: React.FC<{
     timespan: string
     title: string
     platform: string
-    // description: string
     url?: string
 }> = ({ timespan, title, platform, url }): React.ReactElement => {
     return (
@@ -23,39 +22,32 @@ export const CustomInfoContainer: React.FC<{
                 <CustomText
                     title={timespan}
                     fontSize={FONT_SIZE.medium}
-                   
-                    fontWeight={'600'}
+                    fontWeight={FONT_WEIGHT.weight500}
+                    fontColor={COLOR_THEME.secondaryTextColor}
                     maintainCase={true}
                 />
 
                 <CustomText
                     title={title}
                     fontSize={FONT_SIZE.medium}
-                   
-                    fontWeight={'600'}
+                    fontWeight={FONT_WEIGHT.weight500}
                     maintainCase={true}
                 />
 
                 <CustomText
                     title={platform}
                     fontSize={FONT_SIZE.medium}
-                   
-                    fontWeight={'600'}
+                    fontWeight={FONT_WEIGHT.weight500}
                     maintainCase={true}
                 />
-                {/* <CustomText
-                    title={description}
-                    fontSize={FONT_SIZE.medium}
-                   
-                    maintainCase={true}
-                /> */}
             </div>
             {url && (
                 <div className={styles.secondaryContainer}>
                     <CustomText
                         title={WORD_DIR.certificate}
                         fontSize={FONT_SIZE.medium}
-                        fontColor={'white'}
+                        fontWeight={FONT_WEIGHT.weight500}
+                        fontColor={COLOR_THEME.white}
                         maintainCase={true}
                         url={url}
                     />

@@ -14,11 +14,12 @@
 
 .mainContainer {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
-    /* border: 1px solid var(--secondary-text-color); */
+    border: 1px solid var(--secondary-text-color);
     border-radius: 0.5rem;
-    background-color:#333;
+    background-color: var(--primary-color);
     height: 12rem;
     width: 25%;
     margin: 0.5rem;

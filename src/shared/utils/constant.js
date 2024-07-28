@@ -26,13 +26,13 @@ export const FONT_SIZE = {
 
 export const FONT_WEIGHT = {
     bold: 'bold',
-    bold100: '100',
-    bold200: '200',
-    bold300: '300',
-    bold400: '400',
-    bold500: '500',
-    bold600: '600',
-    bold700: '700',
-    bold800: '800',
-    bold900: '900',
+    weight100: 100,
+    weight200: 200,
+    weight300: 300,
+    weight400: 400,
+    weight500: 500,
+    weight600: 600,
+    weight700: 700,
+    weight800: 800,
+    weight900: 900,
 }

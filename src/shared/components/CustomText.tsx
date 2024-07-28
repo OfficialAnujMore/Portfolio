@@ -1,12 +1,12 @@
 import React from 'react'
 import commonStyles from '../../styles/Common.module.css'
-import { COLOR_THEME } from 'shared/utils/constant'
+import { COLOR_THEME, FONT_WEIGHT } from 'shared/utils/constant'
 
 interface CustomTextProps {
     title?: string
     fontSize?: string
     fontColor?: string
-    fontWeight?: string
+    fontWeight?: string | number
     maintainCase?: boolean
     url?: string
 }
@@ -15,7 +15,7 @@ export const CustomText: React.FC<CustomTextProps> = ({
     title,
     fontSize = '',
     fontColor = COLOR_THEME.white,
-    fontWeight,
+    fontWeight = FONT_WEIGHT.weight500,
     maintainCase = true,
     url,
 }): React.ReactElement => {
@@ -23,7 +23,6 @@ export const CustomText: React.FC<CustomTextProps> = ({
         window.open(url, '_blank')
     }
 
-    // Determine class names
     const textClassName = url ? commonStyles.customUnderline : ''
 
     return (

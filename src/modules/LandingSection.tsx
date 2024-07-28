@@ -6,7 +6,7 @@ import { CustomDivider } from 'shared/components/CustomDivider'
 import { CustomButton } from 'shared/components/CustomButton'
 import NavigatorSection from './NavigatorSection'
 import { FONT_SIZE } from 'shared/utils/constant'
-// import CustomParticleContainer from 'shared/components/CustomParticleContainer'
+import CustomParticleContainer from 'shared/components/CustomParticleContainer'
 
 const LandingSection = (): React.ReactElement => {
     return (
@@ -31,7 +31,7 @@ const LandingSection = (): React.ReactElement => {
             />
             <CustomButton text={WORD_DIR.resume} enableBorder={true} />
             <NavigatorSection />
-            {/* <CustomParticleContainer /> */}
+            <CustomParticleContainer />
         </div>
     )
 }

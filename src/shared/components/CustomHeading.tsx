@@ -1,6 +1,6 @@
 import React from 'react'
 import commonStyles from '../../styles/Common.module.css'
-import { FONT_SIZE } from 'shared/utils/constant'
+import { FONT_SIZE, FONT_WEIGHT } from 'shared/utils/constant'
 
 interface CustomHeadingProps {
     title: string
@@ -14,16 +14,16 @@ export const CustomHeading: React.FC<CustomHeadingProps> = ({
     title,
     fontSize = FONT_SIZE.xLarge,
     fontColor,
-    fontWeight = 'bold',
+    fontWeight = FONT_WEIGHT.bold,
     maintainCase = true,
 }): React.ReactElement => {
     return (
         <div className={commonStyles.headingContainer}>
             <h1
                 style={{
-                    fontSize: fontSize ? fontSize : '',
+                    fontSize: fontSize,
                     backgroundColor: fontColor,
-                    fontWeight: fontWeight ? fontWeight : 'bold',
+                    fontWeight: fontWeight,
                 }}
                 className={commonStyles.headingTxt}
             >
