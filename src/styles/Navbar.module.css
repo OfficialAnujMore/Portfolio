@@ -6,6 +6,8 @@
     top: 0;
     z-index: 100;
     background-color: var(--primary-color);
+    width: 100%;
+    box-shadow: 0rem 1px 2px var(--secondary-color);
 }
 
 .logoContainer {
@@ -13,8 +15,8 @@
 }
 
 .primaryTextStyle {
-    color: var(--primary-text-color);
-    font-size: var(--small);
+    color: var(--white);
+    /* font-size: var(--small); */
     margin: 0rem var(--extra-small);
 }
 .sectionContainer {

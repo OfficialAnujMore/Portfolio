@@ -15,16 +15,17 @@ const LandingSection = (): React.ReactElement => {
                 title={WORD_DIR.proflePrimaryTxt}
                 fontSize={FONT_SIZE.xLarge}
             />
-            <CustomDivider customWdith="20%" />
+            <CustomDivider customWdith="50%" />
             <CustomHeading
                 title={WORD_DIR.profileName}
                 fontSize={FONT_SIZE.xxLarge}
             />
-            <CustomDivider customWdith="20%" />
+            <CustomDivider customWdith="50%" />
             <CustomHeading
                 title={WORD_DIR.profileTitle}
                 fontSize={FONT_SIZE.xxxLarge}
             />
+            <CustomDivider customWdith="50%" />
             <CustomHeading
                 title={WORD_DIR.profileDescription}
                 fontSize={FONT_SIZE.xLarge}

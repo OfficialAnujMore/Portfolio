@@ -10,7 +10,7 @@ export const SOCIAL_URL = {
 export const COLOR_THEME = {
     white: '#fff',
     black: '#000',
-    primaryColor: 'rgba(0, 0, 0, 0.08)',
+    primaryColor: 'rgb(17, 17, 25, 1)',
     primaryTextColor: '#ffffff',
     secondaryTextColor: '#acc2fe',
 }

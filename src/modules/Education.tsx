@@ -9,10 +9,7 @@ export const Education = (): React.ReactElement => {
     return (
         <div className={styles.mainContainer}>
             <div className={styles.headingContainer}>
-                <CustomHeading
-                    title={WORD_DIR.education}
-                    maintainCase={false}
-                />
+                <CustomHeading title={WORD_DIR.education} />
             </div>
             <div className={styles.contentDisplayContainer}>
                 {EDUCATION.map((item, id) => {

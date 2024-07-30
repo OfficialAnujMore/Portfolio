@@ -1,9 +1,9 @@
 :root {
     /* Color variables */
     --primary-color: rgb(17, 17, 25, 1);
-    --primary-text-color: #ffffff;
-    --secondary-text-color: #acc2fe;
-    --black: #acc2fe00;
+    --white: #ffffff;
+    --secondary-color: #acc2fe;
+    --gradient-black: #acc2fe00;
 
     /* Size varibales */
     --extra-small: 0.5rem;

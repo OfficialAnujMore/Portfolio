@@ -29,23 +29,21 @@
 }
 
 .timelineContent {
-    border: 1px solid var(--secondary-text-color);
+    border: 1px solid var(--secondary-color);
     border-radius: 0.5rem;
+    border-radius: 8px;
     background-color: var(--primary-color);
     padding: 10px 20px;
-    border-radius: 8px;
     position: relative;
     width: calc(100% - 60px);
 }
 
 .timelineContent h2 {
     margin: 0;
-    font-size: 1.2em;
 }
 
 .timelineContent h3 {
     margin: 5px 0;
-    font-size: 1em;
     font-weight: normal;
     color: #8ab4f8;
 }

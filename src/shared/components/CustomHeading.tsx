@@ -15,7 +15,7 @@ export const CustomHeading: React.FC<CustomHeadingProps> = ({
     fontSize = FONT_SIZE.xLarge,
     fontColor,
     fontWeight = FONT_WEIGHT.bold,
-    maintainCase = true,
+    maintainCase = false,
 }): React.ReactElement => {
     return (
         <div className={commonStyles.headingContainer}>

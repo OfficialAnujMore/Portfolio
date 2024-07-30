@@ -24,21 +24,18 @@ export const CustomInfoContainer: React.FC<{
                     fontSize={FONT_SIZE.medium}
                     fontWeight={FONT_WEIGHT.weight500}
                     fontColor={COLOR_THEME.secondaryTextColor}
-                    maintainCase={true}
                 />
 
                 <CustomText
                     title={title}
                     fontSize={FONT_SIZE.medium}
                     fontWeight={FONT_WEIGHT.weight500}
-                    maintainCase={true}
                 />
 
                 <CustomText
                     title={platform}
                     fontSize={FONT_SIZE.medium}
                     fontWeight={FONT_WEIGHT.weight500}
-                    maintainCase={true}
                 />
             </div>
             {url && (
@@ -48,7 +45,6 @@ export const CustomInfoContainer: React.FC<{
                         fontSize={FONT_SIZE.medium}
                         fontWeight={FONT_WEIGHT.weight500}
                         fontColor={COLOR_THEME.white}
-                        maintainCase={true}
                         url={url}
                     />
                 </div>

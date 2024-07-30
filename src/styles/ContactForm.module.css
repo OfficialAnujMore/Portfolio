@@ -1,11 +1,11 @@
 .bodyContainer {
-    border: 1px solid var(--secondary-text-color);
+    display: flex;
+    border: 1px solid var(--secondary-color);
     background-color: var(--primary-color);
     border-radius: 1rem;
     color: #fff;
-    display: flex;
-    flex-direction: row;
-    width: 70%;
+    width: 60vw;
+    /* background-color: rebeccapurple; */
 }
 
 .formContainer {
@@ -28,6 +28,8 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    background-color: rebeccapurple;
+    width: 100vw;
     /* background-color: var(--primary-color); */
 }
 
@@ -57,10 +59,9 @@
 .mainContainer textarea {
     background-color: transparent;
     border-radius: 0.5rem;
-    color: var(--secondary-text-color);
+    color: var(--secondary-color);
     height: 5vh;
     width: 100%;
-    font-size: var(--medium);
 }
 
 .mainContainer label {
@@ -70,7 +71,7 @@
     margin-bottom: 1rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768x) {
     .iconContainer {
         flex-direction: column;
     }
@@ -80,7 +81,10 @@
     }
 
     .mainContainer {
-        padding: 15px;
-        width: 100%;
+        /* padding: 15px; */
+        /* width: 100vw; */
+    }
+    .bodyContainer{
+        width: 100vw;
     }
 }
