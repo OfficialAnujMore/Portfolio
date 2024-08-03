@@ -6,8 +6,8 @@ import { CustomDivider } from 'shared/components/CustomDivider'
 import { CustomButton } from 'shared/components/CustomButton'
 import NavigatorSection from './NavigatorSection'
 import { FONT_SIZE, NAVIGATION_PATH } from 'shared/utils/constant'
-import CustomParticleContainer from 'shared/components/CustomParticleContainer'
 import resume from '../assets/Resume - Anuj More.pdf'
+import MemoizedCustomParticleContainer from 'shared/components/CustomParticleContainer'
 
 const LandingSection = (): React.ReactElement => {
     return (
@@ -40,7 +40,7 @@ const LandingSection = (): React.ReactElement => {
                 // }}
             />
             <NavigatorSection />
-            <CustomParticleContainer />
+            <MemoizedCustomParticleContainer />
         </div>
     )
 }
