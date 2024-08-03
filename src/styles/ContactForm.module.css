@@ -1,0 +1,88 @@
+.bodyContainer {
+    display: flex;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    color: #fff;
+    width: 60vw;
+    padding: var(--small);
+}
+
+.formContainer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.iconContainer {
+    align-items: center;
+    display: flex;
+    flex-basis: 5vw;
+    flex-direction: column;
+    flex-grow: 0;
+    justify-content: space-evenly;
+}
+
+.mainContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.mainContainer button {
+    background: #8ab4f8;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.mainContainer button:hover {
+    background: #669cf1;
+}
+
+.mainContainer form {
+    display: flex;
+    flex-direction: column;
+    width: calc(40%);
+}
+
+.mainContainer input,
+.mainContainer textarea {
+    background-color: transparent;
+    border-radius: 0.5rem;
+    color: var(--secondary-color);
+    height: 5vh;
+    width: 100%;
+}
+
+.mainContainer label {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+    .iconContainer {
+        flex-direction: row;
+        margin-top: 1rem;
+    }
+
+    .iconContainer a {
+        margin: 10px 0;
+    }
+    .bodyContainer {
+        width: 80vw;
+        flex-direction: column-reverse;
+    }
+
+    .mainContainer form {
+        width: calc(80%);
+    }
+}

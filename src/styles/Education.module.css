@@ -1,0 +1,26 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    position: relative;
+}
+
+.contentDisplayContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1120px) {
+    .contentDisplayContainer {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 900px) {
+    .mainContainer {
+        /* margin: 0 2rem; */
+    }
+}
