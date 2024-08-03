@@ -106,7 +106,7 @@
     }
 
     .timelineContent {
-        width: calc(100% - 30px);
+        width: 80%;
     }
 
     .timelineItem::before {

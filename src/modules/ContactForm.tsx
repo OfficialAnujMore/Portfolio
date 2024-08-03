@@ -7,7 +7,12 @@ import { CustomButton } from 'shared/components/CustomButton'
 import { CustomHeading } from 'shared/components/CustomHeading'
 import WORD_DIR from '../shared/local/en.js'
 import { CustomText } from 'shared/components/CustomText'
-import { SOCIAL_URL, FONT_SIZE, FONT_WEIGHT } from 'shared/utils/constant'
+import {
+    SOCIAL_URL,
+    FONT_SIZE,
+    FONT_WEIGHT,
+    NAVIGATION_PATH,
+} from 'shared/utils/constant'
 const ContactForm: React.FC = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -20,7 +25,7 @@ const ContactForm: React.FC = () => {
     }
 
     return (
-        <div className={style.mainContainer}>
+        <div className={style.mainContainer} id={NAVIGATION_PATH.contactMe}>
             <CustomHeading title={WORD_DIR.contact} />
             <div className={style.bodyContainer}>
                 <div className={style.iconContainer}>
@@ -76,7 +81,7 @@ const ContactForm: React.FC = () => {
                         <label>
                             <CustomText
                                 title={WORD_DIR.name}
-                                fontSize={FONT_SIZE.medium}
+                                fontSize={FONT_SIZE.small}
                                 fontWeight={FONT_WEIGHT.weight500}
                             />
                             <input
@@ -88,7 +93,7 @@ const ContactForm: React.FC = () => {
                         <label>
                             <CustomText
                                 title={WORD_DIR.email}
-                                fontSize={FONT_SIZE.medium}
+                                fontSize={FONT_SIZE.small}
                                 fontWeight={FONT_WEIGHT.weight500}
                             />
                             <input
@@ -100,7 +105,7 @@ const ContactForm: React.FC = () => {
                         <label>
                             <CustomText
                                 title={WORD_DIR.message}
-                                fontSize={FONT_SIZE.medium}
+                                fontSize={FONT_SIZE.small}
                                 fontWeight={FONT_WEIGHT.weight500}
                             />
                             <textarea
@@ -109,7 +114,10 @@ const ContactForm: React.FC = () => {
                                 maxLength={200}
                             />
                         </label>
-                        <button type="submit">{WORD_DIR.send}</button>
+                        <CustomButton
+                            text={WORD_DIR.send}
+                            enableBorder={true}
+                        />
                     </form>
                 </div>
             </div>

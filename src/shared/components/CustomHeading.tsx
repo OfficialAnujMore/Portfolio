@@ -18,17 +18,15 @@ export const CustomHeading: React.FC<CustomHeadingProps> = ({
     maintainCase = false,
 }): React.ReactElement => {
     return (
-        <div className={commonStyles.headingContainer}>
-            <h1
-                style={{
-                    fontSize: fontSize,
-                    backgroundColor: fontColor,
-                    fontWeight: fontWeight,
-                }}
-                className={commonStyles.headingTxt}
-            >
-                {maintainCase ? title : title.toUpperCase()}
-            </h1>
-        </div>
+        <h1
+            style={{
+                fontSize: fontSize,
+                backgroundColor: fontColor,
+                fontWeight: fontWeight,
+            }}
+            className={commonStyles.headingTxt}
+        >
+            {maintainCase ? title : title.toUpperCase()}
+        </h1>
     )
 }

@@ -13,28 +13,22 @@ export const CustomInfoContainer: React.FC<{
     return (
         <div className={styles.mainContainer}>
             <div className={styles.primaryContainer}>
-                {/* <div
-                    className={styles.customText}
-                    dangerouslySetInnerHTML={{
-                        __html: title.replace('\n', '<br/>'),
-                    }}
-                /> */}
                 <CustomText
                     title={timespan}
-                    fontSize={FONT_SIZE.medium}
+                    fontSize={FONT_SIZE.small}
                     fontWeight={FONT_WEIGHT.weight500}
                     fontColor={COLOR_THEME.secondaryTextColor}
                 />
 
                 <CustomText
                     title={title}
-                    fontSize={FONT_SIZE.medium}
+                    fontSize={FONT_SIZE.small}
                     fontWeight={FONT_WEIGHT.weight500}
                 />
 
                 <CustomText
                     title={platform}
-                    fontSize={FONT_SIZE.medium}
+                    fontSize={FONT_SIZE.small}
                     fontWeight={FONT_WEIGHT.weight500}
                 />
             </div>
@@ -42,7 +36,7 @@ export const CustomInfoContainer: React.FC<{
                 <div className={styles.secondaryContainer}>
                     <CustomText
                         title={WORD_DIR.certificate}
-                        fontSize={FONT_SIZE.medium}
+                        fontSize={FONT_SIZE.small}
                         fontWeight={FONT_WEIGHT.weight500}
                         fontColor={COLOR_THEME.white}
                         url={url}

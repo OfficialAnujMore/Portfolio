@@ -16,8 +16,9 @@ export const COLOR_THEME = {
 }
 
 export const FONT_SIZE = {
-    small: '0.5rem',
-    medium: '1rem',
+    extraSmall: '0.5rem',
+    small: '1rem',
+    medium: '1.2rem',
     large: '1.5rem',
     xLarge: '2rem',
     xxLarge: '2.5rem',
@@ -35,4 +36,13 @@ export const FONT_WEIGHT = {
     weight700: 700,
     weight800: 800,
     weight900: 900,
+}
+
+export const NAVIGATION_PATH = {
+    home: 'home',
+    aboutme: 'aboutme',
+    experience: 'experience',
+    projects: 'projects',
+    education: 'education',
+    contactMe: 'contactMe',
 }

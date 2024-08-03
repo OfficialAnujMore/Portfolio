@@ -13,11 +13,10 @@ import './styles/variables.css'
 function App(): React.ReactElement {
     return (
         <div className="App">
-            {/* <CustomNavbar /> */}
+            <CustomNavbar />
             <LandingSection />
             <CustomDivider />
             <AboutMe />
-            {/* <Skills /> */}
             <CustomDivider />
             <Experience />
             <CustomDivider />

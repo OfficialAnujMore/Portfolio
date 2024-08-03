@@ -5,12 +5,13 @@ import { CustomHeading } from 'shared/components/CustomHeading'
 import { CustomDivider } from 'shared/components/CustomDivider'
 import { CustomButton } from 'shared/components/CustomButton'
 import NavigatorSection from './NavigatorSection'
-import { FONT_SIZE } from 'shared/utils/constant'
+import { FONT_SIZE, NAVIGATION_PATH } from 'shared/utils/constant'
 import CustomParticleContainer from 'shared/components/CustomParticleContainer'
+import resume from '../assets/Resume - Anuj More.pdf'
 
 const LandingSection = (): React.ReactElement => {
     return (
-        <div className={styles.mainContainer}>
+        <div className={styles.mainContainer} id={NAVIGATION_PATH.home}>
             <CustomHeading
                 title={WORD_DIR.proflePrimaryTxt}
                 fontSize={FONT_SIZE.xLarge}
@@ -23,14 +24,21 @@ const LandingSection = (): React.ReactElement => {
             <CustomDivider customWdith="50%" />
             <CustomHeading
                 title={WORD_DIR.profileTitle}
-                fontSize={FONT_SIZE.xxxLarge}
+                fontSize={FONT_SIZE.xxLarge}
             />
             <CustomDivider customWdith="50%" />
             <CustomHeading
                 title={WORD_DIR.profileDescription}
                 fontSize={FONT_SIZE.xLarge}
             />
-            <CustomButton text={WORD_DIR.resume} enableBorder={true} />
+            <CustomButton
+                text={WORD_DIR.resume}
+                enableBorder={true}
+                actionItem={resume}
+                // eventListner={() => {
+                //     console.log('Clicked')
+                // }}
+            />
             <NavigatorSection />
             <CustomParticleContainer />
         </div>

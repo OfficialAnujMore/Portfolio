@@ -12,7 +12,7 @@ export const CustomSkills: React.FC<{
         <div className={styles.skillsContainer}>
             <CustomText
                 title={`${title} : ${skills}`}
-                fontSize={FONT_SIZE.medium}
+                fontSize={FONT_SIZE.small}
             />
         </div>
     )

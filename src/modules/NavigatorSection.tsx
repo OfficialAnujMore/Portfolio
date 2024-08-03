@@ -2,6 +2,7 @@ import React from 'react'
 import commonStyles from '../styles/Common.module.css'
 import { CustomButton } from 'shared/components/CustomButton'
 import downArrow from '../assets/images/down-arrow.png'
+import { NAVIGATION_PATH } from 'shared/utils/constant'
 
 const NavigatorSection = (): React.ReactElement => {
     return (
@@ -11,6 +12,7 @@ const NavigatorSection = (): React.ReactElement => {
                 customComponent={
                     <img className={commonStyles.imgStyle} src={downArrow} />
                 }
+                eventListner={NAVIGATION_PATH.aboutme}
             />
         </div>
     )

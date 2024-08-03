@@ -6,6 +6,7 @@
 .headingContainer {
     padding: 0;
     margin: 0;
+    justify-content: center;
 }
 
 .dividerContainer {
@@ -16,18 +17,21 @@
 .headingTxt {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
-    /* font-size: var(--x-large); */
     background: linear-gradient(var(--secondary-color), var(--gradient-black));
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    text-align: center;
+    width: 100%;
 }
 
 .buttonContainer {
     display: flex;
-    align-items: center;
+    justify-content: center;
     border-radius: var(--extra-small);
     cursor: pointer;
 }
@@ -43,7 +47,6 @@
     align-items: center;
     width: 100%;
     height: 20vh;
-    /* background-color: rebeccapurple; */
     animation: upDownAnimation 3s linear infinite;
 }
 

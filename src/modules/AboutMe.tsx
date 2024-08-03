@@ -9,6 +9,7 @@ import {
     FONT_SIZE,
     SOCIAL_URL,
     FONT_WEIGHT,
+    NAVIGATION_PATH,
 } from 'shared/utils/constant'
 import { CustomButton } from 'shared/components/CustomButton'
 import { AiTwotoneMail } from 'react-icons/ai'
@@ -17,7 +18,7 @@ import { Skills } from './Skills'
 
 const AboutMe = (): React.ReactElement => {
     return (
-        <div className={styles.mainContainer}>
+        <div className={styles.mainContainer} id={NAVIGATION_PATH.aboutme}>
             <div className={styles.skillsContainer}>
                 <div className={styles.imgContainer}>
                     <img src={profileImg} alt={WORD_DIR.profileName} />

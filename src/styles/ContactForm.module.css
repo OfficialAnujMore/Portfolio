@@ -5,7 +5,7 @@
     border-radius: 1rem;
     color: #fff;
     width: 60vw;
-    /* background-color: rebeccapurple; */
+    padding: var(--small);
 }
 
 .formContainer {
@@ -28,9 +28,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: rebeccapurple;
-    width: 100vw;
-    /* background-color: var(--primary-color); */
 }
 
 .mainContainer button {
@@ -71,20 +68,21 @@
     margin-bottom: 1rem;
 }
 
-@media (max-width: 768x) {
+@media (max-width: 767px) {
     .iconContainer {
-        flex-direction: column;
+        flex-direction: row;
+        margin-top: 1rem;
     }
 
     .iconContainer a {
         margin: 10px 0;
     }
-
-    .mainContainer {
-        /* padding: 15px; */
-        /* width: 100vw; */
+    .bodyContainer {
+        width: 80vw;
+        flex-direction: column-reverse;
     }
-    .bodyContainer{
-        width: 100vw;
+
+    .mainContainer form {
+        width: calc(80%);
     }
 }

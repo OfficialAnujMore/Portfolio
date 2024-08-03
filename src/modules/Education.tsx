@@ -4,10 +4,11 @@ import { CustomHeading } from 'shared/components/CustomHeading'
 import WORD_DIR from '../shared/local/en.js'
 import { CustomInfoContainer } from 'shared/components/CustomInfoContainer'
 import { EDUCATION } from '../shared/utils/education'
+import { NAVIGATION_PATH } from 'shared/utils/constant'
 
 export const Education = (): React.ReactElement => {
     return (
-        <div className={styles.mainContainer}>
+        <div className={styles.mainContainer} id={NAVIGATION_PATH.education}>
             <div className={styles.headingContainer}>
                 <CustomHeading title={WORD_DIR.education} />
             </div>
