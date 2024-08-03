@@ -1,6 +1,6 @@
 const WORD_DIR = {
     proflePrimaryTxt: "Hello, It's Me",
-    profileName: 'Anuj Chandrakant More',
+    profileName: 'Anuj More',
     profileTitle: 'Software Developer',
     profileDescription: 'From California, USA',
     resume: 'Resume',
@@ -26,6 +26,7 @@ const WORD_DIR = {
 
     education: 'Education & Certification',
     certificate: 'Certificate',
+    view: 'View',
 
     contact: 'Contact Me',
     name: 'Name',
