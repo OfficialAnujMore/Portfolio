@@ -6,6 +6,7 @@
     --gradient-black: #acc2fe00;
 
     /* Size varibales */
+    --zero: 0;
     --extra-small: 0.5rem;
     --small: 1rem;
     --medium: 1.5rem;

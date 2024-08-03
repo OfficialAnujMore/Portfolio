@@ -11,7 +11,7 @@ export const CustomInfoContainer: React.FC<{
     url?: string
 }> = ({ timespan, title, platform, url }): React.ReactElement => {
     return (
-        <div className={styles.mainContainer}>
+        <div className={styles.infoMainContainer}>
             <div className={styles.primaryContainer}>
                 <CustomText
                     title={timespan}

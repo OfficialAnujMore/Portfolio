@@ -1,5 +1,5 @@
 import React from 'react'
-import commonStyles from '../../styles/Common.module.css'
+import style from '../../styles/CustomHeading.module.css'
 import { FONT_SIZE, FONT_WEIGHT } from 'shared/utils/constant'
 
 interface CustomHeadingProps {
@@ -24,7 +24,7 @@ export const CustomHeading: React.FC<CustomHeadingProps> = ({
                 backgroundColor: fontColor,
                 fontWeight: fontWeight,
             }}
-            className={commonStyles.headingTxt}
+            className={style.headingTxt}
         >
             {maintainCase ? title : title.toUpperCase()}
         </h1>

@@ -1,0 +1,31 @@
+.descriptionContainer {
+    display: flex;
+    justify-self: start;
+    align-items: center;
+}
+.customUnderline {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--white);
+    transition: color var(--zero) 0.3s ease;
+}
+
+.customUnderline::after {
+    content: '';
+    position: absolute;
+    left: var(--zero);
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: var(--white);
+    transition: background var(--zero) 0.3s ease;
+}
+
+.customUnderline:hover {
+    color: var(--secondary-color);
+}
+
+.customUnderline:hover::after {
+    background: var(--secondary-color);
+}

@@ -7,7 +7,7 @@
     color: white;
 }
 
-.mainContainer {
+.ExperienceMainContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -29,9 +29,6 @@
 }
 
 .timelineContent {
-    border: 1px solid var(--secondary-color);
-    border-radius: 0.5rem;
-    border-radius: 8px;
     background-color: var(--primary-color);
     padding: 10px 20px;
     position: relative;

@@ -1,4 +1,4 @@
-.mainContainer {
+.infoMainContainer {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -13,18 +13,18 @@
 }
 
 @media (max-width: 1200px) {
-    .mainContainer {
+    .infoMainContainer {
         width: 40%;
     }
 }
 
 @media (max-width: 992px) {
-    .mainContainer {
+    .infoMainContainer {
         width: 40%;
     }
 }
 @media (max-width: 768px) {
-    .mainContainer {
+    .infoMainContainer {
         width: 90%;
     }
 }

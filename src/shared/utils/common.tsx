@@ -11,7 +11,5 @@ export const scrollToSection = (id: string): void => {
             top: offsetPosition,
             behavior: 'smooth',
         })
-    } else {
-        console.error(`Element with id "${id}" not found.`)
     }
 }

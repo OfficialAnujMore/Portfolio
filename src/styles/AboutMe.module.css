@@ -1,11 +1,8 @@
-.mainContainer {
+.aboutMeMainContainer {
     display: flex;
     position: relative;
-    border: 1px solid var(--secondary-color);
-    border-radius: 0.5rem;
-    border-radius: 8px;
-    background-color: var(--primary-color);
     width: 80vw;
+    background-color: var(--primary-color);
     padding: 1rem;
 }
 .skillsContainer {
@@ -32,12 +29,12 @@
 }
 .contactInfoContainer {
     display: flex;
-    align-content: flex-start;
-    width: 25%;
+    align-items: center;
+    width: 100%;
 }
 
 @media (max-width: 1100px) {
-    .mainContainer {
+    .aboutMeMainContainer {
         flex-direction: column;
         flex-wrap: wrap;
     }

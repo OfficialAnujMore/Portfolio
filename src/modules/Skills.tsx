@@ -7,7 +7,7 @@ import { SKILLS } from 'shared/utils/skillsInfo'
 SKILLS
 export const Skills = (): React.ReactElement => {
     return (
-        <div className={styles.mainContainer}>
+        <div className={styles.skillsMainContainer}>
             <div className={styles.headingContainer}>
                 <CustomHeading title={WORD_DIR.skills} maintainCase={false} />
             </div>

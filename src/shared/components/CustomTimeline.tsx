@@ -1,6 +1,7 @@
 // src/components/Timeline.tsx
 import React from 'react'
 import style from '../../styles/Experience.module.css'
+import globalStyle from '../../styles/Global.module.css'
 
 interface Event {
     dateRange: string
@@ -40,9 +41,11 @@ const CustomTimeline: React.FC = () => {
     return (
         <div className={style.timeline}>
             {events.map((event, index) => (
-                <div key={index} className={style.timelineItem}>
+                <div key={index} className={`${style.timelineItem}`}>
                     <div className={style.timelineDate}>{event.dateRange}</div>
-                    <div className={style.timelineContent}>
+                    <div
+                        className={`${style.timelineContent} ${globalStyle.commonBorderDecoration}`}
+                    >
                         <h2>{event.title}</h2>
                         <h3>{event.roles}</h3>
                         <h3>{event.type}</h3>

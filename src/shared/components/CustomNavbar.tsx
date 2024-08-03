@@ -3,10 +3,10 @@ import styles from '../../styles/Navbar.module.css'
 import logo from '../../assets/images/my-logo.png'
 import WORD_DIR from '../../shared/local/en.js'
 import { NAVBAR } from 'shared/utils/navbar'
-import { CustomNavElements } from './CustomNavElements'
 import { RxCross1 } from 'react-icons/rx'
 import { FaBars } from 'react-icons/fa6'
 import { FONT_SIZE } from 'shared/utils/constant'
+import { scrollToSection } from 'shared/utils/common'
 
 const CustomNavbar = (): React.ReactElement => {
     const [isOpen, setIsOpen] = useState(false)
@@ -16,8 +16,8 @@ const CustomNavbar = (): React.ReactElement => {
     }
 
     return (
-        <div className={styles.mainContainer}>
-            <div className={styles.contentContainer}>
+        <div className={styles.navbarMainContainer}>
+            <div className={styles.navBarContentContainer}>
                 <div className={styles.logoContainer}>
                     <img alt={WORD_DIR.profileName} src={logo} />
                 </div>
@@ -34,11 +34,16 @@ const CustomNavbar = (): React.ReactElement => {
                 className={`${styles.sectionContainer} ${isOpen ? styles.open : ''}`}
             >
                 {NAVBAR.map((item, key) => (
-                    <CustomNavElements
+                    <div
                         key={key}
-                        title={item.title}
-                        path={item.navigationPath}
-                    />
+                        className={styles.primaryTextStyle}
+                        onClick={() => {
+                            toggleMenu()
+                            scrollToSection(item.navigationPath)
+                        }}
+                    >
+                        {item.title}
+                    </div>
                 ))}
             </div>
         </div>

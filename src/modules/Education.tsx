@@ -1,5 +1,6 @@
 import React from 'react'
-import styles from '../styles/Education.module.css'
+import style from '../styles/Education.module.css'
+import globalStyle from '../styles/Global.module.css'
 import { CustomHeading } from 'shared/components/CustomHeading'
 import WORD_DIR from '../shared/local/en.js'
 import { CustomInfoContainer } from 'shared/components/CustomInfoContainer'
@@ -8,11 +9,14 @@ import { NAVIGATION_PATH } from 'shared/utils/constant'
 
 export const Education = (): React.ReactElement => {
     return (
-        <div className={styles.mainContainer} id={NAVIGATION_PATH.education}>
-            <div className={styles.headingContainer}>
+        <div
+            className={`${style.educationMainContainer}`}
+            id={NAVIGATION_PATH.education}
+        >
+            <div className={style.headingContainer}>
                 <CustomHeading title={WORD_DIR.education} />
             </div>
-            <div className={styles.contentDisplayContainer}>
+            <div className={style.contentDisplayContainer}>
                 {EDUCATION.map((item, id) => {
                     return (
                         <CustomInfoContainer

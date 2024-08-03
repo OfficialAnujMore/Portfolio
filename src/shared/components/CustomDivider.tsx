@@ -1,5 +1,5 @@
 import React from 'react'
-import commonStyles from '../../styles/Common.module.css'
+import globalStyle from '../../styles/Global.module.css'
 
 export const CustomDivider: React.FC<{
     customWdith?: string
@@ -7,7 +7,7 @@ export const CustomDivider: React.FC<{
     return (
         <hr
             style={{ width: customWdith }}
-            className={commonStyles.dividerContainer}
+            className={globalStyle.dividerMainContainer}
         />
     )
 }
