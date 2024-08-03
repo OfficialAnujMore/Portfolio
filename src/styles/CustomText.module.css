@@ -3,12 +3,17 @@
     justify-self: start;
     align-items: center;
 }
+.descriptionContainer>h1{
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+}
 .customUnderline {
     position: relative;
     display: inline-block;
     cursor: pointer;
     color: var(--white);
     transition: color var(--zero) 0.3s ease;
+ 
 }
 
 .customUnderline::after {

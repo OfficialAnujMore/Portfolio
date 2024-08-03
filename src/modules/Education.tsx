@@ -25,6 +25,7 @@ export const Education = (): React.ReactElement => {
                             title={item.title}
                             platform={item.platform}
                             url={item.url}
+                            imagePath={item.imagePath}
                         />
                     )
                 })}

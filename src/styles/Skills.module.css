@@ -3,6 +3,7 @@
     align-items: start;
     flex-direction: column;
     position: relative;
+    padding: 1rem;
 }
 .headingContainer {
     display: flex;
