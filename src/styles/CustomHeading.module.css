@@ -1,0 +1,28 @@
+.headingTxt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: var(--zero);
+    padding: var(--zero);
+    background: linear-gradient(var(--secondary-color), var(--gradient-black));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.animatedHeadingTxt {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #000; /* Cursor */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}

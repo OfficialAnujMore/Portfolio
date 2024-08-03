@@ -1,4 +1,4 @@
-.mainContainer {
+.educationMainContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +20,7 @@
 }
 
 @media (max-width: 900px) {
-    .mainContainer {
+    .educationMainContainer {
         /* margin: 0 2rem; */
     }
 }

@@ -1,5 +1,6 @@
 import React from 'react'
-import styles from '../styles/AboutMe.module.css'
+import style from '../styles/AboutMe.module.css'
+import globalStyle from '../styles/Global.module.css'
 import profileImg from '../assets/images/profileImg.png'
 import WORD_DIR from '../shared/local/en.js'
 import { CustomHeading } from 'shared/components/CustomHeading'
@@ -18,15 +19,17 @@ import { Skills } from './Skills'
 
 const AboutMe = (): React.ReactElement => {
     return (
-        <div className={styles.mainContainer} id={NAVIGATION_PATH.aboutme}>
-            <div className={styles.skillsContainer}>
-                <div className={styles.imgContainer}>
+        <div
+            className={`${style.aboutMeMainContainer} ${globalStyle.commonBorderDecoration}`}
+            id={NAVIGATION_PATH.aboutme}
+        >
+            <div className={style.skillsContainer}>
+                <div className={style.imgContainer}>
                     <img src={profileImg} alt={WORD_DIR.profileName} />
                 </div>
                 <Skills />
             </div>
-            {/* About me content */}
-            <div className={styles.descriptionContainer}>
+            <div className={style.descriptionContainer}>
                 <CustomHeading title={WORD_DIR.aboutMe} />
                 <CustomText
                     title={WORD_DIR.descriptionOne}
@@ -43,7 +46,7 @@ const AboutMe = (): React.ReactElement => {
                     fontSize={FONT_SIZE.medium}
                     fontWeight={FONT_WEIGHT.weight200}
                 />
-                <div className={styles.contactInfoContainer}>
+                <div className={style.contactInfoContainer}>
                     <CustomButton
                         customComponent={
                             <FaPhone
@@ -56,11 +59,12 @@ const AboutMe = (): React.ReactElement => {
                     />
                     <CustomText
                         title={WORD_DIR.phoneNumber}
-                        fontSize={FONT_SIZE.medium}
+                        fontSize={FONT_SIZE.small}
                         maintainCase={false}
+                        fontWeight={FONT_WEIGHT.weight400}
                     />
                 </div>
-                <div className={styles.contactInfoContainer}>
+                <div className={style.contactInfoContainer}>
                     <CustomButton
                         customComponent={
                             <AiTwotoneMail
@@ -73,7 +77,8 @@ const AboutMe = (): React.ReactElement => {
                     />
                     <CustomText
                         title={WORD_DIR.emailAddress}
-                        fontSize={FONT_SIZE.medium}
+                        fontSize={FONT_SIZE.small}
+                        fontWeight={FONT_WEIGHT.weight400}
                     />
                 </div>
             </div>

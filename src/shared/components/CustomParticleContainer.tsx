@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, memo } from 'react'
 import { Particles, initParticlesEngine } from '@tsparticles/react'
 import { loadSlim } from '@tsparticles/slim'
 const CustomParticleContainer = (): React.ReactElement => {
@@ -18,12 +18,6 @@ const CustomParticleContainer = (): React.ReactElement => {
                 <Particles
                     id="tsparticles"
                     options={{
-                        // background: {
-                        //     color: {
-                        //         value: '#ffffff',
-                        //     },
-                        //     opacity: 0.1,
-                        // },
                         fpsLimit: 120,
                         interactivity: {
                             events: {
@@ -87,4 +81,7 @@ const CustomParticleContainer = (): React.ReactElement => {
     )
 }
 
-export default CustomParticleContainer
+const MemoizedCustomParticleContainer = memo(CustomParticleContainer)
+MemoizedCustomParticleContainer.displayName = 'MemoizedCustomParticleContainer'
+
+export default MemoizedCustomParticleContainer

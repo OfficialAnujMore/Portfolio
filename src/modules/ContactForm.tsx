@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import style from '../styles/ContactForm.module.css'
+import globalStyle from '../styles/Global.module.css'
 import { AiFillLinkedin, AiOutlineX, AiTwotoneMail } from 'react-icons/ai'
 import { TbBrandLeetcode } from 'react-icons/tb'
 import { FaGithub } from 'react-icons/fa'
@@ -25,9 +26,14 @@ const ContactForm: React.FC = () => {
     }
 
     return (
-        <div className={style.mainContainer} id={NAVIGATION_PATH.contactMe}>
+        <div
+            className={`${style.contactFormMainContainer} `}
+            id={NAVIGATION_PATH.contactMe}
+        >
             <CustomHeading title={WORD_DIR.contact} />
-            <div className={style.bodyContainer}>
+            <div
+                className={` ${style.bodyContainer} ${globalStyle.commonBorderDecoration}`}
+            >
                 <div className={style.iconContainer}>
                     <CustomButton
                         customComponent={

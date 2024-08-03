@@ -1,5 +1,5 @@
 import React from 'react'
-import commonStyles from '../../styles/Common.module.css'
+import style from '../../styles/CustomButton.module.css'
 import { COLOR_THEME, FONT_SIZE, FONT_WEIGHT } from 'shared/utils/constant'
 import { scrollToSection } from 'shared/utils/common'
 
@@ -20,7 +20,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
 }): React.ReactElement => {
     return (
         <div
-            className={commonStyles.buttonContainer}
+            className={style.buttonMainContainer}
             style={{
                 border: enableBorder
                     ? `1px solid ${COLOR_THEME.secondaryTextColor}`
@@ -38,7 +38,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
             {customComponent ? (
                 customComponent
             ) : (
-                <p className={commonStyles.buttonTxt}>{text?.toUpperCase()}</p>
+                <p className={style.buttonTxt}>{text?.toUpperCase()}</p>
             )}
         </div>
     )

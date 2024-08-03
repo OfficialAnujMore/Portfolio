@@ -1,5 +1,5 @@
 import React from 'react'
-import commonStyles from '../../styles/Common.module.css'
+import style from '../../styles/CustomText.module.css'
 import { COLOR_THEME, FONT_WEIGHT } from 'shared/utils/constant'
 
 interface CustomTextProps {
@@ -23,10 +23,10 @@ export const CustomText: React.FC<CustomTextProps> = ({
         window.open(url, '_blank')
     }
 
-    const textClassName = url ? commonStyles.customUnderline : ''
+    const textClassName = url ? style.customUnderline : ''
 
     return (
-        <div className={commonStyles.descriptionContainer}>
+        <div className={style.descriptionContainer}>
             <h1
                 style={{
                     fontSize: fontSize,

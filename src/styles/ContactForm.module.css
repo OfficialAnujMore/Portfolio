@@ -1,8 +1,6 @@
 .bodyContainer {
     display: flex;
-    border: 1px solid var(--secondary-color);
     background-color: var(--primary-color);
-    border-radius: 1rem;
     color: #fff;
     width: 60vw;
     padding: var(--small);
@@ -23,37 +21,21 @@
     justify-content: space-evenly;
 }
 
-.mainContainer {
+.contactFormMainContainer {
     align-items: center;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-.mainContainer button {
-    background: #8ab4f8;
-    border: none;
-    border-radius: 5px;
-    color: #000;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    transition: background 0.3s;
-    width: 100%;
-}
-
-.mainContainer button:hover {
-    background: #669cf1;
-}
-
-.mainContainer form {
+.contactFormMainContainer form {
     display: flex;
     flex-direction: column;
     width: calc(40%);
 }
 
-.mainContainer input,
-.mainContainer textarea {
+.contactFormMainContainer input,
+.contactFormMainContainer textarea {
     background-color: transparent;
     border-radius: 0.5rem;
     color: var(--secondary-color);
@@ -61,7 +43,7 @@
     width: 100%;
 }
 
-.mainContainer label {
+.contactFormMainContainer label {
     align-items: start;
     display: flex;
     flex-direction: column;
@@ -82,7 +64,7 @@
         flex-direction: column-reverse;
     }
 
-    .mainContainer form {
+    .contactFormMainContainer form {
         width: calc(80%);
     }
 }

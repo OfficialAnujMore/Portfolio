@@ -1,7 +1,9 @@
-.mainContainer {
+.landingMainContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height:100vh;
+    height: 95vh;
+    width: 100%;
+    /* margin-top: 3vh; */
 }

@@ -1,5 +1,4 @@
-/* Navbar styles */
-.mainContainer {
+.navbarMainContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -8,8 +7,10 @@
     z-index: 100;
     background-color: var(--primary-color);
     width: 100%;
+    box-sizing: border-box; 
     box-shadow: 0rem 1px 2px var(--secondary-color);
     cursor: pointer;
+    padding: 0 1rem; 
 }
 
 .logoContainer {
@@ -37,7 +38,7 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .mainContainer {
+    .navbarMainContainer {
         width: 90%;
         padding: 0rem 1rem;
         flex-direction: column;
@@ -70,7 +71,7 @@
     .primaryTextStyle {
         margin: 0.5rem 0;
     }
-    .contentContainer {
+    .navBarContentContainer {
         display: flex;
         align-items: center;
         width: 100%;
