@@ -1,4 +1,4 @@
-.timeline {
+.timelineMainContainer {
     position: relative;
     padding: 20px 0;
     width: 90%;
@@ -7,7 +7,7 @@
     color: white;
 }
 
-.ExperienceMainContainer {
+.experienceMainContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -15,16 +15,17 @@
 }
 
 .timelineItem {
-    position: relative;
-    padding-left: 40px;
-    margin-bottom: 30px;
     display: flex;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
     flex-direction: column;
+    /* background-color: rebeccapurple; */
 }
 
 .timelineDate {
     font-weight: bold;
-    margin-right: 20px;
+    margin-right: 2rem;
     color: #8ab4f8;
 }
 

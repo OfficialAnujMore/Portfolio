@@ -7,7 +7,7 @@ import { NAVIGATION_PATH } from 'shared/utils/constant'
 const Experience = (): React.ReactElement => {
     return (
         <div
-            className={style.ExperienceMainContainer}
+            className={style.experienceMainContainer}
             id={NAVIGATION_PATH.experience}
         >
             <CustomHeading title={WORD_DIR.experience} />
