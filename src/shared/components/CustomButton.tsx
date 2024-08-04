@@ -1,6 +1,6 @@
 import React from 'react'
 import style from '../../styles/CustomButton.module.css'
-import { COLOR_THEME, FONT_SIZE, FONT_WEIGHT } from 'shared/utils/constant'
+import { COLOR_THEME, FONT_SIZE } from 'shared/utils/constant'
 import { scrollToSection } from 'shared/utils/common'
 
 interface CustomButtonProps {
@@ -9,6 +9,7 @@ interface CustomButtonProps {
     actionItem?: string
     eventListner?: string
     enableBorder?: boolean
+    onClick?: () => void
 }
 
 export const CustomButton: React.FC<CustomButtonProps> = ({
@@ -17,6 +18,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
     actionItem,
     eventListner,
     enableBorder,
+    onClick,
 }): React.ReactElement => {
     return (
         <div
@@ -28,7 +30,9 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
                 marginRight: customComponent ? FONT_SIZE.extraSmall : undefined,
             }}
             onClick={() => {
-                if (actionItem) {
+                if (onClick) {
+                    onClick()
+                } else if (actionItem) {
                     window.open(actionItem, '_blank')
                 } else if (eventListner) {
                     scrollToSection(eventListner)
