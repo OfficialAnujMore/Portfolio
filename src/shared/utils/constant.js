@@ -23,6 +23,7 @@ export const FONT_SIZE = {
     xLarge: '2rem',
     xxLarge: '2.5rem',
     xxxLarge: '3rem',
+    largest: '6rem',
 }
 
 export const FONT_WEIGHT = {

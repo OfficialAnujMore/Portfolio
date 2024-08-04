@@ -15,19 +15,18 @@ const LandingSection = (): React.ReactElement => {
         <div className={styles.landingMainContainer} id={NAVIGATION_PATH.home}>
             <CustomHeading
                 title={WORD_DIR.proflePrimaryTxt}
-                fontSize={FONT_SIZE.xLarge}
+                fontSize={FONT_SIZE.xxLarge}
                 maintainCase={true}
             />
-            <CustomDivider customWdith="20%" />
             <CustomHeading
                 title={WORD_DIR.profileName}
-                fontSize={FONT_SIZE.xxLarge}
+                fontSize={FONT_SIZE.largest}
                 maintainCase={true}
+                textDecoration={true}
             />
-            <CustomDivider customWdith="20%" />
             <CustomHeading
                 title={WORD_DIR.profileTitle}
-                fontSize={FONT_SIZE.xxLarge}
+                fontSize={FONT_SIZE.xxxLarge}
                 maintainCase={true}
             />
             {/* <CustomAnimatedHeading
@@ -37,10 +36,9 @@ const LandingSection = (): React.ReactElement => {
                 fontSize={FONT_SIZE.xxLarge}
                 maintainCase={true}
             /> */}
-            <CustomDivider customWdith="20%" />
             <CustomHeading
                 title={WORD_DIR.profileDescription}
-                fontSize={FONT_SIZE.xLarge}
+                fontSize={FONT_SIZE.xxLarge}
                 maintainCase={true}
             />
             <CustomButton

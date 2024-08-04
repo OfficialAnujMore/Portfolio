@@ -1,5 +1,5 @@
 .dividerMainContainer {
-    margin: var(--zero);
+    margin: var(--small);
     padding: var(--zero);
     border: 1px solid var(--secondary-color);
 }

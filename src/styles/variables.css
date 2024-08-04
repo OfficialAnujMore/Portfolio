@@ -1,9 +1,10 @@
 :root {
     /* Color variables */
     --primary-color: rgb(17, 17, 25, 1);
-    --white: #ffffff;
-    --secondary-color: #acc2fe;
-    --gradient-black: #acc2fe00;
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+    --secondary-color: rgb(172, 194, 254);
+    --gradient-black: rgba(172, 194, 254, 0.4);
 
     /* Size varibales */
     --zero: 0;

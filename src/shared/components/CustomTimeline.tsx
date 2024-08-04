@@ -30,7 +30,11 @@ const CustomTimeline: React.FC = () => {
                 const uniqueId = event.id + event.title
 
                 return (
-                    <div key={index} className={`${style.timelineItem}`}>
+                    <div
+                        key={index}
+                        id={uniqueId}
+                        className={`${style.timelineItem}`}
+                    >
                         <CustomText
                             title={event.dateRange}
                             fontSize={FONT_SIZE.small}
@@ -44,7 +48,6 @@ const CustomTimeline: React.FC = () => {
                                     ? 'pointer'
                                     : 'default',
                             }}
-                            id={uniqueId}
                         >
                             <CustomText
                                 title={event.title}
