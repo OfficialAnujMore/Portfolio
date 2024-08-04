@@ -15,13 +15,9 @@ function App(): React.ReactElement {
         <div className="App">
             <CustomNavbar />
             <LandingSection />
-            <CustomDivider />
             <AboutMe />
-            <CustomDivider />
             <Experience />
-            <CustomDivider />
             <Education />
-            <CustomDivider />
             <ContactForm />
         </div>
     )

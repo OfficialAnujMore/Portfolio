@@ -8,6 +8,7 @@ interface CustomHeadingProps {
     fontColor?: string
     fontWeight?: string
     maintainCase?: boolean
+    textDecoration?: boolean
 }
 
 export const CustomHeading: React.FC<CustomHeadingProps> = ({
@@ -16,6 +17,7 @@ export const CustomHeading: React.FC<CustomHeadingProps> = ({
     fontColor,
     fontWeight = FONT_WEIGHT.bold,
     maintainCase = false,
+    textDecoration = false,
 }): React.ReactElement => {
     return (
         <h1
@@ -24,7 +26,7 @@ export const CustomHeading: React.FC<CustomHeadingProps> = ({
                 backgroundColor: fontColor,
                 fontWeight: fontWeight,
             }}
-            className={style.headingTxt}
+            className={`${style.headingTxt} ${textDecoration ? style.textDecoration : null}`}
         >
             {maintainCase ? title : title.toUpperCase()}
         </h1>

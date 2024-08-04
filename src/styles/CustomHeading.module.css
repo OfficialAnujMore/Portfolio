@@ -11,14 +11,25 @@
     -webkit-background-clip: text;
     text-align: center;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0rem;
+}
+
+.textDecoration{
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-color); 
+    text-decoration-thickness: 2px; 
+    text-underline-offset: 4px;
+    text-decoration-style: solid; 
+    position: relative;
+    overflow: hidden; 
+    margin-bottom: 0.5rem;
 }
 
 .animatedHeadingTxt {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2px solid #000; /* Cursor */
+    border-right: 2px solid #000;
     animation: blink-caret 0.75s step-end infinite;
 }
 
