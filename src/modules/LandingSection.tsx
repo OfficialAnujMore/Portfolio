@@ -22,6 +22,7 @@ const LandingSection = (): React.ReactElement => {
                 title={WORD_DIR.profileName}
                 fontSize={FONT_SIZE.largest}
                 maintainCase={true}
+                textDecoration={true}
             />
             <CustomHeading
                 title={WORD_DIR.profileTitle}
