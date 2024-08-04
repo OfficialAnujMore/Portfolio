@@ -1,6 +1,7 @@
 import React, { useEffect, useState, memo } from 'react'
 import { Particles, initParticlesEngine } from '@tsparticles/react'
 import { loadSlim } from '@tsparticles/slim'
+import { COLOR_THEME } from 'shared/utils/constant'
 const CustomParticleContainer = (): React.ReactElement => {
     const [init, setInit] = useState(false)
 
@@ -14,69 +15,76 @@ const CustomParticleContainer = (): React.ReactElement => {
 
     return (
         <div>
-            {init && (
-                <Particles
-                    id="tsparticles"
-                    options={{
-                        fpsLimit: 120,
-                        interactivity: {
-                            events: {
-                                onHover: {
-                                    enable: true,
-                                    mode: 'repulse',
-                                },
+            <Particles
+                id="tsparticles"
+                options={{
+                    fpsLimit: 120,
+                    interactivity: {
+                        events: {
+                            onHover: {
+                                enable: true,
+                                mode: 'repulse',
                             },
-                            modes: {
-                                push: {
-                                    quantity: 100,
-                                },
-                                repulse: {
-                                    distance: 100,
-                                    duration: 0.1,
-                                },
+                            resize: {
+                                delay: 1,
+                                enable: true,
                             },
                         },
-                        particles: {
-                            color: {
-                                value: '#ffffff',
+                        modes: {
+                            push: {
+                                quantity: 4,
                             },
-                            links: {
-                                color: '#ffffff',
-                                distance: 150,
-                                enable: true,
-                                opacity: 0.2,
-                                width: 1,
-                            },
-                            move: {
-                                direction: 'none',
-                                enable: true,
-                                outModes: {
-                                    default: 'bounce',
-                                },
-                                random: false,
-                                speed: 0.3,
-                                straight: true,
-                            },
-                            number: {
-                                density: {
-                                    enable: true,
-                                },
-                                value: 200,
-                            },
-                            opacity: {
-                                value: 0.3,
-                            },
-                            shape: {
-                                type: 'circle',
-                            },
-                            size: {
-                                value: { min: 1, max: 4 },
+                            repulse: {
+                                distance: 100,
+                                duration: 0.1,
                             },
                         },
-                        detectRetina: true,
-                    }}
-                />
-            )}
+                    },
+                    particles: {
+                        color: {
+                            value: COLOR_THEME.white,
+                        },
+                        links: {
+                            color: COLOR_THEME.white,
+                            distance: 150,
+                            enable: true,
+                            opacity: 0.2,
+                            width: 1,
+                        },
+                        collisions: {
+                            enable: true,
+                        },
+                        move: {
+                            direction: 'none',
+                            enable: true,
+                            outModes: {
+                                default: 'bounce',
+                            },
+                            random: false,
+                            speed: 0.2,
+                            straight: true,
+                        },
+                        number: {
+                            density: {
+                                enable: true,
+                                height: 700,
+                                width: 700,
+                            },
+                            value: 60,
+                        },
+                        opacity: {
+                            value: 0.5,
+                        },
+                        shape: {
+                            type: 'circle',
+                        },
+                        size: {
+                            value: { min: 1, max: 4 },
+                        },
+                    },
+                    detectRetina: true,
+                }}
+            />
         </div>
     )
 }

@@ -21,6 +21,8 @@ const WORD_DIR = {
     mid: 'Mid',
 
     experience: 'Experience',
+    showMore: 'Read More',
+    showLess: 'Show Less',
 
     projects: 'Projects',
 
