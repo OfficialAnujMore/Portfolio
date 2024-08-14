@@ -5,12 +5,14 @@
     align-items: center;
     background-color: var(--background-color);
     position: relative;
+    width: 80%;
 }
 
 .contentDisplayContainer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 @media (max-width: 1120px) {

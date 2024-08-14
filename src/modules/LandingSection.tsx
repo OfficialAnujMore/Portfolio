@@ -20,13 +20,12 @@ const LandingSection = (): React.ReactElement => {
             />
             <CustomHeading
                 title={WORD_DIR.profileName}
-                fontSize={FONT_SIZE.largest}
+                fontSize={FONT_SIZE.xxxLarge}
                 maintainCase={true}
-                textDecoration={true}
             />
             <CustomHeading
                 title={WORD_DIR.profileTitle}
-                fontSize={FONT_SIZE.xxxLarge}
+                fontSize={FONT_SIZE.xxLarge}
                 maintainCase={true}
             />
             {/* <CustomAnimatedHeading

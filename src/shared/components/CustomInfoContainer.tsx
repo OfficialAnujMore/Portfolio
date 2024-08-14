@@ -63,7 +63,7 @@ export const CustomInfoContainer: React.FC<{
                 {url && (
                     <div className={styles.secondaryContainer}>
                         <CustomText
-                            title={WORD_DIR.certificate}
+                            title={WORD_DIR.certification}
                             fontSize={FONT_SIZE.small}
                             fontWeight={FONT_WEIGHT.weight400}
                             fontColor={COLOR_THEME.secondaryTextColor}
