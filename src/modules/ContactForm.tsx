@@ -30,7 +30,7 @@ const ContactForm: React.FC = () => {
             className={`${style.contactFormMainContainer} `}
             id={NAVIGATION_PATH.contactMe}
         >
-            <CustomHeading title={WORD_DIR.contact} />
+            <CustomHeading title={WORD_DIR.contactMe} />
             <div
                 className={` ${style.bodyContainer} ${globalStyle.commonBorderDecoration}`}
             >

@@ -1,4 +1,5 @@
 const WORD_DIR = {
+    home: 'Home',
     proflePrimaryTxt: "Hello, It's Me",
     profileName: 'Anuj More',
     profileTitle: 'Software Developer',
@@ -26,11 +27,11 @@ const WORD_DIR = {
 
     projects: 'Projects',
 
-    education: 'Education & Certification',
-    certificate: 'Certificate',
+    education: 'Education',
+    certification: 'Certifications',
     view: 'View',
 
-    contact: 'Contact Me',
+    contactMe: 'Contact Me',
     name: 'Name',
     email: 'Email',
     message: 'Message',

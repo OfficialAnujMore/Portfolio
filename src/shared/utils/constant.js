@@ -45,5 +45,6 @@ export const NAVIGATION_PATH = {
     experience: 'experience',
     projects: 'projects',
     education: 'education',
+    certification: 'certifications',
     contactMe: 'contactMe',
 }
