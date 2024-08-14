@@ -1,6 +1,7 @@
 import csuFLogo from '../../assets/images/CSUF_Logo.png'
 import kjsieitLogo from '../../assets/images/KJSIEIT_Logo.png'
 import courseraLogo from '../../assets/images/Coursera_Logo.png'
+import linkedInLearningLogo from '../../assets/images/LinkedIn_Learning_Logo.png'
 
 export const EDUCATION = [
     {
@@ -14,6 +15,13 @@ export const EDUCATION = [
         title: `Bachelor of engineering - Information Technology`,
         platform: 'University of Mumbai 3.4/4 CGPA',
         imagePath: kjsieitLogo,
+    },
+    {
+        timespan: 'Aug 2024',
+        title: 'Integrating AI image generation into web app',
+        platform: 'LinkedIn',
+        url: 'https://www.linkedin.com/learning/certificates/7ae08edc82cda9e103b7eb85020b4a71777f63babd7d8e0431ac041ccb6e588f?trk=share_certificate',
+        imagePath: linkedInLearningLogo,
     },
     {
         timespan: 'Oct 2022',
