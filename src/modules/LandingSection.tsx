@@ -1,5 +1,5 @@
 import React from 'react'
-import resume from '../assets/Resume - Anuj More.pdf'
+import resume from '../assets/Anuj More - Resume.pdf'
 import WORD_DIR from '../shared/local/en.js'
 import { CustomButton } from 'shared/components/CustomButton'
 import { CustomDivider } from 'shared/components/CustomDivider'
