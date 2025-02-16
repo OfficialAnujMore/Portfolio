@@ -1,33 +1,109 @@
-:root {
-    /* Color variables */
-    --primary-color: rgb(17, 17, 25, 1);
-    --white: rgb(255, 255, 255);
-    --black: rgb(0, 0, 0);
-    --secondary-color: rgb(172, 194, 254);
-    --gradient-black: rgba(172, 194, 254, 0.4);
+/* Container */
+.landingContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3xl) 10%;
+    background-color: var(--secondary-color);
+}
 
-    /* Size varibales */
-    --zero: 0;
-    --extra-small: 0.5rem;
-    --small: 1rem;
-    --medium: 1.5rem;
-    --large: 2rem;
-    --x-large: 2.5rem;
+/* Left Text Section */
+.textSection {
+    max-width: 500px;
+}
 
-    --mobile-max-width: 480px;
+.greeting {
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    color: var(--gray);
+}
 
-    /* Styles for small tablets and landscape mobile devices */
-    --small-tablet-min-width: 481px;
-    --small-tablet-max-width: 767px;
+.title {
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    margin-top: var(--space-xs);
+}
 
-    /* Styles for tablets */
-    --tablet-min-width: 768px;
-    --tablet-max-width: 1024px;
+.highlight {
+    color: var(--black);
+    text-decoration: underline;
+}
 
-    /* Styles for laptops and small desktops */
-    --laptop-min-width: 1025px;
-    --laptop-max-width: 1200px;
+.blackText {
+    color: var(--black);
+}
 
-    /* Styles for desktops and large screens */
-    --desktop-min-width: 1201px;
+.description {
+    color: #777;
+    font-size: var(--font-size-md);
+    margin-top: var(--space-xs);
+}
+
+/* Buttons */
+.buttons {
+    margin-top: var(--space-md);
+    display: flex;
+    gap: var(--space-md);
+}
+
+.primaryBtn {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-md);
+    border-radius: var(--space-xs);
+    cursor: pointer;
+    background-color: var(--black);
+    color: var(--secondary-color);
+    border: none;
+    transition: var(--transition-normal);
+}
+
+.primaryBtn:hover {
+    background-color: var(--gradient-overlay);
+}
+
+.secondaryBtn {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-md);
+    border-radius: var(--space-xs);
+    cursor: pointer;
+    border: 2px solid var(--black);
+    background: transparent;
+    color: var(--black);
+    transition: var(--transition-normal);
+}
+
+.secondaryBtn:hover {
+    background-color: #f5f5f5;
+}
+
+/* Right Image Section */
+.imageSection {
+    position: relative;
+}
+
+.profileImage {
+    width: 350px;
+    border-radius: var(--space-xs);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating Tags */
+.tag {
+    position: absolute;
+    background: var(--black);
+    color: var(--secondary-color);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--space-xs);
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+}
+
+.topLeft {
+    top: var(--space-xs);
+    left: var(--space-xs);
+}
+
+.bottomRight {
+    bottom: var(--space-xs);
+    right: var(--space-xs);
 }
