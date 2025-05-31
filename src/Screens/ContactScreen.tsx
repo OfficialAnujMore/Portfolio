@@ -2,6 +2,9 @@ import { useState } from 'react';
 import styles from '../styles/contact.module.css';
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
+import { content } from '../constants/en';
+import CustomText from '../components/CustomText';
+import CustomButton from '../components/CustomButton';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -33,7 +36,7 @@ const Contact = () => {
     {
       name: 'GitHub',
       icon: <FaGithub />,
-      url: 'https://github.com/your-username'
+      url: content.contact.github
     },
     {
       name: 'Instagram',
@@ -43,64 +46,62 @@ const Contact = () => {
     {
       name: 'LeetCode',
       icon: <SiLeetcode />,
-      url: 'https://leetcode.com/your-username'
+      url: content.contact.leetcode
     }
   ];
 
   return (
-    <section className={styles.contactContainer} id="contact">
+    <section className={styles.contactContainer}>
       <div className={styles.content}>
-        <h2 className={styles.sectionTitle}>Get In Touch</h2>
-        <p className={styles.sectionSubtitle}>
-          Feel free to reach out for collaborations or just a friendly hello
-        </p>
-
+        <CustomText variant="h2" className={styles.sectionTitle}>{content.contact.title}</CustomText>
+        <CustomText variant="p" className={styles.sectionSubtitle}>{content.contact.subtitle}</CustomText>
         <div className={styles.contactWrapper}>
           <div className={styles.formContainer}>
-            <form onSubmit={handleSubmit} className={styles.form}>
+            <form className={styles.form} onSubmit={handleSubmit}>
               <div className={styles.inputGroup}>
+                <label htmlFor="name" className={styles.label}>{content.contact.nameLabel}</label>
                 <input
+                  className={styles.input}
                   type="text"
+                  id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Your Name"
                   required
-                  className={styles.input}
                 />
               </div>
               <div className={styles.inputGroup}>
+                <label htmlFor="email" className={styles.label}>{content.contact.emailLabel}</label>
                 <input
+                  className={styles.input}
                   type="email"
+                  id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Your Email"
                   required
-                  className={styles.input}
                 />
               </div>
               <div className={styles.inputGroup}>
+                <label htmlFor="message" className={styles.label}>{content.contact.messageLabel}</label>
                 <textarea
+                  className={styles.textarea}
+                  id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Your Message"
                   required
-                  className={styles.textarea}
-                  rows={6}
                 />
               </div>
-              <button type="submit" className={styles.submitButton}>
-                Send Message
-              </button>
+              <CustomButton type="submit" className={styles.submitButton}>
+                {content.contact.sendButton}
+              </CustomButton>
             </form>
           </div>
-
           <div className={styles.socialLinks}>
-            <h3 className={styles.socialTitle}>Connect With Me</h3>
+            <CustomText variant="h3" className={styles.socialTitle}>{content.contact.findMe}</CustomText>
             <div className={styles.socialGrid}>
-              {socialLinks.map((link) => (
+              {socialLinks.map(link => (
                 <a
                   key={link.name}
                   href={link.url}

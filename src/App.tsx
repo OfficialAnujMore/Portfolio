@@ -5,8 +5,8 @@ import SkillsScreen from './Screens/SkillsScreen';
 import ExperienceScreen from './Screens/ExperienceScreen';
 import ProjectScreen from './Screens/ProjectScreen';
 import RecommendationScreen from './Screens/RecommendationScreen';
-import Contact from './Components/Contact';
-import Navbar from './Components/Navbar';
+import ContactScreen from './Screens/ContactScreen';
+import Navbar from './components/Navbar';
 import { cssVariables } from './constants/colors';
 import './styles/globals.css';
 import './App.css';
@@ -53,7 +53,7 @@ function App() {
               <RecommendationScreen />
             </section>
             <section id="contact">
-              <Contact />
+              <ContactScreen />
             </section>
           </main>
         </>

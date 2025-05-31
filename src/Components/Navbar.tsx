@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/navbar.module.css';
+import CustomText from '../components/CustomText';
+import CustomButton from '../components/CustomButton';
+import { content } from '../constants/en';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,11 +28,20 @@ const Navbar: React.FC = () => {
     }
   };
 
+  const navLinks = [
+    { id: 'home', label: content.navbar.home },
+    { id: 'skills', label: content.navbar.skills },
+    { id: 'experience', label: content.navbar.experience },
+    { id: 'projects', label: content.navbar.projects },
+    { id: 'recommendations', label: content.navbar.recommendations },
+    { id: 'contact', label: content.navbar.contact },
+  ];
+
   return (
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.navContent}>
         <div className={styles.logo}>
-          <span className={styles.logoText}>AM</span>
+          <CustomText variant="span" className={styles.logoText}>{content.navbar.logo}</CustomText>
         </div>
 
         {/* Mobile Menu Button */}
@@ -45,12 +57,16 @@ const Navbar: React.FC = () => {
 
         {/* Navigation Links */}
         <div className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`}>
-          <button onClick={() => scrollToSection('home')}>Home</button>
-          <button onClick={() => scrollToSection('skills')}>Skills</button>
-          <button onClick={() => scrollToSection('experience')}>Experience</button>
-          <button onClick={() => scrollToSection('projects')}>Projects</button>
-          <button onClick={() => scrollToSection('recommendations')}>Recommendations</button>
-          <button onClick={() => scrollToSection('contact')}>Contact</button>
+          {navLinks.map(link => (
+            <CustomButton
+              key={link.id}
+              as="button"
+              onClick={() => scrollToSection(link.id)}
+              className={styles.navButton}
+            >
+              <CustomText variant="span">{link.label}</CustomText>
+            </CustomButton>
+          ))}
         </div>
       </div>
     </nav>

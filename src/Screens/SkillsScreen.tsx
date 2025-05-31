@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import styles from '../styles/skills.module.css';
+import { content } from '../constants/en';
+import CustomText from '../components/CustomText';
 
 interface Skill {
   name: string;
 }
 
 const skillsByCategory: Record<string, Skill[]> = {
-  'Frontend Development': [
+  [content.skills.categories.frontend]: [
     { name: 'React' },
     { name: 'TypeScript' },
     { name: 'JavaScript' },
@@ -17,7 +19,7 @@ const skillsByCategory: Record<string, Skill[]> = {
     { name: 'Tailwind CSS' },
     { name: 'Material UI' },
   ],
-  'Backend Development': [
+  [content.skills.categories.backend]: [
     { name: 'Node.js' },
     { name: 'Python' },
     { name: 'Java' },
@@ -26,7 +28,7 @@ const skillsByCategory: Record<string, Skill[]> = {
     { name: 'Spring Boot' },
     { name: 'GraphQL' },
   ],
-  'Database & Cloud': [
+  [content.skills.categories.database]: [
     { name: 'MongoDB' },
     { name: 'PostgreSQL' },
     { name: 'MySQL' },
@@ -35,7 +37,7 @@ const skillsByCategory: Record<string, Skill[]> = {
     { name: 'Docker' },
     { name: 'Redis' },
   ],
-  'Machine Learning': [
+  [content.skills.categories.ml]: [
     { name: 'TensorFlow' },
     { name: 'PyTorch' },
     { name: 'Scikit-learn' },
@@ -44,7 +46,7 @@ const skillsByCategory: Record<string, Skill[]> = {
     { name: 'NumPy' },
     { name: 'Keras' },
   ],
-  'Tools & Others': [
+  [content.skills.categories.tools]: [
     { name: 'Git' },
     { name: 'VS Code' },
     { name: 'Postman' },
@@ -105,7 +107,7 @@ const SkillsScreen: React.FC = () => {
         key={`${skill.name}-${index}`} 
         className={styles.skillCard}
       >
-        <span className={styles.skillName}>{skill.name}</span>
+        <CustomText variant="span" className={styles.skillName}>{skill.name}</CustomText>
       </div>
     ));
   };
@@ -113,9 +115,8 @@ const SkillsScreen: React.FC = () => {
   return (
     <section className={styles.skillsContainer}>
       <div className={styles.content}>
-        <h2 className={styles.title}>Skills & Technologies</h2>
-        <p className={styles.subtitle}>Technologies I've been working with</p>
-        
+        <CustomText variant="h2" className={styles.title}>{content.skills.title}</CustomText>
+        <CustomText variant="p" className={styles.subtitle}>{content.skills.subtitle}</CustomText>
         <div className={styles.categories}>
           {Object.entries(skillsByCategory).map(([category, skills], categoryIndex) => (
             <div 
@@ -123,7 +124,7 @@ const SkillsScreen: React.FC = () => {
               className={styles.category}
               ref={el => categoriesRef.current[categoryIndex] = el}
             >
-              <h3 className={styles.categoryTitle}>{category}</h3>
+              <CustomText variant="h3" className={styles.categoryTitle}>{category}</CustomText>
               <div className={styles.skillsTrack}>
                 <div className={styles.skillsSlider}>
                   {renderSkillsGroup(skills)}

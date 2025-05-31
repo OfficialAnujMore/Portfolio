@@ -1,6 +1,9 @@
 import React from 'react'
 import styles from '../styles/home.module.css'
 import profileImage from '../assets/profile.jpg'
+import { content } from '../constants/en'
+import CustomText from '../components/CustomText'
+import CustomImagePreview from '../components/CustomImagePreview'
 
 const HomeScreen: React.FC = () => {
     return (
@@ -10,27 +13,26 @@ const HomeScreen: React.FC = () => {
                     <div className={styles.flipCard}>
                         <div className={styles.flipCardInner}>
                             <div className={styles.flipCardFront}>
-                                <img
+                                <CustomImagePreview
                                     src={profileImage}
-                                    alt="Anuj More"
+                                    alt={content.home.name}
                                     className={styles.profileImage}
                                 />
                             </div>
                             <div className={styles.flipCardBack}>
-                                <div className={styles.initials}>AM</div>
+                                <CustomText variant="span" className={styles.initials}>{content.home.initials}</CustomText>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className={styles.textSection}>
-                    <div className={styles.introText}>
-                        Hi <span className={styles.wavingHand}>👋</span>, I am
-                    </div>
-                    <h1 className={styles.name}>Anuj More</h1>
-                    <p className={styles.description}>
-                        A curious computer engineer passionate about solving
-                        real-world problems using technology.
-                    </p>
+                    <CustomText variant="span" className={styles.introText}>
+                        {content.home.intro.split('<wavingHand/>')[0]}
+                        <span className={styles.wavingHand}>{content.home.wavingHand}</span>
+                        {content.home.intro.split('<wavingHand/>')[1]}
+                    </CustomText>
+                    <CustomText variant="h1" className={styles.name}>{content.home.name}</CustomText>
+                    <CustomText variant="p" className={styles.description}>{content.home.description}</CustomText>
                 </div>
             </div>
         </section>

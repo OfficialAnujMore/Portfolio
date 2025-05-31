@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from '../styles/projects.module.css';
 import { FaGithub, FaGlobe, FaArrowRight } from 'react-icons/fa';
+import { content } from '../constants/en';
+import CustomText from '../components/CustomText';
+import CustomButton from '../components/CustomButton';
+import CustomImagePreview from '../components/CustomImagePreview';
 
 interface Project {
   id: string;
@@ -161,24 +165,24 @@ const FeaturedProjectCard: React.FC<{ project: Project }> = ({ project }) => {
     >
       <div className={styles.featuredContent}>
         <div className={styles.featuredImageContainer}>
-          <img src={project.image} alt={project.title} className={styles.featuredImage} />
+          <CustomImagePreview src={project.image} alt={project.title} className={styles.featuredImage} />
         </div>
         <div className={styles.featuredDetails}>
-          <span className={styles.category}>{project.category}</span>
-          <h3 className={styles.featuredTitle}>{project.title}</h3>
-          <p className={styles.featuredDescription}>{project.shortDescription}</p>
+          <CustomText variant="span" className={styles.category}>{project.category}</CustomText>
+          <CustomText variant="h3" className={styles.featuredTitle}>{project.title}</CustomText>
+          <CustomText variant="p" className={styles.featuredDescription}>{project.shortDescription}</CustomText>
           <div className={styles.featuredMeta}>
-            <span className={styles.date}>{project.date}</span>
+            <CustomText variant="span" className={styles.date}>{project.date}</CustomText>
             <div className={styles.links}>
               {project.githubUrl && (
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                <CustomButton as="a" href={project.githubUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
                   <FaGithub />
-                </a>
+                </CustomButton>
               )}
               {project.projectUrl && (
-                <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                <CustomButton as="a" href={project.projectUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
                   <FaGlobe />
-                </a>
+                </CustomButton>
               )}
             </div>
           </div>
@@ -215,17 +219,19 @@ const RegularProjectCard: React.FC<{ project: Project }> = ({ project }) => {
       className={`${styles.regularCard} ${isVisible ? styles.visible : ''}`}
     >
       <div className={styles.regularImageContainer}>
-        <img src={project.image} alt={project.title} className={styles.regularImage} />
+        <CustomImagePreview src={project.image} alt={project.title} className={styles.regularImage} />
       </div>
       <div className={styles.regularContent}>
-        <span className={styles.category}>{project.category}</span>
-        <h3 className={styles.regularTitle}>{project.title}</h3>
-        <p className={styles.regularDescription}>{project.shortDescription}</p>
+        <CustomText variant="span" className={styles.category}>{project.category}</CustomText>
+        <CustomText variant="h3" className={styles.regularTitle}>{project.title}</CustomText>
+        <CustomText variant="p" className={styles.regularDescription}>{project.shortDescription}</CustomText>
         <div className={styles.regularMeta}>
-          <span className={styles.date}>{project.date}</span>
-          <a href={project.projectUrl} className={styles.readMore}>
-            View Project <FaArrowRight />
-          </a>
+          <CustomText variant="span" className={styles.date}>{project.date}</CustomText>
+          {project.projectUrl && (
+            <CustomButton as="a" href={project.projectUrl} className={styles.readMore} target="_blank" rel="noopener noreferrer">
+              {content.projects.viewProject} <FaArrowRight />
+            </CustomButton>
+          )}
         </div>
       </div>
     </div>
@@ -239,11 +245,9 @@ const ProjectScreen: React.FC = () => {
   return (
     <section className={styles.projectsContainer}>
       <div className={styles.content}>
-        <h2 className={styles.sectionTitle}>Featured Projects</h2>
-        <p className={styles.sectionSubtitle}>Some things I've built</p>
-        
+        <CustomText variant="h2" className={styles.sectionTitle}>{content.projects.title}</CustomText>
+        <CustomText variant="p" className={styles.sectionSubtitle}>{content.projects.subtitle}</CustomText>
         <FeaturedProjectCard project={featuredProject} />
-        
         <div className={styles.projectsGrid}>
           {regularProjects.map((project) => (
             <RegularProjectCard key={project.id} project={project} />

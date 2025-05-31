@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/splash.module.css';
+import { content } from '../constants/en';
+import CustomText from '../components/CustomText';
 
 interface SplashScreenProps {
   onComplete: () => void;
@@ -22,15 +24,15 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
 
   return (
     <div className={styles.splashContainer}>
-      <div className={`${styles.animatedText} ${styles.hello}`}>
-        Hi <span className={styles.wavingHand}>👋</span>, I am
-      </div>
-      <div className={`${styles.animatedText} ${styles.name}`}>
-        Anuj More
-      </div>
-      <div className={`${styles.animatedText} ${styles.role}`}>
-        Software Developer based in California
-      </div>
+      <CustomText variant="span" className={`${styles.animatedText} ${styles.hello}`}>
+        {content.splash.greeting} <span className={styles.wavingHand}>{content.splash.wavingHand}</span>, I am
+      </CustomText>
+      <CustomText variant="span" className={`${styles.animatedText} ${styles.name}`}>
+        {content.splash.name}
+      </CustomText>
+      <CustomText variant="span" className={`${styles.animatedText} ${styles.role}`}>
+        {content.splash.role}
+      </CustomText>
     </div>
   );
 };
