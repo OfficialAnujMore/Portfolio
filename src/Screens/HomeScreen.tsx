@@ -7,11 +7,20 @@ const HomeScreen: React.FC = () => {
         <section className={styles.homeContainer}>
             <div className={styles.content}>
                 <div className={styles.imageSection}>
-                    <img
-                        src={profileImage}
-                        alt="Anuj More"
-                        className={styles.profileImage}
-                    />
+                    <div className={styles.flipCard}>
+                        <div className={styles.flipCardInner}>
+                            <div className={styles.flipCardFront}>
+                                <img
+                                    src={profileImage}
+                                    alt="Anuj More"
+                                    className={styles.profileImage}
+                                />
+                            </div>
+                            <div className={styles.flipCardBack}>
+                                <div className={styles.initials}>AM</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.textSection}>
                     <div className={styles.introText}>
