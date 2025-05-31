@@ -301,32 +301,21 @@
   }
 
   .timeline::before {
-    left: 20px;
+    left: 16px;
   }
 
   .experienceCard {
-    width: calc(100% - 50px);
-    margin-left: 50px;
+    width: calc(100% - 32px);
+    margin-left: 32px;
     transform: none;
     box-shadow: 
       0 8px 24px -8px rgba(0, 0, 0, 0.1),
       0 4px 12px -4px rgba(255, 138, 0, 0.05);
+    padding: 1.5rem;
   }
 
   .experienceCard:hover {
     transform: translateY(-5px);
-  }
-
-  .experienceCard::before,
-  .experienceCard:hover::before,
-  .logoContainer,
-  .experienceCard:hover .logoContainer,
-  .companyInfo,
-  .description,
-  .technologies,
-  .tech,
-  .tech:hover {
-    transform: none;
   }
 
   .experienceCard.left,
@@ -335,17 +324,13 @@
   }
 
   .experienceCard::before {
-    left: -40px !important;
+    left: -32px !important;
     right: auto !important;
   }
 
   .experienceCard::after {
-    left: -30px !important;
+    left: -20px !important;
     right: auto !important;
-  }
-
-  .experienceCard {
-    padding: 1.5rem;
   }
 
   .logoContainer {
