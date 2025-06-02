@@ -33,7 +33,7 @@
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  background: linear-gradient(45deg, var(--color-background-dark), var(--color-border-main));
+  background: linear-gradient(45deg, var(--color-background-dark), var(--color-border-light));
   z-index: 0;
   animation: rotate 40s linear infinite;
 }
