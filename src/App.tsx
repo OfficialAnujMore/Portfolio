@@ -57,7 +57,7 @@ function App() {
               <ContactScreen />
             </section>
           </main>
-          <Footer />
+          {/* <Footer /> */}
         </>
       )}
     </div>
