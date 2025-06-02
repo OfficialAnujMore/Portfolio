@@ -1,7 +1,7 @@
 .contactContainer {
   min-height: 100vh;
   width: 100%;
-  padding: 8rem 0;
+  padding: 2rem 0;
   background-color: var(--color-background-main);
 }
 
@@ -38,18 +38,20 @@
 
 .formContainer {
   background: var(--color-background-light);
-  padding: 3.5rem;
+  padding: 1rem;
   border-radius: 16px;
   border: 1px solid rgba(100, 110, 140, 0.2);
   box-shadow: 
     0 10px 30px -10px rgba(0, 0, 0, 0.1),
     0 5px 15px -5px rgba(255, 138, 0, 0.05);
+  max-width: 600px;
+  width: 100%;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .inputGroup {
@@ -103,8 +105,7 @@
 }
 
 .resumeButton {
-  margin-top: 2rem;
-  padding: 1.2rem 2.5rem;
+  padding: 1rem 1rem;
   background: var(--color-primary-gradient);
   color: var(--color-common-white);
   border: none;
@@ -129,7 +130,8 @@
 .socialLinks {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
+  align-items: center;
 }
 
 .socialTitle {
@@ -217,4 +219,16 @@
     font-size: 1rem;
     padding: 1rem;
   }
+}
+
+/* Char count below message box, right aligned */
+.charCountWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.25rem;
+}
+
+.charCount {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
 } 

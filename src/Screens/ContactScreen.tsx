@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import styles from '../styles/contact.module.css';
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagram, FaCalendarAlt } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import { content } from '../constants/en';
 import CustomText from '../components/CustomText';
 import CustomButton from '../components/CustomButton';
 import resumePDF from '../assets/Anuj More - Resume.pdf';
 import { sendContactEmail } from '../utils/emailjsApi';
+
+const maxCharCount = content.contact.validation.maxCharCount;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -37,7 +39,7 @@ const Contact = () => {
       const wordCount = formData.message.trim().split(/\s+/).length;
       if (wordCount < 5) {
         errors.message = content.contact.validation.messageMinWords;
-      } else if (formData.message.length > 2000) {
+      } else if (formData.message.length > maxCharCount) {
         errors.message = content.contact.validation.messageMaxChars;
       }
     }
@@ -81,7 +83,7 @@ const Contact = () => {
     {
       name: 'LinkedIn',
       icon: <FaLinkedin />,
-      url: 'https://linkedin.com/in/your-username'
+      url: content.contact.linkedin
     },
     {
       name: 'GitHub',
@@ -89,15 +91,21 @@ const Contact = () => {
       url: content.contact.github
     },
     {
-      name: 'Instagram',
-      icon: <FaInstagram />,
-      url: 'https://instagram.com/your-username'
-    },
-    {
       name: 'LeetCode',
       icon: <SiLeetcode />,
       url: content.contact.leetcode
+    },
+    {
+      name: 'Calendly',
+      icon: <FaCalendarAlt />,
+      url: content.contact.calendly
+    },
+    {
+      name: 'Instagram',
+      icon: <FaInstagram />,
+      url: content.contact.instagram
     }
+   
   ];
 
   return (
@@ -142,11 +150,14 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
+                  maxLength={maxCharCount}
                   required
                 />
-                <CustomText variant="span" className={styles.charCount}>
-                  {formData.message.length}/2000 characters
-                </CustomText>
+                <div className={styles.charCountWrapper}>
+                  <CustomText variant="span" className={styles.charCount}>
+                    {formData.message.length}/{maxCharCount}
+                  </CustomText>
+                </div>
                 {fieldErrors.message && <CustomText variant="span" className={styles.errorMsg}>{fieldErrors.message}</CustomText>}
               </div>
               <CustomButton type="submit" className={styles.submitButton} disabled={loading}>
