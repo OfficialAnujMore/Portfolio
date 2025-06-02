@@ -62,7 +62,7 @@ const projects: Project[] = [
     title: 'Property Price Prediction',
     shortDescription: 'A machine learning model to predict property prices in Bengaluru based on historical data and features.',
     fullDescription: `Developed a machine learning model using Scikit-Learn to predict property prices for homes located in Bengaluru, based on various conditions and features. This project involves analyzing historical real estate data to forecast prices with high accuracy. It highlights my expertise in data science, feature engineering, and model development, demonstrating my ability to apply machine learning techniques to real-world problems.`,
-    image: 'https://placehold.co/900x600/222831/ff8a00.png?text=Bengaluru+Property+Prediction',
+    image: 'https://placehold.co/900x600/222831/ff8a00.png?text=Property+Price+Prediction',
     technologies: ['Machine Learning', 'Software developer'],
     githubUrl: '',
     projectUrl: '',

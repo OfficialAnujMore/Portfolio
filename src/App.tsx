@@ -7,6 +7,7 @@ import ProjectScreen from './Screens/ProjectScreen';
 import RecommendationScreen from './Screens/RecommendationScreen';
 import ContactScreen from './Screens/ContactScreen';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import { cssVariables } from './constants/colors';
 import './styles/globals.css';
 import './App.css';
@@ -56,6 +57,7 @@ function App() {
               <ContactScreen />
             </section>
           </main>
+          <Footer />
         </>
       )}
     </div>

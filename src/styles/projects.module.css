@@ -131,6 +131,9 @@
   color: var(--color-text-secondary);
   font-size: 1.5rem;
   transition: all 0.3s ease;
+  padding: 0.4rem 1.2rem;
+  border-radius: 4px;
+  min-height: 36px;
 }
 
 .link:hover {
@@ -232,6 +235,9 @@
   color: var(--color-primary-main);
   text-decoration: none;
   transition: all 0.3s ease;
+  padding: 0.4rem 1.2rem;
+  border-radius: 4px;
+  min-height: 36px;
 }
 
 .readMore:hover {

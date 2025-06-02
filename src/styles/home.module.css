@@ -232,12 +232,13 @@
 }
 
 .resumeButton {
+  padding: 0.4rem 1.2rem;
+  border-radius: 4px;
+  min-height: 36px;
   margin-top: 2rem;
-  padding: 1.2rem 2.5rem;
   background: var(--color-primary-gradient);
   color: var(--color-common-white);
   border: none;
-  border-radius: 8px;
   font-family: var(--font-primary);
   font-weight: var(--fw-semibold);
   font-size: 1.1rem;

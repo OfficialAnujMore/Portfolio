@@ -113,7 +113,7 @@ const Contact = () => {
       <div className={styles.content}>
         <CustomText variant="h2" className={styles.sectionTitle}>{content.contact.title}</CustomText>
         <CustomText variant="p" className={styles.sectionSubtitle}>{content.contact.subtitle}</CustomText>
-        <div className={styles.contactWrapper}>
+        <div className={styles.contactWrapperSingle}>
           <div className={styles.formContainer}>
             <form className={styles.form} onSubmit={handleSubmit}>
               <div className={styles.inputGroup}>
@@ -165,28 +165,27 @@ const Contact = () => {
               </CustomButton>
               {success && <div className={styles.successMsg}>{success}</div>}
               {error && <div className={styles.errorMsg}>{error}</div>}
+              <div className={styles.linksRow}>
+               
+                <div className={styles.socialRow}>
+                  {socialLinks.map(link => (
+                    <a
+                      key={link.name}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.socialLink}
+                      aria-label={link.name}
+                    >
+                      {link.icon}
+                    </a>
+                  ))}
+                </div>
+                <CustomButton as="a" href={resumePDF} download className={styles.resumeButton}>
+                  {content.contact.resumeButton}
+                </CustomButton>
+              </div>
             </form>
-          </div>
-          <div className={styles.socialLinks}>
-            <CustomText variant="h3" className={styles.socialTitle}>{content.contact.findMe}</CustomText>
-            <div className={styles.socialGrid}>
-              {socialLinks.map(link => (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.socialLink}
-                  aria-label={link.name}
-                >
-                  {link.icon}
-                  <span>{link.name}</span>
-                </a>
-              ))}
-            </div>
-            <CustomButton as="a" href={resumePDF} download className={styles.resumeButton}>
-              {content.contact.resumeButton}
-            </CustomButton>
           </div>
         </div>
       </div>
