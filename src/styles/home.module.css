@@ -229,4 +229,27 @@
     font-size: 1.2rem;
     margin: 1rem auto;
   }
+}
+
+.resumeButton {
+  margin-top: 2rem;
+  padding: 1.2rem 2.5rem;
+  background: var(--color-primary-gradient);
+  color: var(--color-common-white);
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-primary);
+  font-weight: var(--fw-semibold);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  display: inline-block;
+  text-decoration: none;
+}
+.resumeButton:hover {
+  background: linear-gradient(270deg, #FF8A00, #FF4E00);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 138, 0, 0.2);
 } 

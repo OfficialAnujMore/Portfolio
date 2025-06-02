@@ -12,7 +12,8 @@ export const content = {
     wavingHand: "👋",
     name: "Anuj More",
     description: "A curious computer engineer passionate about solving real-world problems using technology.",
-    initials: "AM"
+    initials: "AM",
+    resumeButton: "Resume"
   },
   contact: {
     title: "Contact",
@@ -22,10 +23,18 @@ export const content = {
     messageLabel: "Message",
     sendButton: "Send Message",
     findMe: "Find me on",
+    resumeButton: "Resume",
     github: "https://github.com/YourGithubUsername",
     leetcode: "https://leetcode.com/YourLeetcodeUsername",
     email: "your.email@example.com",
-    calendly: "https://calendly.com/YourCalendlyLink"
+    calendly: "https://calendly.com/YourCalendlyLink",
+    validation: {
+      nameMin: "Name must be at least 2 characters.",
+      emailInvalid: "Please enter a valid email address.",
+      messageMinWords: "Message must be at least 5 words.",
+      messageMaxChars: "Message cannot exceed 2000 characters.",
+      required: "This field is required."
+    }
   },
   recommendations: {
     title: "Recommendations",

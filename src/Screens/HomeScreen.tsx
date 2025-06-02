@@ -4,6 +4,8 @@ import profileImage from '../assets/profile.jpg'
 import { content } from '../constants/en'
 import CustomText from '../components/CustomText'
 import CustomImagePreview from '../components/CustomImagePreview'
+import CustomButton from '../components/CustomButton'
+import resumePDF from '../assets/Anuj More - Resume.pdf'
 
 const HomeScreen: React.FC = () => {
     return (
@@ -33,6 +35,9 @@ const HomeScreen: React.FC = () => {
                     </CustomText>
                     <CustomText variant="h1" className={styles.name}>{content.home.name}</CustomText>
                     <CustomText variant="p" className={styles.description}>{content.home.description}</CustomText>
+                    <CustomButton as="a" href={resumePDF} download className={styles.resumeButton}>
+                      {content.home.resumeButton}
+                    </CustomButton>
                 </div>
             </div>
         </section>

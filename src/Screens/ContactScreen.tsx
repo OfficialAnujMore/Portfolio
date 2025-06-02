@@ -5,6 +5,8 @@ import { SiLeetcode } from 'react-icons/si';
 import { content } from '../constants/en';
 import CustomText from '../components/CustomText';
 import CustomButton from '../components/CustomButton';
+import resumePDF from '../assets/Anuj More - Resume.pdf';
+import { sendContactEmail } from '../utils/emailjsApi';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,11 +14,58 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<{ name?: string; email?: string; message?: string }>({});
+
+  const validate = () => {
+    const errors: { name?: string; email?: string; message?: string } = {};
+    if (!formData.name.trim()) {
+      errors.name = content.contact.validation.required;
+    } else if (formData.name.trim().length < 2) {
+      errors.name = content.contact.validation.nameMin;
+    }
+    if (!formData.email.trim()) {
+      errors.email = content.contact.validation.required;
+    } else if (!/^\S+@\S+\.\S+$/.test(formData.email.trim())) {
+      errors.email = content.contact.validation.emailInvalid;
+    }
+    if (!formData.message.trim()) {
+      errors.message = content.contact.validation.required;
+    } else {
+      const wordCount = formData.message.trim().split(/\s+/).length;
+      if (wordCount < 5) {
+        errors.message = content.contact.validation.messageMinWords;
+      } else if (formData.message.length > 2000) {
+        errors.message = content.contact.validation.messageMaxChars;
+      }
+    }
+    return errors;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you can add your form submission logic
-    console.log('Form submitted:', formData);
+    const errors = validate();
+    setFieldErrors(errors);
+    if (Object.keys(errors).length > 0) {
+      return;
+    }
+    setLoading(true);
+    setSuccess(null);
+    setError(null);
+    console.log(formData);
+    
+    try {
+      await sendContactEmail(formData.name, formData.email, formData.message);
+      setSuccess('Message sent successfully!');
+      setFormData({ name: '', email: '', message: '' });
+      setFieldErrors({});
+    } catch (err) {
+      setError('Failed to send message. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -25,6 +74,7 @@ const Contact = () => {
       ...prev,
       [name]: value
     }));
+    setFieldErrors(prev => ({ ...prev, [name]: undefined }));
   };
 
   const socialLinks = [
@@ -69,6 +119,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                 />
+                {fieldErrors.name && <CustomText variant="span" className={styles.errorMsg}>{fieldErrors.name}</CustomText>}
               </div>
               <div className={styles.inputGroup}>
                 <label htmlFor="email" className={styles.label}>{content.contact.emailLabel}</label>
@@ -81,6 +132,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                 />
+                {fieldErrors.email && <CustomText variant="span" className={styles.errorMsg}>{fieldErrors.email}</CustomText>}
               </div>
               <div className={styles.inputGroup}>
                 <label htmlFor="message" className={styles.label}>{content.contact.messageLabel}</label>
@@ -92,10 +144,16 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                 />
+                <CustomText variant="span" className={styles.charCount}>
+                  {formData.message.length}/2000 characters
+                </CustomText>
+                {fieldErrors.message && <CustomText variant="span" className={styles.errorMsg}>{fieldErrors.message}</CustomText>}
               </div>
-              <CustomButton type="submit" className={styles.submitButton}>
-                {content.contact.sendButton}
+              <CustomButton type="submit" className={styles.submitButton} disabled={loading}>
+                {loading ? 'Sending...' : content.contact.sendButton}
               </CustomButton>
+              {success && <div className={styles.successMsg}>{success}</div>}
+              {error && <div className={styles.errorMsg}>{error}</div>}
             </form>
           </div>
           <div className={styles.socialLinks}>
@@ -115,6 +173,9 @@ const Contact = () => {
                 </a>
               ))}
             </div>
+            <CustomButton as="a" href={resumePDF} download className={styles.resumeButton}>
+              {content.contact.resumeButton}
+            </CustomButton>
           </div>
         </div>
       </div>
