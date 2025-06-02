@@ -25,10 +25,12 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
   return (
     <div className={styles.splashContainer}>
       <CustomText variant="span" className={`${styles.animatedText} ${styles.hello}`}>
-        {content.splash.greeting} <span className={styles.wavingHand}>{content.splash.wavingHand}</span>, I am
+        {content.greeting.intro.split('<wavingHand/>')[0]}
+        <span className={styles.wavingHand}>{content.greeting.wavingHand}</span>
+        {content.greeting.intro.split('<wavingHand/>')[1]}
       </CustomText>
       <CustomText variant="span" className={`${styles.animatedText} ${styles.name}`}>
-        {content.splash.name}
+        {content.greeting.name}
       </CustomText>
       <CustomText variant="span" className={`${styles.animatedText} ${styles.role}`}>
         {content.splash.role}

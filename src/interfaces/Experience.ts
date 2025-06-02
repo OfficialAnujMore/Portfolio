@@ -3,6 +3,7 @@ export interface Experience {
   logo: string;
   role: string;
   period: string;
+  location: string;
   description: string[];
   technologies: string[];
 } 

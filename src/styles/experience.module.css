@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8rem 0;
   background-color: var(--color-background-main);
 }
 
@@ -45,12 +44,12 @@
   background: linear-gradient(to bottom, transparent, var(--color-primary-main), transparent);
   top: 0;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  transform: none;
 }
 
 .experienceCard {
-  width: calc(50% - 50px);
+  width: calc(100% - 80px);
   background: linear-gradient(145deg, var(--color-background-light), var(--color-background-main));
   border: 1px solid rgba(64, 64, 64, 0.2);
   border-radius: 16px;
@@ -58,6 +57,8 @@
   position: relative;
   opacity: 0;
   margin: 3rem 0;
+  margin-left: 80px;
+  left: 0;
   transform: translateY(20px) perspective(1000px);
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 
@@ -76,6 +77,8 @@
   border: 4px solid var(--color-background-main);
   border-radius: 50%;
   top: 50%;
+  left: -62px;
+  right: auto;
   transform: translateY(-50%) translateZ(20px);
   box-shadow: 
     0 0 0 4px rgba(255, 138, 0, 0.1),
@@ -91,33 +94,23 @@
   height: 2px;
   background: linear-gradient(90deg, var(--color-primary-main), transparent);
   top: 50%;
+  left: -50px;
+  right: auto;
   transform: translateY(-50%);
   transition: all 0.3s ease;
 }
 
-.experienceCard.left {
-  left: 0;
-}
-
-.experienceCard.left::before {
-  right: -62px;
-}
-
-.experienceCard.left::after {
-  right: -50px;
-}
-
-.experienceCard.right {
-  left: calc(50% + 50px);
-}
-
-.experienceCard.right::before {
-  left: -62px;
-}
-
+/* Remove alternating left/right logic */
+.experienceCard.left,
+.experienceCard.right,
+.experienceCard.left::before,
+.experienceCard.right::before,
+.experienceCard.left::after,
 .experienceCard.right::after {
-  left: -50px;
-  background: linear-gradient(90deg, transparent, var(--color-primary-main));
+  left: unset;
+  right: unset;
+  background: unset;
+  display: none;
 }
 
 .experienceCard:hover {

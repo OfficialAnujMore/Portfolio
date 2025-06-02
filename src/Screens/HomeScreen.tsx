@@ -17,7 +17,7 @@ const HomeScreen: React.FC = () => {
                             <div className={styles.flipCardFront}>
                                 <CustomImagePreview
                                     src={profileImage}
-                                    alt={content.home.name}
+                                    alt={content.greeting.name}
                                     className={styles.profileImage}
                                 />
                             </div>
@@ -29,11 +29,11 @@ const HomeScreen: React.FC = () => {
                 </div>
                 <div className={styles.textSection}>
                     <CustomText variant="span" className={styles.introText}>
-                        {content.home.intro.split('<wavingHand/>')[0]}
-                        <span className={styles.wavingHand}>{content.home.wavingHand}</span>
-                        {content.home.intro.split('<wavingHand/>')[1]}
+                        {content.greeting.intro.split('<wavingHand/>')[0]}
+                        <span className={styles.wavingHand}>{content.greeting.wavingHand}</span>
+                        {content.greeting.intro.split('<wavingHand/>')[1]}
                     </CustomText>
-                    <CustomText variant="h1" className={styles.name}>{content.home.name}</CustomText>
+                    <CustomText variant="h1" className={styles.name}>{content.greeting.name}</CustomText>
                     <CustomText variant="p" className={styles.description}>{content.home.description}</CustomText>
                     <CustomButton as="a" href={resumePDF} download className={styles.resumeButton}>
                       {content.home.resumeButton}

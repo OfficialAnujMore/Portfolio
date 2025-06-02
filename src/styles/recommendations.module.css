@@ -1,7 +1,6 @@
 .recommendationsContainer {
   min-height: 100vh;
   width: 100%;
-  padding: 8rem 0;
   background-color: var(--color-background-main);
 }
 

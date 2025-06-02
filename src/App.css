@@ -47,6 +47,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 0; /* Add padding to account for fixed navbar */
+  padding: 1rem 0; /* Add padding to account for fixed navbar */
   scroll-margin-top: 60px; /* Adjust scroll position for navbar */
 }
