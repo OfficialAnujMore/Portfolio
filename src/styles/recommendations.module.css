@@ -1,0 +1,228 @@
+.recommendationsContainer {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-background-main);
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.recommendationsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* When grid has only one child */
+.recommendationsGrid:has(> :first-child:last-child) {
+  grid-template-columns: 1fr;
+  max-width: 800px;
+}
+
+.recommendationCard {
+  position: relative;
+  padding: 3rem 2.5rem 2.5rem;
+  background: var(--color-background-light);
+  border-radius: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(100, 110, 140, 0.2);
+  box-shadow: 
+    0 10px 30px -10px rgba(0, 0, 0, 0.1),
+    0 5px 15px -5px rgba(255, 138, 0, 0.05);
+  backdrop-filter: blur(10px);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendationCard.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.recommendationCard:hover {
+  transform: translateY(-10px);
+  border-color: var(--color-primary-light);
+  box-shadow: 
+    0 20px 40px -20px rgba(0, 0, 0, 0.2),
+    0 10px 20px -10px rgba(255, 138, 0, 0.1);
+  background: linear-gradient(145deg, 
+    var(--color-background-light) 0%,
+    rgba(255, 138, 0, 0.05) 100%
+  );
+}
+
+.quoteIcon {
+  position: absolute;
+  top: -1rem;
+  left: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--color-primary-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-common-white);
+  font-size: 1rem;
+}
+
+.recommendationContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.recommendationText {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  flex-grow: 1;
+  font-style: italic;
+}
+
+.recommenderInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(64, 64, 64, 0.1);
+}
+
+.recommenderImage {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.recommenderImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recommenderDetails {
+  flex-grow: 1;
+}
+
+.recommenderName {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+  background: var(--color-primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.recommenderTitle {
+  font-family: var(--font-secondary);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.relationship {
+  font-family: var(--font-secondary);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  opacity: 0.8;
+}
+
+.linkedinLink {
+  color: var(--color-text-secondary);
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  margin-left: auto;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: rgba(255, 138, 0, 0.1);
+}
+
+.linkedinLink:hover {
+  color: var(--color-primary-main);
+  transform: translateY(-2px);
+  background: rgba(255, 138, 0, 0.2);
+}
+
+@media (max-width: 1200px) {
+  .recommendationsGrid {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+  }
+
+  .recommendationsGrid:only-child,
+  .recommendationsGrid > *:only-child {
+    max-width: 800px;
+  }
+
+  .recommendationCard {
+    padding: 2.5rem 2rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .recommendationsContainer {
+    padding: 6rem 0;
+  }
+
+  .content {
+    padding: 0 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .recommendationsGrid {
+    gap: 2rem;
+  }
+
+  .recommendationCard {
+    padding: 2.5rem 1.5rem 1.5rem;
+    min-height: 250px;
+  }
+
+  .quoteIcon {
+    left: 1.5rem;
+  }
+
+  .recommendationText {
+    font-size: 1rem;
+  }
+} 

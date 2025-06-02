@@ -1,0 +1,149 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.navbar.scrolled {
+  background-color: var(--color-background-main);
+  box-shadow: 0 2px 10px var(--color-shadow-light);
+  padding: 0.8rem 0;
+}
+
+.navContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  font-weight: var(--fw-extrabold);
+  background: var(--color-primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLinks button {
+  font-family: var(--font-primary);
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: var(--fw-medium);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  padding: 0.4rem 1.2rem;
+  position: relative;
+  transition: color 0.3s ease;
+  letter-spacing: 0.02em;
+  border-radius: 4px;
+  min-height: 36px;
+}
+
+.navLinks button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--color-primary-gradient);
+  transition: width 0.3s ease;
+}
+
+.navLinks button:hover {
+  background: var(--color-primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navLinks button:hover::after {
+  width: 100%;
+}
+
+.menuButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.menuButton span {
+  width: 100%;
+  height: 2px;
+  background: var(--color-text-primary);
+  transition: all 0.3s ease;
+}
+
+.menuButton.open span:first-child {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menuButton.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuButton.open span:last-child {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 968px) {
+  .menuButton {
+    display: flex;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background-color: var(--color-background-main);
+    flex-direction: column;
+    padding: 80px 2rem 2rem;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px var(--color-shadow-light);
+  }
+
+  .navLinks.open {
+    right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navContent {
+    padding: 0 1rem;
+  }
+
+  .navLinks {
+    width: 100%;
+    align-items: center;
+  }
+} 
