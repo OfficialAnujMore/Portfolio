@@ -64,7 +64,7 @@
 .skillsTrack {
   display: flex;
   width: fit-content;
-  animation: scroll 25s linear infinite;
+  animation: scroll 50s linear infinite;
 }
 
 .skillsSlider {

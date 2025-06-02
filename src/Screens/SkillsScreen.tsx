@@ -3,57 +3,47 @@ import styles from '../styles/skills.module.css';
 import { content } from '../constants/en';
 import CustomText from '../components/CustomText';
 
-interface Skill {
-  name: string;
-}
-
-const skillsByCategory: Record<string, Skill[]> = {
+const skillsByCategory: Record<string, string[]> = {
   [content.skills.categories.frontend]: [
-    { name: 'React' },
-    { name: 'TypeScript' },
-    { name: 'JavaScript' },
-    { name: 'HTML5' },
-    { name: 'CSS3' },
-    { name: 'Redux' },
-    { name: 'Next.js' },
-    { name: 'Tailwind CSS' },
-    { name: 'Material UI' },
+    'JavaScript',
+    'TypeScript',
+    'ReactJS',
+    'React Native',
+    'React Hooks',
+    'React Router',
+    'HTML5',
+    'CSS3',
+    'Redux',
+    'Push Notification',
   ],
   [content.skills.categories.backend]: [
-    { name: 'Node.js' },
-    { name: 'Python' },
-    { name: 'Java' },
-    { name: 'Express' },
-    { name: 'FastAPI' },
-    { name: 'Spring Boot' },
-    { name: 'GraphQL' },
+    'Python',
+    'Java',
+    'Node.js',
+    'Express.js',
+    'Rest API',
+    'OAuth',
+    'JWT',
+    'Socket.io',
+    'WebSockets',
   ],
   [content.skills.categories.database]: [
-    { name: 'MongoDB' },
-    { name: 'PostgreSQL' },
-    { name: 'MySQL' },
-    { name: 'AWS' },
-    { name: 'Firebase' },
-    { name: 'Docker' },
-    { name: 'Redis' },
-  ],
-  [content.skills.categories.ml]: [
-    { name: 'TensorFlow' },
-    { name: 'PyTorch' },
-    { name: 'Scikit-learn' },
-    { name: 'OpenCV' },
-    { name: 'Pandas' },
-    { name: 'NumPy' },
-    { name: 'Keras' },
+    'PostgreSQL',
+    'MySQL',
+    'MongoDB',
+    'Amazon Web Services',
+    'Firebase Cloud Functions',
+    'Firebase Auth',
+    'Firebase Cloud Messaging',
+    'Docker',
   ],
   [content.skills.categories.tools]: [
-    { name: 'Git' },
-    { name: 'VS Code' },
-    { name: 'Postman' },
-    { name: 'Figma' },
-    { name: 'Jest' },
-    { name: 'Linux' },
-    { name: 'Agile' },
+    'Git',
+    'VS Code',
+    'Postman',
+    'Figma',
+    'XCode',
+    'Android Studio',
   ],
 };
 
@@ -99,15 +89,15 @@ const SkillsScreen: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  const renderSkillsGroup = (skills: Skill[]) => {
+  const renderSkillsGroup = (skills: string[]) => {
     // Create three copies for smoother infinite scroll
     const repeatedSkills = [...skills, ...skills, ...skills];
     return repeatedSkills.map((skill, index) => (
       <div 
-        key={`${skill.name}-${index}`} 
+        key={`${skill}-${index}`} 
         className={styles.skillCard}
       >
-        <CustomText variant="span" className={styles.skillName}>{skill.name}</CustomText>
+        <CustomText variant="span" className={styles.skillName}>{skill}</CustomText>
       </div>
     ));
   };
