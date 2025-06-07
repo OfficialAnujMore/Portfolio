@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/navbar.module.css';
-import CustomText from '../components/CustomText';
-import CustomButton from '../components/CustomButton';
+import CustomText from './CustomText';
+import CustomButton from './CustomButton';
 import { content } from '../constants/en';
 
 const Navbar: React.FC = () => {
