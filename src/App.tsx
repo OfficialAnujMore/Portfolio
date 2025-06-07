@@ -6,7 +6,7 @@ import ExperienceScreen from './Screens/ExperienceScreen';
 import ProjectScreen from './Screens/ProjectScreen';
 import RecommendationScreen from './Screens/RecommendationScreen';
 import ContactScreen from './Screens/ContactScreen';
-import CustomNavbar from './components/CustomNavbar';
+import CustomNavbar from './components/CustomNavbar.tsx';
 import CustomFooter from './components/CustomFooter';
 import { cssVariables } from './constants/colors';
 import './styles/globals.css';
