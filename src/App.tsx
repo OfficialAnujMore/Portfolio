@@ -6,8 +6,8 @@ import ExperienceScreen from './Screens/ExperienceScreen';
 import ProjectScreen from './Screens/ProjectScreen';
 import RecommendationScreen from './Screens/RecommendationScreen';
 import ContactScreen from './Screens/ContactScreen';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import CustomNavbar from './components/CustomNavbar';
+import CustomFooter from './components/CustomFooter';
 import { cssVariables } from './constants/colors';
 import './styles/globals.css';
 import './App.css';
@@ -36,7 +36,7 @@ function App() {
         <SplashScreen onComplete={handleSplashComplete} />
       ) : (
         <>
-          <Navbar />
+          <CustomNavbar />
           <main>
             <section id="home">
               <HomeScreen />
@@ -57,7 +57,7 @@ function App() {
               <ContactScreen />
             </section>
           </main>
-          <Footer />
+          <CustomFooter />
         </>
       )}
     </div>
