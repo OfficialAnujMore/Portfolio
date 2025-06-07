@@ -5,7 +5,7 @@ import { SiLeetcode } from 'react-icons/si';
 import { content } from '../constants/en';
 import CustomText from '../components/CustomText';
 import CustomButton from '../components/CustomButton';
-import resumePDF from '../assets/Anuj More - Resume.pdf';
+import resumePDF from '../assets/Anuj_More_Resume.pdf';
 import { sendContactEmail } from '../utils/emailjsApi';
 
 const maxCharCount = content.contact.validation.maxCharCount;

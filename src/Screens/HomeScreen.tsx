@@ -5,7 +5,7 @@ import { content } from '../constants/en'
 import CustomText from '../components/CustomText'
 import CustomImagePreview from '../components/CustomImagePreview'
 import CustomButton from '../components/CustomButton'
-import resumePDF from '../assets/Anuj More - Resume.pdf'
+import resumePDF from '../assets/Anuj_More_Resume.pdf'
 
 const HomeScreen: React.FC = () => {
     return (
