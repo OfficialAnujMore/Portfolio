@@ -3,8 +3,8 @@ import styles from '../styles/contact.module.css';
 import { FaLinkedin, FaGithub, FaInstagram, FaCalendarAlt } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import { content } from '../constants/en';
-import CustomText from '../components/CustomText';
-import CustomButton from '../components/CustomButton';
+import CustomText from '../Components/CustomText';
+import CustomButton from '../Components/CustomButton';
 import resumePDF from '../assets/Anuj_More_Resume.pdf';
 import { sendContactEmail } from '../utils/emailjsApi';
 
