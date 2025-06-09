@@ -3,8 +3,8 @@ import { FaGlobe, FaQuoteLeft } from 'react-icons/fa';
 import styles from '../styles/recommendations.module.css';
 import { recommendations } from '../constants/recommendations';
 import { content } from '../constants/en';
-import CustomText from '../components/CustomText';
-import CustomImagePreview from '../components/CustomImagePreview';
+import CustomText from '../Components/CustomText';
+import CustomImagePreview from '../Components/CustomImagePreview';
 import { Recommendation } from '../interfaces/Recommendation';
 
 const RecommendationCard: React.FC<{ recommendation: Recommendation }> = ({ recommendation }) => {

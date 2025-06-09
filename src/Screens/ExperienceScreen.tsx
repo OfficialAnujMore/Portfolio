@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import styles from '../styles/experience.module.css'
 // import { experiences } from '../constants/experiences';
-import CustomText from '../components/CustomText'
-import CustomImagePreview from '../components/CustomImagePreview'
+import CustomText from '../Components/CustomText'
+import CustomImagePreview from '../Components/CustomImagePreview'
 import adobeLogo from '../assets/adobe_logo.jpeg'
 import sankeyLogo from '../assets/sankey_solutions_logo.jpeg'
 import studyMonkLogo from '../assets/study_monk_logo.jpeg'

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styles from '../styles/skills.module.css';
 import { content } from '../constants/en';
-import CustomText from '../components/CustomText';
+import CustomText from '../Components/CustomText';
 
 const skillsByCategory: Record<string, string[]> = {
   [content.skills.categories.frontend]: [

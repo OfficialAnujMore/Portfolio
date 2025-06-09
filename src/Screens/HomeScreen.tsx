@@ -2,9 +2,9 @@ import React from 'react'
 import styles from '../styles/home.module.css'
 import profileImage from '../assets/profile.jpg'
 import { content } from '../constants/en'
-import CustomText from '../components/CustomText'
-import CustomImagePreview from '../components/CustomImagePreview'
-import CustomButton from '../components/CustomButton'
+import CustomText from '../Components/CustomText'
+import CustomImagePreview from '../Components/CustomImagePreview'
+import CustomButton from '../Components/CustomButton'
 import resumePDF from '../assets/Anuj_More_Resume.pdf'
 
 const HomeScreen: React.FC = () => {

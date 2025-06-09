@@ -2,9 +2,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import styles from '../styles/projects.module.css';
 import { FaGithub, FaGlobe, FaArrowRight } from 'react-icons/fa';
 import { content } from '../constants/en';
-import CustomText from '../components/CustomText';
-import CustomButton from '../components/CustomButton';
-import CustomImagePreview from '../components/CustomImagePreview';
+import CustomText from '../Components/CustomText';
+import CustomButton from '../Components/CustomButton';
+import CustomImagePreview from '../Components/CustomImagePreview';
 
 interface Project {
   id: string;
