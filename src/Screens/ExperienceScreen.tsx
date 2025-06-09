@@ -111,7 +111,6 @@ const ExperienceScreen: React.FC = () => {
 
         return () => observer.disconnect()
     }, [])
-    console.log(experiences[0].logo)
 
     return (
         <section className={styles.experienceContainer}>
