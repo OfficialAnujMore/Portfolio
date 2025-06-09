@@ -1,0 +1,30 @@
+.content {
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionTitle {
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: var(--fw-bold);
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 80%;
+    }
+}
