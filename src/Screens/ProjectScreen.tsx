@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from '../styles/projects.module.css';
+import global from '../styles/global.module.css';
 import { FaGithub, FaGlobe, FaArrowRight } from 'react-icons/fa';
 import { content } from '../constants/en';
 import CustomText from '../Components/CustomText';
@@ -190,9 +191,9 @@ const ProjectScreen: React.FC = () => {
 
   return (
     <section className={styles.projectsContainer}>
-      <div className={styles.content}>
-        <CustomText variant="h2" className={styles.sectionTitle}>{content.projects.title}</CustomText>
-        <CustomText variant="p" className={styles.sectionSubtitle}>{content.projects.subtitle}</CustomText>
+      <div className={global.content}>
+        <CustomText variant="h2" className={global.sectionTitle}>{content.projects.title}</CustomText>
+        <CustomText variant="p" className={global.sectionSubtitle}>{content.projects.subtitle}</CustomText>
         <FeaturedProjectCard project={featuredProject} />
         <div className={styles.projectsGrid}>
           {regularProjects.map((project) => (

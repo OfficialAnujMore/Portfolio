@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styles from '../styles/skills.module.css';
+import global from '../styles/global.module.css';
 import { content } from '../constants/en';
 import CustomText from '../Components/CustomText';
 
@@ -105,8 +106,8 @@ const SkillsScreen: React.FC = () => {
   return (
     <section className={styles.skillsContainer}>
       <div className={styles.content}>
-        <CustomText variant="h2" className={styles.title}>{content.skills.title}</CustomText>
-        <CustomText variant="p" className={styles.subtitle}>{content.skills.subtitle}</CustomText>
+        <CustomText variant="h2" className={global.sectionTitle}>{content.skills.title}</CustomText>
+        <CustomText variant="p" className={global.sectionSubtitle}>{content.skills.subtitle}</CustomText>
         <div className={styles.categories}>
           {Object.entries(skillsByCategory).map(([category, skills], categoryIndex) => (
             <div 

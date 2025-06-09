@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from '../styles/contact.module.css';
+import global from '../styles/global.module.css';
 import { FaLinkedin, FaGithub, FaInstagram, FaCalendarAlt } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import { content } from '../constants/en';
@@ -110,9 +111,9 @@ const Contact = () => {
 
   return (
     <section className={styles.contactContainer}>
-      <div className={styles.content}>
-        <CustomText variant="h2" className={styles.sectionTitle}>{content.contact.title}</CustomText>
-        <CustomText variant="p" className={styles.sectionSubtitle}>{content.contact.subtitle}</CustomText>
+      <div className={global.content}>
+        <CustomText variant="h2" className={global.sectionTitle}>{content.contact.title}</CustomText>
+        <CustomText variant="p" className={global.sectionSubtitle}>{content.contact.subtitle}</CustomText>
         <div className={styles.contactWrapperSingle}>
           <div className={styles.formContainer}>
             <form className={styles.form} onSubmit={handleSubmit}>

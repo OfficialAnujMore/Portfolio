@@ -6,6 +6,7 @@ import { content } from '../constants/en';
 import CustomText from '../Components/CustomText';
 import CustomImagePreview from '../Components/CustomImagePreview';
 import { Recommendation } from '../interfaces/Recommendation';
+import global from '../styles/global.module.css';
 
 const RecommendationCard: React.FC<{ recommendation: Recommendation }> = ({ recommendation }) => {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -69,9 +70,9 @@ const RecommendationCard: React.FC<{ recommendation: Recommendation }> = ({ reco
 const RecommendationScreen: React.FC = () => {
   return (
     <section className={styles.recommendationsContainer}>
-      <div className={styles.content}>
-        <CustomText variant="h2" className={styles.sectionTitle}>{content.recommendations.title}</CustomText>
-        <CustomText variant="p" className={styles.sectionSubtitle}>{content.recommendations.subtitle}</CustomText>
+      <div className={global.content}>
+        <CustomText variant="h2" className={global.sectionTitle}>{content.recommendations.title}</CustomText>
+        <CustomText variant="p" className={global.sectionSubtitle}>{content.recommendations.subtitle}</CustomText>
         <div className={styles.recommendationsGrid}>
           {recommendations.map((recommendation) => (
             <RecommendationCard

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import styles from '../styles/experience.module.css'
+import global from '../styles/global.module.css'
 // import { experiences } from '../constants/experiences';
 import CustomText from '../Components/CustomText'
 import CustomImagePreview from '../Components/CustomImagePreview'
@@ -114,11 +115,11 @@ const ExperienceScreen: React.FC = () => {
 
     return (
         <section className={styles.experienceContainer}>
-            <div className={styles.content}>
-                <CustomText variant="h2" className={styles.title}>
+            <div className={global.content}>
+                <CustomText variant="h2" className={global.sectionTitle}>
                     Experience
                 </CustomText>
-                <CustomText variant="p" className={styles.subtitle}>
+                <CustomText variant="p" className={global.sectionSubtitle}>
                     Where I've worked
                 </CustomText>
 
