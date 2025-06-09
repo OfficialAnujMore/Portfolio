@@ -12,7 +12,7 @@ import { cssVariables } from './constants/colors';
 import './styles/globals.css';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
@@ -62,6 +62,6 @@ function App() {
       )}
     </div>
   );
-}
+};
 
 export default App;

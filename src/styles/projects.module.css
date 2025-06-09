@@ -266,7 +266,7 @@
 
 @media (max-width: 768px) {
   .projectsContainer {
-    padding: 6rem 0;
+    padding: 0rem 1rem;
   }
 
   .content {
