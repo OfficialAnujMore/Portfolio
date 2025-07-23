@@ -11,9 +11,9 @@ import { Experience } from 'interfaces/Experience'
 
 const experiences: Experience[] = [
     {
-        company: 'Adobe',
+        company: 'Adobe@Fullerton',
         logo: adobeLogo,
-        role: 'Data Analyst @CSU Fullerton',
+        role: 'Data Analyst',
         period: 'May 2025 - Present',
         location: 'Fullerton, California, USA',
         description: [
