@@ -49,7 +49,7 @@ export const content = {
             frontend: 'Frontend Development',
             backend: 'Backend Development',
             database: 'Database & Cloud',
-            ml: 'Machine Learning',
+            analytics: 'Data Analytics',
             tools: 'Tools & Others',
         },
     },

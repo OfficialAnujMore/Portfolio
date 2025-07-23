@@ -38,6 +38,15 @@ const skillsByCategory: Record<string, string[]> = {
     'Firebase Cloud Messaging',
     'Docker',
   ],
+    [content.skills.categories.analytics]: [
+      'Pandas', 
+      'Numpy',
+      'Matplotlib',
+      'Seaborn',
+      'Power BI',
+      'Jupyter Notebook',
+      'Statistics'
+  ],
   [content.skills.categories.tools]: [
     'Git',
     'VS Code',
