@@ -5,29 +5,6 @@
   background-color: var(--color-background-main);
 }
 
-.content {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.sectionTitle {
-  font-family: var(--font-primary);
-  font-size: 3rem;
-  font-weight: var(--fw-bold);
-  color: var(--color-text-primary);
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.sectionSubtitle {
-  font-family: var(--font-secondary);
-  font-size: 1.2rem;
-  color: var(--color-text-secondary);
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
 .contactWrapper {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -206,15 +183,7 @@
 
 @media (max-width: 768px) {
   .contactContainer {
-    padding: 6rem 0;
-  }
-
-  .content {
-    padding: 0 1.5rem;
-  }
-
-  .sectionTitle {
-    font-size: 2.5rem;
+    padding: 0 1rem;
   }
 
   .formContainer {
@@ -268,4 +237,6 @@
   display: flex;
   align-items: center;
   gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 } 

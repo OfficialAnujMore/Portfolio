@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import styles from '../styles/contact.module.css';
+import global from '../styles/global.module.css';
 import { FaLinkedin, FaGithub, FaInstagram, FaCalendarAlt } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import { content } from '../constants/en';
-import CustomText from '../components/CustomText';
-import CustomButton from '../components/CustomButton';
-import resumePDF from '../assets/Anuj More - Resume.pdf';
+import CustomText from '../Components/CustomText';
+import CustomButton from '../Components/CustomButton';
+import resumePDF from '../assets/Anuj_More_Resume.pdf';
 import { sendContactEmail } from '../utils/emailjsApi';
 
 const maxCharCount = content.contact.validation.maxCharCount;
@@ -110,9 +111,9 @@ const Contact = () => {
 
   return (
     <section className={styles.contactContainer}>
-      <div className={styles.content}>
-        <CustomText variant="h2" className={styles.sectionTitle}>{content.contact.title}</CustomText>
-        <CustomText variant="p" className={styles.sectionSubtitle}>{content.contact.subtitle}</CustomText>
+      <div className={global.content}>
+        <CustomText variant="h2" className={global.sectionTitle}>{content.contact.title}</CustomText>
+        <CustomText variant="p" className={global.sectionSubtitle}>{content.contact.subtitle}</CustomText>
         <div className={styles.contactWrapperSingle}>
           <div className={styles.formContainer}>
             <form className={styles.form} onSubmit={handleSubmit}>

@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import styles from '../styles/experience.module.css'
+import global from '../styles/global.module.css'
 // import { experiences } from '../constants/experiences';
-import CustomText from '../components/CustomText'
-import CustomImagePreview from '../components/CustomImagePreview'
+import CustomText from '../Components/CustomText'
+import CustomImagePreview from '../Components/CustomImagePreview'
 import adobeLogo from '../assets/adobe_logo.jpeg'
 import sankeyLogo from '../assets/sankey_solutions_logo.jpeg'
 import studyMonkLogo from '../assets/study_monk_logo.jpeg'
@@ -111,15 +112,14 @@ const ExperienceScreen: React.FC = () => {
 
         return () => observer.disconnect()
     }, [])
-    console.log(experiences[0].logo)
 
     return (
         <section className={styles.experienceContainer}>
-            <div className={styles.content}>
-                <CustomText variant="h2" className={styles.title}>
+            <div className={global.content}>
+                <CustomText variant="h2" className={global.sectionTitle}>
                     Experience
                 </CustomText>
-                <CustomText variant="p" className={styles.subtitle}>
+                <CustomText variant="p" className={global.sectionSubtitle}>
                     Where I've worked
                 </CustomText>
 

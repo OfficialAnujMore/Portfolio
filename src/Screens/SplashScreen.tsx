@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/splash.module.css';
 import { content } from '../constants/en';
-import CustomText from '../components/CustomText';
+import CustomText from '../Components/CustomText';
 
 interface SplashScreenProps {
   onComplete: () => void;
