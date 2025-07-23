@@ -182,8 +182,8 @@ const Contact = () => {
                     </a>
                   ))}
                 </div>
-                <CustomButton as="a" href={resumePDF} download className={styles.resumeButton}>
-                  {content.contact.resumeButton}
+                <CustomButton as="a" href={resumePDF} target="_blank" rel="noopener noreferrer" className={styles.resumeButton}>
+                  {content.home.resumeButton}
                 </CustomButton>
               </div>
             </form>

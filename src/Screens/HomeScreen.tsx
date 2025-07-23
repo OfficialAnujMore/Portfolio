@@ -35,7 +35,7 @@ const HomeScreen: React.FC = () => {
                     </CustomText>
                     <CustomText variant="h1" className={styles.name}>{content.greeting.name}</CustomText>
                     <CustomText variant="p" className={styles.description}>{content.home.description}</CustomText>
-                    <CustomButton as="a" href={resumePDF} download className={styles.resumeButton}>
+                    <CustomButton as="a" href={resumePDF} target="_blank" rel="noopener noreferrer" className={styles.resumeButton}>
                       {content.home.resumeButton}
                     </CustomButton>
                 </div>
