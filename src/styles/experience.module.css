@@ -262,7 +262,7 @@
   }
 
   .experienceCard {
-    width: calc(100% - 32px);
+    width: calc(100%);
     margin-left: 32px;
     transform: none;
     box-shadow: 

@@ -19,6 +19,16 @@
   max-width: 800px;
 }
 
+.recommendationCard:last-child:nth-child(odd) {
+  justify-self: center;
+  grid-column: 1 / -1;
+  max-width: calc(50% - 1.25rem); 
+}
+
+.recommendationsGrid:has(> :nth-child(odd):last-child) {
+  justify-items: center;
+}
+
 .recommendationCard {
   position: relative;
   padding: 3rem 2.5rem 2.5rem;
@@ -165,6 +175,12 @@
 
   .recommendationCard {
     padding: 2.5rem 2rem 2rem;
+  }
+  
+  .recommendationCard:last-child:nth-child(odd) {
+    justify-self: stretch;
+    grid-column: 1;
+    max-width: none;
   }
 }
 
