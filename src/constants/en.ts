@@ -9,7 +9,7 @@ export const content = {
     },
     home: {
         description:
-            'A curious computer engineer passionate about solving real-world problems using technology.',
+            'A curious Software Developer passionate about solving real-world problems using technology.',
         initials: 'AM',
         resumeButton: 'Resume',
     },
@@ -55,7 +55,7 @@ export const content = {
     },
     projects: {
         title: 'Featured Projects',
-        subtitle: "Some things I've built",
+        subtitle: "Projects I've built",
         viewProject: 'View Project',
     },
     navbar: {

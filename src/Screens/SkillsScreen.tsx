@@ -27,6 +27,7 @@ const skillsByCategory: Record<string, string[]> = {
     'JWT',
     'Socket.io',
     'WebSockets',
+    'GraphQL'
   ],
   [content.skills.categories.database]: [
     'PostgreSQL',
