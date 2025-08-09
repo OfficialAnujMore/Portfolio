@@ -34,7 +34,7 @@ const experiences: Experience[] = [
             'Jupyter Notebook',
             'Power BI',
             'Discord',
-            'Communication'
+            'Communication',
         ],
     },
     {
@@ -44,11 +44,11 @@ const experiences: Experience[] = [
         period: 'Jun 2021 - June 2024',
         location: 'Mumbai, Maharashtra, India',
         description: [
-            'Delivered a cross platform EV charging & retail mobile app deployed across 900+ fuel, retail & EV sites, boosting customer engagement & increasing footfall by 15%.',
-            'Integrated WebSocket streams & REST APIs to deliver real time EV charging insights, leading to a 10% decrease in customer support inquiries related to charging status & pricing confusion.',
-            'Implemented admin control system leveraging Azure SQL, REST APIs, ReactJS, & Django, facilitated instant tariff updates, minimizing pricing discrepancies across 900+ EV charging sites.',
-            'Optimized invoice generation & reporting workflows, normalizing databases, implementing Redis caching, & scheduling cron jobs cutting invoice time from 45s to 15s & handling 10,000+ invoices/week.',
-            'Enhanced app performance & UX using lazy loading, virtualization, React Hooks & memoization, reducing load times by 4%.',
+            'Delivered a cross-platform EV charging and retail mobile application deployed across over 900+ fuel and retail sites, enhancing customer engagement and boosting footfall by 15% within the first quarter post release of new version.',
+            'Implemented real time WebSocket streams and REST APIs to provide EV charging insights, resulting in a 10% reduction in customer support inquiries related to charging status and pricing confusion across the network of stations.',
+            'Transform an admin control system utilizing Azure SQL, REST APIs, ReactJS, and Django that facilitated instant tariff updates, minimizing pricing discrepancies across more than 900+ EV charging locations significantly.',
+            'Optimized invoice generation workflows through database normalization, Redis caching implementation, and cron job scheduling which cut invoice processing time from 45 seconds to just 15 seconds while managing over 10,000 invoices weekly.',
+            'Enhanced application performance and user experience using lazy loading techniques, virtualization strategies, React Hooks, and memoization practices which collectively reduced load times by an impressive 4% overall.',
         ],
         technologies: [
             'JavaScript',
@@ -78,11 +78,12 @@ const experiences: Experience[] = [
         period: 'Jan 2021 to Jun 2021 · 6 mos',
         location: 'Bengaluru, Karnataka, India',
         description: [
-            'Delivered a production ready mobile application using React Native that enabled over 1,000 users to efficiently locate nearby garages within a specified radius based on real-time GPS tracking.',
-            'Maintained backend infrastructure using Node.js & Express.js which enhanced data retrieval speeds by 30%, enhancing user experience.',
-            'Implemented secure authentication via Firebase Authentication for over 500 active users, ensuring data security & trust in the platform.',
-            'Designed RESTful APIs that managed garage listings & reviews while handling up to 10 requests per second without downtime.',
-            'Integrated push notifications through Firebase Cloud Messaging leading to a 25% increase in user engagement with service offers.',
+            'Delivered a production-ready mobile application using React Native that enabled over 1,000 users to efficiently locate nearby garages within a specified radius based on real-time GPS tracking.',
+            'Maintained backend infrastructure using Node.js and Express.js which improved data retrieval speeds by 30%, enhancing user experience significantly.',
+            'Implemented secure user authentication via Firebase Authentication for over 500 active users, ensuring data security and trust in the platform.',
+            'Designed RESTful APIs that managed garage listings and reviews while handling up to 10 requests per second without downtime during peak usage hours.',
+            'Integrated push notifications through Firebase Cloud Messaging (FCM) leading to a 25% increase in user engagement with service offers and updates.',
+            'Managed database design with MongoDB for structured data storage that supported scalability as the user base grew by 40% during the project lifecycle.',
         ],
         technologies: [
             'JavaScript',
