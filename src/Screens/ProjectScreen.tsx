@@ -73,8 +73,7 @@ const projects: Project[] = [
         ],
         githubUrl:
             'https://github.com/OfficialAnujMore/Regional-Sales-Data-Analysis',
-        projectUrl:
-            'https://colab.research.google.com/drive/1yVgetcQQthyWoQe3cRYRnK4q36Qohgk4',
+        projectUrl: 'https://colab.research.google.com/drive/1yVgetcQQthyWoQe3cRYRnK4q36Qohgk4',
         category: 'DATA ANALYSIS',
         date: 'July 2025',
     },
