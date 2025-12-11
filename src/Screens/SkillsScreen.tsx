@@ -8,45 +8,33 @@ const skillsByCategory: Record<string, string[]> = {
   [content.skills.categories.frontend]: [
     'JavaScript',
     'TypeScript',
-    'ReactJS',
+    'React.js',
     'React Native',
     'React Hooks',
     'React Router',
-    'HTML5',
-    'CSS3',
-    'Redux',
-    'Push Notification',
   ],
   [content.skills.categories.backend]: [
     'Python',
-    'Java',
+    'Fast API',
     'Node.js',
-    'Express.js',
     'Rest API',
     'OAuth',
     'JWT',
     'Socket.io',
     'WebSockets',
-    'GraphQL'
-  ],
-  [content.skills.categories.database]: [
+    'AI Integration',
     'PostgreSQL',
     'MySQL',
-    'MongoDB',
+    'Redis',
+    'Cron Jobs'
+
+  ],
+  [content.skills.categories.cloud]: [
     'Amazon Web Services',
-    'Firebase Cloud Functions',
-    'Firebase Auth',
+    'AWS EC2',
+    'AWS Lambda',
     'Firebase Cloud Messaging',
     'Docker',
-  ],
-    [content.skills.categories.analytics]: [
-      'Pandas', 
-      'Numpy',
-      'Matplotlib',
-      'Seaborn',
-      'Power BI',
-      'Jupyter Notebook',
-      'Statistics'
   ],
   [content.skills.categories.tools]: [
     'Git',

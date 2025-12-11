@@ -9,7 +9,7 @@ export const content = {
     },
     home: {
         description:
-            'A curious Software Developer passionate about solving real-world problems using technology.',
+            'Full-Stack Engineer building scalable systems and AI-powered experiences that solve real problems.',
         initials: 'AM',
         resumeButton: 'Resume',
     },
@@ -48,8 +48,7 @@ export const content = {
         categories: {
             frontend: 'Frontend Development',
             backend: 'Backend Development',
-            database: 'Database & Cloud',
-            analytics: 'Data Analytics',
+            cloud: 'Cloud Technologies',
             tools: 'Tools & Others',
         },
     },

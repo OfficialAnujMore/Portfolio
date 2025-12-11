@@ -7,6 +7,16 @@ import CustomText from '../Components/CustomText'
 import CustomButton from '../Components/CustomButton'
 import CustomImagePreview from '../Components/CustomImagePreview'
 import ProjectModal from '../Components/ProjectModal'
+import hirehourImg from '../assets/HireHour.png'
+import roadsideAssistanceImg from '../assets/RoadsideAssistance.png'
+import campusLinkImg from '../assets/CampusLink.png'
+import kleanSQLImg1 from '../assets/KleanSQL.jpg'
+import kleanSQLImg2 from '../assets/KleanSQL2.jpg'
+import kleanSQLImg3 from '../assets/KleanSQL3.jpg'
+import prepmateImg1 from '../assets/PrepMate.jpg'
+import prepmateImg2 from '../assets/PrepMate2.jpg'
+import prepmateImg3 from '../assets/PrepMate3.jpg'
+import visionCrafterAI1 from '../assets/VisionCrafterAI.png'
 
 interface Project {
     id: string
@@ -32,50 +42,182 @@ interface Project {
 }
 
 const projects: Project[] = [
+
     {
-        id: 'regional-sales-analysis',
-        title: 'Regional Sales Data Analysis',
+        id: 'vision-crafter',
+        title: 'Vision Crafter – AI-Powered Image Editing Made Simple',
         shortDescription:
-            'Multi-year sales data analysis (2014-2018) uncovering insights on regional performance, customer behavior, and product profitability using Python and Power BI.',
+            "Vision Crafter is a full stack platform currently in development that democratizes professional image editing. It leverages modern AI models and ImageKit to enable users to easily perform complex transformations—such as background removal, object erasure, enhancement, and generative scene extension—through automated workflows.",
         fullDescription: {
             projectOverview:
-                'This project analyzes multi-year sales data (2014–2018) to uncover insights on regional performance, customer behavior, and product profitability. It leverages real-world business data and applies data wrangling, visualization, and analysis techniques using Python and Power BI. The dataset includes detailed information about sales orders, customers, products, regions, state regions, and 2017 budgets, enabling comprehensive business intelligence analysis.',
+                "Vision Crafter is a full stack AI image-editing platform being designed to transform images using professional-grade features. Currently being developed in association with California State University, Fullerton, it integrates powerful tools like ImageKit alongside modern AI models. The platform is aiming to simplify complex editing tasks, allowing users to crop photos, remove backgrounds, erase specific objects, enhance overall image quality (saturation, contrast), and utilize generative AI to create new objects or extend scenes seamlessly.",
             keyContribution: [
-                'Conducted comprehensive data analysis on multi-year sales data (2014-2018) using Python and Power BI.',
-                'Performed data cleaning, merging, and exploratory data analysis (EDA) using pandas, matplotlib, and seaborn.',
-                'Built interactive Power BI dashboard for business stakeholders to filter by region, product, or sales channel.',
-                'Analyzed budget vs actual performance for 2017, identifying underperforming products and high-value customers.',
-                'Applied data wrangling techniques to combine sales data with customer, product, and regional information.',
-                'Created visualizations for sales trends, profit margins, channel performance, and customer segmentation.',
-                'Integrated multiple data sources including sales orders, customer data, product information, regional metadata, and budget allocations.',
-                'Developed interactive dashboard enabling quick decision-making with regional and product filters.',
+                'Developing a robust full stack architecture utilizing React for a responsive frontend and FastAPI for high-performance backend image processing.',
+                'Integrating ImageKit to manage on-demand transformations, image optimization, and rapid CDN delivery of edited assets.',
+                'Implementing a comprehensive suite of AI-driven features including background removal, object erasure, and generative image extensions.',
+                'Architecting backend services for scalable deployment on AWS (EC2, S3), utilizing PostgreSQL for secure data storage (integration ongoing).',
+                'Designing clean, maintainable backend modules strictly adhering to SOLID principles and industry-standard best practices.',
             ],
             impact: [
-                'Identified high-performing regions and products for strategic business decisions.',
-                'Uncovered products underperforming relative to their 2017 budgets for resource optimization.',
-                'Enabled quick decision-making through interactive Power BI dashboard with regional and product filters.',
-                'Provided insights on export and wholesale channel profitability patterns for business strategy.',
-                'Demonstrated the value of data-driven decision making in regional sales optimization.',
-                'Created a scalable analysis framework that can be applied to future sales data.',
+                'Simplifies advanced image editing techniques, making professional AI tools accessible to users without technical expertise.',
+                'Provides a scalable foundation for a production-level SaaS image editing application.',
+                'Optimizes user workflows by combining multiple AI editing capabilities into a single, cohesive platform.',
             ],
         },
-        image: `https://placehold.co/900x600/222831/ff8a00.png?text=Regional+Sales+Analysis`,
+        image: visionCrafterAI1,
+        media:
+            [
+                {
+                    type: 'image',
+                    url: visionCrafterAI1,
+                    alt: 'Vision Crafter Overview Infographic',
+                    caption: 'Platform Features, Architecture, and User Interface Overview'
+                },
+            ],
+        technologies: [
+            'ReactJS',
+            'FastAPI',
+            'Python',
+            'ImageKit API',
+            'AI/ML Models',
+            'AWS (EC2, S3)',
+            'PostgreSQL',
+        ],
+        githubUrl: 'https://github.com/OfficialAnujMore/visioncrafterai_fe',
+        projectUrl: '',
+        category: 'AI & Web App',
+        date: 'Nov 2025 - Present',
+    },
+    {
+        id: 'prepmate',
+        title: 'PrepMate – On-Device AI Interview Coach',
+        shortDescription:
+            "Developed for Google Chrome Built-in AI Challenge 2025, PrepMate is a personal, on-device AI interview coach designed to make interview practice accessible and effective. Born from the frustration of finding unbiased feedback, it allows users to simulate interviews based on specific job descriptions. By leveraging Google Chrome's built-in AI, PrepMate provides real-time analysis of clarity, structure, and relevance without sending data to external servers.",
+        fullDescription: {
+            projectOverview:
+                "PrepMate is a personal, on-device AI interview coach designed to make interview practice accessible and effective. Born from the frustration of finding unbiased feedback, it allows users to simulate interviews based on specific job descriptions. By leveraging Google Chrome's built-in AI, PrepMate provides real-time analysis of clarity, structure, and relevance without sending data to external servers.",
+            keyContribution: [
+                'Developed the frontend using ReactJS, Vite, and TypeScript for a fast and responsive user experience.',
+                'Integrated the Google Chrome Writer API (Gemini Nano) to enable offline, on-device AI text generation and analysis.',
+                'Implemented the Web Speech API to facilitate natural voice interaction via SpeechSynthesis (Text-to-Speech) and SpeechRecognition (Speech-to-Text).',
+                'Designed complex prompt engineering strategies to generate context-aware interview questions and evaluate user responses.',
+                'Configured Chrome Origin Trials to successfully deploy experimental browser features in a production environment on Netlify.',
+                'Integrated Firebase for basic analytics to track user engagement and platform usage.',
+            ],
+            impact: [
+                'Enabled a fully private AI solution with zero latency constraints and no backend inference costs.',
+                'Democratized access to quality interview coaching by providing a free, accessible tool for students and job seekers.',
+                'Achieved natural, conversational flow in mock interviews using browser-native capabilities.',
+            ],
+        },
+        image: prepmateImg1,
+        media:
+            [
+                {
+                    type: 'video',
+                    url: 'https://youtu.be/hFN5CddhqYc',
+                    alt: 'PreMate Demo Video',
+                    caption: 'Complete walkthrough of the web app'
+                },
+                {
+                    type: 'image',
+                    url: prepmateImg1,
+                    alt: 'App Preview',
+                    caption: 'App Preview'
+                },
+                {
+                    type: 'image',
+                    url: prepmateImg2,
+                    alt: 'App Preview',
+                    caption: 'App Preview'
+                },
+                {
+                    type: 'image',
+                    url: prepmateImg3,
+                    alt: 'Project Work flow',
+                    caption: 'Project  Work Flow'
+                },
+            ],
+        technologies: [
+            'ReactJS',
+            'TypeScript',
+            'Vite',
+            'Google Chrome Writer API',
+            'Gemini Nano',
+            'Web Speech API',
+            'Firebase',
+            'Netlify',
+        ],
+        githubUrl: 'https://github.com/OfficialAnujMore/prep-mate',
+        projectUrl: 'https://devpost.com/software/prepmate-your-ai-interview-rehearsal-coach',
+        category: 'AI & Web App',
+        date: 'Oct 2025 - Nov 2025',
+    },
+    {
+        id: 'kleansql',
+        title: 'KleanSQL – Query Your Data at the Speed of Thought',
+        shortDescription:
+            'Developed for Cal Hacks 12.0, KleanSQL is an AI-driven analytics platform that empowers users to interact with their data using plain English instead of SQL.',
+        fullDescription: {
+            projectOverview:
+                "KleanSQL is an AI-driven analytics platform that empowers users to interact with their data using plain English instead of SQL. By simply uploading a CSV or Excel file, users can ask questions like “What is the average salary by department?” and instantly receive clean, reliable SQL queries along with visualized results.",
+            keyContribution: [
+                'Designed and implemented a modular data pipeline combining profiling, LLM-based SQL generation, and query execution.',
+                'Built backend services with FastAPI and DuckDB, enabling sub-second query performance on large datasets.',
+                'Integrated Anthropic Claude Sonnet 4 for natural-language-to-SQL conversion with structured JSON outputs.',
+                'Developed a Streamlit web interface featuring real-time feedback, SQL previews, and dark-theme responsiveness.',
+                'Added intelligent data profiling and missing-value imputation for robust analytics on messy datasets.',
+                'Containerized the entire system using Docker, supporting optional Weaviate integration for semantic column search.',
+            ],
+            impact: [
+                'Simplified data analysis for non-technical users by translating natural-language questions into executable SQL.',
+                'Improved data-query efficiency through DuckDB’s vectorized processing, delivering instant insights.',
+                'Enhanced transparency and trust by exposing both raw and cleaned SQL outputs for every query.',
+                'Showcased scalable AI-driven architecture capable of handling thousands of rows per second.',
+            ],
+        },
+        image: kleanSQLImg1,
+        media:
+            [
+                {
+                    type: 'video',
+                    url: 'https://youtu.be/kK30QcI6veI',
+                    alt: 'KleanSQL Demo Video',
+                    caption: 'Complete walkthrough of the web app'
+                },
+                {
+                    type: 'image',
+                    url: kleanSQLImg1,
+                    alt: 'App Preview',
+                    caption: 'App Preview'
+                },
+                {
+                    type: 'image',
+                    url: kleanSQLImg2,
+                    alt: 'App Preview',
+                    caption: 'App Preview'
+                },
+                {
+                    type: 'image',
+                    url: kleanSQLImg3,
+                    alt: 'Project Work flow',
+                    caption: 'Project  Work Flow'
+                },
+            ],
         technologies: [
             'Python',
-            'Power BI',
-            'Pandas',
-            'NumPy',
-            'Matplotlib',
-            'Seaborn',
-            'Jupyter Notebook',
-            'Google Colab',
-            'Excel',
+            'FastAPI',
+            'DuckDB',
+            'Streamlit',
+            'Anthropic Claude API',
+            'Docker',
+            'Weaviate',
+            'SQL',
         ],
-        githubUrl:
-            'https://github.com/OfficialAnujMore/Regional-Sales-Data-Analysis',
-        projectUrl: 'https://colab.research.google.com/drive/1yVgetcQQthyWoQe3cRYRnK4q36Qohgk4',
-        category: 'DATA ANALYSIS',
-        date: 'July 2025',
+        githubUrl: 'https://github.com/shatayu1210/CalHack_CleanSQL',
+        projectUrl: 'https://devpost.com/software/kleansql',
+        category: 'AI & Web App',
+        date: 'Oct 2025 - Oct 2025',
     },
     {
         id: 'hirehour',
@@ -99,33 +241,7 @@ const projects: Project[] = [
                 'Enhanced platform reliability with optimized backend infrastructure and cloud deployment.',
             ],
         },
-        image: 'https://placehold.co/900x600/222831/ff8a00.png?text=HireHour',
-        // media: [
-        //     {
-        //         type: 'image',
-        //         url: 'https://placehold.co/900x600/222831/ff8a00.png?text=HireHour+App+Screenshot+1',
-        //         alt: 'HireHour App Main Screen',
-        //         caption: 'Main dashboard showing available service providers'
-        //     },
-        //     {
-        //         type: 'image',
-        //         url: 'https://placehold.co/900x600/222831/ff8a00.png?text=HireHour+App+Screenshot+2',
-        //         alt: 'HireHour App Booking Flow',
-        //         caption: 'Streamlined booking process for event services'
-        //     },
-        //     {
-        //         type: 'video',
-        //         url: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4',
-        //         alt: 'HireHour App Demo Video',
-        //         caption: 'Complete walkthrough of the HireHour platform'
-        //     },
-        //     {
-        //         type: 'video',
-        //         url: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4',
-        //         alt: 'HireHour App Demo Video',
-        //         caption: 'Complete walkthrough of the HireHour platform'
-        //     }
-        // ],
+        image: hirehourImg,
         technologies: [
             'React Native',
             'TypeScript',
@@ -133,7 +249,6 @@ const projects: Project[] = [
             'Node.js',
             'Prisma ORM',
             'PostgreSQL',
-            'DigitalOcean',
             'SendGrid',
             'Push notification',
             'Payment gateway integration',
@@ -142,41 +257,6 @@ const projects: Project[] = [
         projectUrl: '',
         category: 'MOBILE APP',
         date: 'Dec 2024 - Present',
-    },
-    {
-        id: 'housing-market-analysis',
-        title: 'Housing Market Analysis Dashboard',
-        shortDescription:
-            'A web-based dashboard for real-time housing market analysis, providing insights into pricing, inventory, and demand patterns.',
-        fullDescription: {
-            projectOverview:
-                'Developed a web-based dashboard for real-time housing market analysis. This platform provides clear insights into pricing, inventory, and demand patterns, empowering real estate professionals and investors to make data-driven decisions. Built using the Preswald open-source platform, it offers a seamless and responsive user experience.',
-            keyContribution: [
-                'Developed interactive data visualizations, enabling users to explore market trends effortlessly.',
-                'Integrated real-time data APIs for accurate, up-to-date insights.',
-                'Optimized frontend performance for smooth navigation and quick load times.',
-                'Implemented responsive design for enhanced accessibility across devices.',
-                'Focused on user-friendly interfaces to support data-driven strategies.',
-            ],
-            impact: [
-                'Improved data analysis efficiency for real estate stakeholders.',
-                'Enhanced decision-making through intuitive visual representations.',
-                'Increased platform engagement with responsive design and real-time insights.',
-            ],
-        },
-        image: 'https://placehold.co/900x600/222831/ff8a00.png?text=Housing+Market+Analysis',
-        technologies: [
-            'Data Analysis',
-            'Data Engineering',
-            'Python',
-            'Statistical Data Analysis',
-        ],
-        githubUrl:
-            'https://github.com/OfficialAnujMore/housing-market-analysis',
-        projectUrl:
-            'https://housing-analysis-397455_anuj-more-assessment.preswald.app/',
-        category: ['DATA ANALYSIS', 'WEB APP'],
-        date: 'Apr 2025',
     },
     {
         id: 'roadside-assistance',
@@ -199,7 +279,7 @@ const projects: Project[] = [
                 'Improved reliability and performance by leveraging cloud-based infrastructure.',
             ],
         },
-        image: 'https://placehold.co/900x600/222831/ff8a00.png?text=Roadside+Side+Assistance',
+        image: roadsideAssistanceImg,
         technologies: [
             'Flutter',
             'Firebase',
@@ -207,37 +287,10 @@ const projects: Project[] = [
             'Node.js',
             'MYSQL',
         ],
-        githubUrl: '',
+        githubUrl: 'https://github.com/OfficialAnujMore/Roadside-Assistance',
         projectUrl: '',
         category: 'MOBILE APP',
         date: 'Aug 2020 - Dec 2020',
-    },
-    {
-        id: 'bengaluru-property-prediction',
-        title: 'Property Price Prediction',
-        shortDescription:
-            'A machine learning model to predict property prices in Bengaluru based on historical data and features.',
-        fullDescription: {
-            projectOverview:
-                'Developed a machine learning model using Scikit-Learn to predict property prices for homes located in Bengaluru, based on various conditions and features. This project involves analyzing historical real estate data to forecast prices with high accuracy. It highlights my expertise in data science, feature engineering, and model development, demonstrating my ability to apply machine learning techniques to real-world problems.',
-            keyContribution: [
-                'Developed a machine learning model using Scikit-Learn for property price prediction.',
-                'Analyzed historical real estate data to identify key features and patterns.',
-                'Implemented feature engineering techniques to improve model accuracy.',
-                'Applied machine learning techniques to solve real-world real estate problems.',
-            ],
-            impact: [
-                'Demonstrated expertise in data science and machine learning.',
-                'Applied ML techniques to real-world real estate problems.',
-                'Showcased ability to work with complex datasets and feature engineering.',
-            ],
-        },
-        image: 'https://placehold.co/900x600/222831/ff8a00.png?text=Property+Price+Prediction+Model',
-        technologies: ['Machine Learning', 'Software developer'],
-        githubUrl: '',
-        projectUrl: '',
-        category: 'MACHINE LEARNING',
-        date: 'May 2020 - Jun 2020',
     },
     {
         id: 'campus-link',
@@ -260,7 +313,7 @@ const projects: Project[] = [
                 'Streamlined event notifications to ensure parents never miss crucial college updates.',
             ],
         },
-        image: 'https://placehold.co/900x600/222831/ff8a00.png?text=Campus+Link',
+        image: campusLinkImg,
         technologies: [
             'Flutter',
             'Firebase',
@@ -272,7 +325,7 @@ const projects: Project[] = [
             'MySQL',
             'PHP',
         ],
-        githubUrl: '',
+        githubUrl: 'https://github.com/OfficialAnujMore/Somaiya-Parents-Teacher-Communicator',
         projectUrl: '',
         category: 'MOBILE APP',
         date: 'Jan 2020 - Feb 2020',
@@ -426,10 +479,10 @@ const ProjectScreen: React.FC = () => {
                             {category === 'MOBILE APP'
                                 ? 'Mobile App'
                                 : category === 'DATA ANALYSIS'
-                                  ? 'Data Analysis'
-                                  : category === 'MACHINE LEARNING'
-                                    ? 'Machine Learning'
-                                    : category}
+                                    ? 'Data Analysis'
+                                    : category === 'MACHINE LEARNING'
+                                        ? 'Machine Learning'
+                                        : category}
                         </CustomButton>
                     ))}
                 </div>
@@ -466,3 +519,142 @@ const ProjectScreen: React.FC = () => {
 }
 
 export default ProjectScreen
+
+
+// const projects: Project[] = [
+// {
+//     id: 'regional-sales-analysis',
+//     title: 'Regional Sales Data Analysis',
+//     shortDescription:
+//         'Multi-year sales data analysis (2014-2018) uncovering insights on regional performance, customer behavior, and product profitability using Python and Power BI.',
+//     fullDescription: {
+//         projectOverview:
+//             'This project analyzes multi-year sales data (2014–2018) to uncover insights on regional performance, customer behavior, and product profitability. It leverages real-world business data and applies data wrangling, visualization, and analysis techniques using Python and Power BI. The dataset includes detailed information about sales orders, customers, products, regions, state regions, and 2017 budgets, enabling comprehensive business intelligence analysis.',
+//         keyContribution: [
+//             'Conducted comprehensive data analysis on multi-year sales data (2014-2018) using Python and Power BI.',
+//             'Performed data cleaning, merging, and exploratory data analysis (EDA) using pandas, matplotlib, and seaborn.',
+//             'Built interactive Power BI dashboard for business stakeholders to filter by region, product, or sales channel.',
+//             'Analyzed budget vs actual performance for 2017, identifying underperforming products and high-value customers.',
+//             'Applied data wrangling techniques to combine sales data with customer, product, and regional information.',
+//             'Created visualizations for sales trends, profit margins, channel performance, and customer segmentation.',
+//             'Integrated multiple data sources including sales orders, customer data, product information, regional metadata, and budget allocations.',
+//             'Developed interactive dashboard enabling quick decision-making with regional and product filters.',
+//         ],
+//         impact: [
+//             'Identified high-performing regions and products for strategic business decisions.',
+//             'Uncovered products underperforming relative to their 2017 budgets for resource optimization.',
+//             'Enabled quick decision-making through interactive Power BI dashboard with regional and product filters.',
+//             'Provided insights on export and wholesale channel profitability patterns for business strategy.',
+//             'Demonstrated the value of data-driven decision making in regional sales optimization.',
+//             'Created a scalable analysis framework that can be applied to future sales data.',
+//         ],
+//     },
+//     image: `https://placehold.co/900x600/222831/ff8a00.png?text=Regional+Sales+Analysis`,
+//     media: [
+//     {
+//         type: 'image',
+//         url: 'https://placehold.co/900x600/222831/ff8a00.png?text=HireHour+App+Screenshot+1',
+//         alt: 'HireHour App Main Screen',
+//         caption: 'Main dashboard showing available service providers'
+//     },
+//     {
+//         type: 'image',
+//         url: 'https://placehold.co/900x600/222831/ff8a00.png?text=HireHour+App+Screenshot+2',
+//         alt: 'HireHour App Booking Flow',
+//         caption: 'Streamlined booking process for event services'
+//     },
+//     {
+//         type: 'video',
+//         url: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4',
+//         alt: 'HireHour App Demo Video',
+//         caption: 'Complete walkthrough of the HireHour platform'
+//     },
+//     {
+//         type: 'video',
+//         url: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4',
+//         alt: 'HireHour App Demo Video',
+//         caption: 'Complete walkthrough of the HireHour platform'
+//     }
+// ],
+//     technologies: [
+//         'Python',
+//         'Power BI',
+//         'Pandas',
+//         'NumPy',
+//         'Matplotlib',
+//         'Seaborn',
+//         'Jupyter Notebook',
+//         'Google Colab',
+//         'Excel',
+//     ],
+//     githubUrl:
+//         'https://github.com/OfficialAnujMore/Regional-Sales-Data-Analysis',
+//     projectUrl: 'https://colab.research.google.com/drive/1yVgetcQQthyWoQe3cRYRnK4q36Qohgk4',
+//     category: 'DATA ANALYSIS',
+//     date: 'July 2025',
+// },
+// {
+//     id: 'housing-market-analysis',
+//     title: 'Housing Market Analysis Dashboard',
+//     shortDescription:
+//         'A web-based dashboard for real-time housing market analysis, providing insights into pricing, inventory, and demand patterns.',
+//     fullDescription: {
+//         projectOverview:
+//             'Developed a web-based dashboard for real-time housing market analysis. This platform provides clear insights into pricing, inventory, and demand patterns, empowering real estate professionals and investors to make data-driven decisions. Built using the Preswald open-source platform, it offers a seamless and responsive user experience.',
+//         keyContribution: [
+//             'Developed interactive data visualizations, enabling users to explore market trends effortlessly.',
+//             'Integrated real-time data APIs for accurate, up-to-date insights.',
+//             'Optimized frontend performance for smooth navigation and quick load times.',
+//             'Implemented responsive design for enhanced accessibility across devices.',
+//             'Focused on user-friendly interfaces to support data-driven strategies.',
+//         ],
+//         impact: [
+//             'Improved data analysis efficiency for real estate stakeholders.',
+//             'Enhanced decision-making through intuitive visual representations.',
+//             'Increased platform engagement with responsive design and real-time insights.',
+//         ],
+//     },
+//     image: 'https://placehold.co/900x600/222831/ff8a00.png?text=Housing+Market+Analysis',
+//     technologies: [
+//         'Data Analysis',
+//         'Data Engineering',
+//         'Python',
+//         'Statistical Data Analysis',
+//     ],
+//     githubUrl:
+//         'https://github.com/OfficialAnujMore/housing-market-analysis',
+//     projectUrl:
+//         'https://housing-analysis-397455_anuj-more-assessment.preswald.app/',
+//     category: ['DATA ANALYSIS', 'WEB APP'],
+//     date: 'Apr 2025',
+// },
+// {
+//     id: 'bengaluru-property-prediction',
+//     title: 'Property Price Prediction',
+//     shortDescription:
+//         'A machine learning model to predict property prices in Bengaluru based on historical data and features.',
+//     fullDescription: {
+//         projectOverview:
+//             'Developed a machine learning model using Scikit-Learn to predict property prices for homes located in Bengaluru, based on various conditions and features. This project involves analyzing historical real estate data to forecast prices with high accuracy. It highlights my expertise in data science, feature engineering, and model development, demonstrating my ability to apply machine learning techniques to real-world problems.',
+//         keyContribution: [
+//             'Developed a machine learning model using Scikit-Learn for property price prediction.',
+//             'Analyzed historical real estate data to identify key features and patterns.',
+//             'Implemented feature engineering techniques to improve model accuracy.',
+//             'Applied machine learning techniques to solve real-world real estate problems.',
+//         ],
+//         impact: [
+//             'Demonstrated expertise in data science and machine learning.',
+//             'Applied ML techniques to real-world real estate problems.',
+//             'Showcased ability to work with complex datasets and feature engineering.',
+//         ],
+//     },
+//     image: 'https://placehold.co/900x600/222831/ff8a00.png?text=Property+Price+Prediction+Model',
+//     technologies: ['Machine Learning', 'Software developer'],
+//     githubUrl: '',
+//     projectUrl: '',
+//     category: 'MACHINE LEARNING',
+//     date: 'May 2020 - Jun 2020',
+// },
+
+// ]
+
