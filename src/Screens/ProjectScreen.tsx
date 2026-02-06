@@ -267,7 +267,7 @@ const projects: Project[] = [
             projectOverview:
                 'The Roadside Assistance App is designed to provide instant support to users facing vehicle breakdowns by helping them find the nearest garage within a specified radius. The app ensures real-time location tracking and seamless communication with service providers, reducing wait times and improving roadside assistance efficiency.',
             keyContribution: [
-                'Developed a cross-platform mobile app using Flutter, ensuring smooth performance on both Android & iOS.',
+                'Developed a cross-platform mobile app using React Native, ensuring smooth performance on both Android & iOS.',
                 'Implemented real-time location tracking via Google Maps API, enabling users to quickly locate nearby service providers.',
                 'Integrated Firebase for push notifications to instantly alert users and service providers about requests and status updates.',
                 'Built a scalable backend with Node.js, optimizing response times for fast service provider matching.',
@@ -281,7 +281,7 @@ const projects: Project[] = [
         },
         image: roadsideAssistanceImg,
         technologies: [
-            'Flutter',
+            'React Native',
             'Firebase',
             'Google Maps API',
             'Node.js',
@@ -301,7 +301,7 @@ const projects: Project[] = [
             projectOverview:
                 "Developed for the IT department of KJ Somaiya Institute of Engineering and Information Technology, this mobile application serves as a centralized platform for seamless communication between parents and the college. The app provides a user-friendly interface to track students' academic progress, attendance records, and upcoming events, fostering better parental engagement.",
             keyContribution: [
-                'Designed and developed a cross-platform app using Flutter, ensuring smooth performance on Android & iOS.',
+                'Designed and developed a cross-platform app using React Native, ensuring smooth performance on Android & iOS.',
                 'Implemented real-time data synchronization with Firebase, allowing parents to access updated student records.',
                 'Developed a secure backend with Node.js and PostgreSQL to manage student data efficiently.',
                 'Integrated push notifications to keep parents informed about attendance, exam schedules, and important announcements.',
@@ -315,7 +315,7 @@ const projects: Project[] = [
         },
         image: campusLinkImg,
         technologies: [
-            'Flutter',
+            'React Native',
             'Firebase',
             'Node.js',
             'PostgreSQL',
@@ -323,9 +323,8 @@ const projects: Project[] = [
             'Android Studio',
             'Android SDK',
             'MySQL',
-            'PHP',
         ],
-        githubUrl: 'https://github.com/OfficialAnujMore/Somaiya-Parents-Teacher-Communicator',
+        githubUrl: '',
         projectUrl: '',
         category: 'MOBILE APP',
         date: 'Jan 2020 - Feb 2020',
