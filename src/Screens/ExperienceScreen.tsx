@@ -13,8 +13,8 @@ const experiences: Experience[] = [
     {
         company: 'Sankey Solutions',
         logo: sankeyLogo,
-        role: 'Solution Analyst',
-        period: 'Jun 2021 - June 2024',
+        role: 'Software Engineer',
+        period: 'June 2021 - June 2024',
         location: 'Mumbai, Maharashtra, India',
         description: [
             'Delivered a secure EV charging analytics dashboard for Motor Fuel Group (MFG) using React & Typescript implementing modular component design, lazy loading & optimized state management using Redux, improving efficiency by 30%.',
@@ -47,7 +47,7 @@ const experiences: Experience[] = [
     {
         company: 'StudyMonk',
         logo: studyMonkLogo,
-        role: 'Mobile Application Developer – React Native',
+        role: 'Software Engineer',
         period: 'Jan 2021 to Jun 2021 · 6 mos',
         location: 'Bengaluru, Karnataka, India',
         description: [
