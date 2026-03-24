@@ -5,11 +5,11 @@ export const content = {
         name: 'Anuj More',
     },
     splash: {
-        role: 'Software Developer based in California',
+        role: 'Software Engineer based in California',
     },
     home: {
         description:
-            'Full-Stack Engineer building scalable systems and AI-powered experiences that solve real problems.',
+            'Software Engineer building scalable systems and AI-powered experiences that solve real problems.',
         initials: 'AM',
         resumeButton: 'Resume',
     },
