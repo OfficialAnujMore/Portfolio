@@ -17,11 +17,17 @@ const experiences: Experience[] = [
         period: 'June 2021 - June 2024',
         location: 'Mumbai, Maharashtra, India',
         description: [
-            'Delivered a secure EV charging analytics dashboard for Motor Fuel Group (MFG) using React & Typescript implementing modular component design, lazy loading & optimized state management using Redux, improving efficiency by 30%.',
-            'Built scalable charging management tools supporting 900+ distributed locations across United Kingdoms, enabling real-time performance monitoring, payment reconciliation workflows, and seamless third-party EV API integrations.',
-            'Collaborated with UI/UX designers to translate Figma prototypes into production-ready, responsive React components aligned with business requirements.',
-            'Applied React memoization techniques like useMemo, useCallback to identify rendering bottlenecks, reducing unnecessary re-renders and improving UI responsiveness.',
-            'Implemented Role-Based Access Control (RBAC) with permission-scoped authorization to enforce secure access across admin, technical, finance, and customer service teams.'
+            // 'Delivered a secure EV charging analytics dashboard for Motor Fuel Group (MFG) using React & Typescript implementing modular component design, lazy loading & optimized state management using Redux, improving efficiency by 30%.',
+            // 'Built scalable charging management tools supporting 900+ distributed locations across United Kingdoms, enabling real-time performance monitoring, payment reconciliation workflows, and seamless third-party EV API integrations.',
+            // 'Collaborated with UI/UX designers to translate Figma prototypes into production-ready, responsive React components aligned with business requirements.',
+            // 'Applied React memoization techniques like useMemo, useCallback to identify rendering bottlenecks, reducing unnecessary re-renders and improving UI responsiveness.',
+            // 'Implemented Role-Based Access Control (RBAC) with permission-scoped authorization to enforce secure access across admin, technical, finance, and customer service teams.'
+
+
+            "Designed and deployed scalable backend services using Python/Django REST APIs on Azure cloud infrastructure to support analytics workloads for Motor Fuel Group (MFG).",
+            "Architected an event-driven microservice for real-time EV charging status updates, improving response latency by 10% and enhancing system scalability.",
+            "Consolidated transaction data across 900+ distributed charging sessions into a unified processing workflow, improving analytics visibility and operational efficiency.",
+            "Designed a role-based access control (RBAC) authorization system to secure multi-role enterprise applications and improve compliance across internal teams"
         ],
         technologies: [
             'JavaScript',
@@ -51,10 +57,15 @@ const experiences: Experience[] = [
         period: 'Jan 2021 to Jun 2021 · 6 mos',
         location: 'Bengaluru, Karnataka, India',
         description: [
-            'Engineered a scalable ed-tech web platform using React and TypeScript, designing reusable component architecture and a centralized UI kit that reduced feature development time by 30%.',
-            'Improved frontend performance by implementing code-splitting, lazy loading, asset compression, and memoization, increasing Lighthouse performance score from 78 to 90 and reducing initial load time by 4%.',
-            'Designed and deployed secure RESTful APIs using Node.js, Express, and MySQL on AWS, supporting 1,000+ active users with optimized query indexing and JWT-based authentication.',
-            'Integrated Stripe payment gateway supporting Apple Pay, Google Pay and Card Payment, increasing paid conversions by 15% while ensuring transactional reliability.'
+            // 'Engineered a scalable ed-tech web platform using React and TypeScript, designing reusable component architecture and a centralized UI kit that reduced feature development time by 30%.',
+            // 'Improved frontend performance by implementing code-splitting, lazy loading, asset compression, and memoization, increasing Lighthouse performance score from 78 to 90 and reducing initial load time by 4%.',
+            // 'Designed and deployed secure RESTful APIs using Node.js, Express, and MySQL on AWS, supporting 1,000+ active users with optimized query indexing and JWT-based authentication.',
+            // 'Integrated Stripe payment gateway supporting Apple Pay, Google Pay and Card Payment, increasing paid conversions by 15% while ensuring transactional reliability.'
+
+            "Built and deployed RESTful APIs using Node.js, Express, and MySQL on AWS cloud infrastructure, supporting 1,000+ active users with optimized query indexing and secure JWT authentication.",
+            "Increased paid conversions by 15% by integrating Stripe payments (Apple Pay, Google Pay, and cards) while ensuring reliable transaction handling.",
+            "Improved application responsiveness through performance optimizations including lazy loading, asset compression, and memoization, increasing Lighthouse score from 78 to 90.",
+            "Reduced feature development time by 30% by designing reusable modules and shared UI components that improved maintainability."
         ],
         technologies: [
             'JavaScript',
