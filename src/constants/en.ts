@@ -9,7 +9,7 @@ export const content = {
     },
     home: {
         description:
-            'Full-Stack Engineer building scalable systems and AI-powered experiences that solve real problems.',
+            'Software Developer with 3+ years of experience building scalable systems and AI-powered experiences that solve real problems.',
         initials: 'AM',
         resumeButton: 'Resume',
     },
@@ -48,8 +48,9 @@ export const content = {
         categories: {
             frontend: 'Frontend Development',
             backend: 'Backend Development',
-            cloud: 'Cloud Technologies',
-            tools: 'Tools & Others',
+            systemDesign: 'System Design',
+            cloud: 'Cloud & DevOps',
+            tools: 'Testing & Tools',
         },
     },
     projects: {

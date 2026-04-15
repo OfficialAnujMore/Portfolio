@@ -34,6 +34,14 @@ interface ProjectModalProps {
     onClose: () => void
 }
 
+const getYouTubeEmbedUrl = (url: string): string | null => {
+    const shortMatch = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/)
+    if (shortMatch) return `https://www.youtube.com/embed/${shortMatch[1]}`
+    const longMatch = url.match(/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/)
+    if (longMatch) return `https://www.youtube.com/embed/${longMatch[1]}`
+    return null
+}
+
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose }) => {
     const modalRef = useRef<HTMLDivElement>(null)
     const [currentMediaIndex, setCurrentMediaIndex] = useState(0)
@@ -156,14 +164,27 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
                             {project.media && project.media.length > 0 ? (
                                 <>
                                     {project.media[currentMediaIndex].type === 'video' ? (
-                                        <video
-                                            src={project.media[currentMediaIndex].url}
-                                            controls
-                                            className={styles.projectImage}
-                                            poster={project.image}
-                                        >
-                                            Your browser does not support the video tag.
-                                        </video>
+                                        (() => {
+                                            const embedUrl = getYouTubeEmbedUrl(project.media![currentMediaIndex].url)
+                                            return embedUrl ? (
+                                                <iframe
+                                                    src={embedUrl}
+                                                    className={styles.videoEmbed}
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowFullScreen
+                                                    title={project.media![currentMediaIndex].alt || project.title}
+                                                />
+                                            ) : (
+                                                <video
+                                                    src={project.media![currentMediaIndex].url}
+                                                    controls
+                                                    className={styles.projectImage}
+                                                    poster={project.image}
+                                                >
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            )
+                                        })()
                                     ) : (
                                         <CustomImagePreview
                                             src={project.media[currentMediaIndex].url}
