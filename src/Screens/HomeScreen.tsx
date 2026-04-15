@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/home.module.css'
-import profileImage from '../assets/profile.jpg'
+import profileImage from '../assets/profile.png'
 import { content } from '../constants/en'
 import CustomText from '../Components/CustomText'
 import CustomImagePreview from '../Components/CustomImagePreview'

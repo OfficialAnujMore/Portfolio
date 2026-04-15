@@ -5,7 +5,7 @@ export const content = {
         name: 'Anuj More',
     },
     splash: {
-        role: 'Software Developer based in California',
+        role: 'Software Engineer based in California',
     },
     home: {
         description:
