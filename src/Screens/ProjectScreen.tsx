@@ -17,6 +17,8 @@ import prepmateImg1 from '../assets/PrepMate.jpg'
 import prepmateImg2 from '../assets/PrepMate2.jpg'
 import prepmateImg3 from '../assets/PrepMate3.jpg'
 import visionCrafterAI1 from '../assets/VisionCrafterAI.png'
+import RestaurantIQ1 from '../assets/RestaurantIQ1.jpg'
+import RestaurantIQ2 from '../assets/RestaurantIQ2.jpg'
 
 interface Project {
     id: string
@@ -43,6 +45,66 @@ interface Project {
 
 const projects: Project[] = [
 
+    {
+        id: 'restaurant-iq',
+        title: 'RestaurantIQ – Geospatial Site Selection for Restaurant Entrepreneurs',
+        shortDescription:
+            'A full-stack geospatial site selection platform that helps restaurant entrepreneurs find the optimal location in any US city — using the same data-driven intelligence large chains spend thousands on, available to anyone for free.',
+        fullDescription: {
+            projectOverview:
+                'RestaurantIQ is a full-stack geospatial site selection platform built at FullyHacks 2026 (California State University, Fullerton). Users enter a city and restaurant category, and RestaurantIQ runs a complete ArcGIS analysis pipeline — scoring 20 candidate locations across 6 weighted factors, mapping competitors and anchors, overlaying a commercial rent pressure heatmap, and surfacing the top 5 sites on an interactive map with AI-generated insights per location.',
+            keyContribution: [
+                'Architected a 6-factor spatial scoring engine combining ArcGIS GeoEnrichment demographic data (population density, median household income, daytime population) with competitor proximity, drive-time catchment, and anchor scoring — normalized into a single 0–100 location score.',
+                'Built a commercial rent pressure heatmap by batching 60+ micro-grid points through ArcGIS GeoEnrichment and rendering color-coded pressure markers with interactive popups on an ArcGIS MapView.',
+                'Integrated four Esri ArcGIS APIs end-to-end — Geocoding, Places, GeoEnrichment, and Maps SDK for JS v5 — with all API calls secured server-side.',
+                'Implemented Gap Finder mode to surface underserved neighborhoods where food demand is high but competition is low — directly addressing food desert identification.',
+                'Integrated OpenAI GPT-4o-mini to summarize demographic and competitor data into plain-English site insights — explaining why a location ranks #1, not just that it does.',
+                'Built full JWT + bcrypt authentication with protected routes and saved locations persisted to MongoDB.',
+            ],
+            impact: [
+                'Democratizes data-driven restaurant site selection, giving individual entrepreneurs access to the same intelligence large chains spend thousands on.',
+                'Addresses food desert identification through Gap Finder mode, surfacing underserved neighborhoods with high demand but low competition.',
+                'Submitted to the Best Use of ArcGIS track sponsored by Esri at FullyHacks 2026.',
+            ],
+        },
+        image: RestaurantIQ2,
+        media: [
+            {
+                type: 'video',
+                url: 'https://www.youtube.com/watch?v=VoYTlok4mdE',
+                alt: 'RestaurantIQ Demo Video',
+                caption: 'Complete walkthrough of the platform',
+            },
+            {
+                type: 'image',
+                url: RestaurantIQ1,
+                alt: 'App Preview',
+                caption: 'Landing Screen'
+            },
+            {
+                type: 'image',
+                url: RestaurantIQ2,
+                alt: 'App Preview',
+                caption: 'Dashboard'
+            },
+        ],
+        technologies: [
+            'React',
+            'ArcGIS Maps SDK v5',
+            'Node.js',
+            'Express',
+            'MongoDB',
+            'OpenAI GPT-4o-mini',
+            'US Census Bureau API',
+            'Tailwind CSS',
+            'JWT',
+            'bcrypt',
+        ],
+        githubUrl: 'https://github.com/OfficialAnujMore/Restaurant-IQ-Client',
+        projectUrl: 'https://devpost.com/software/restaurantiq',
+        category: 'AI & Web App',
+        date: 'Apr 2026',
+    },
     {
         id: 'vision-crafter',
         title: 'Vision Crafter – AI-Powered Image Editing Made Simple',
