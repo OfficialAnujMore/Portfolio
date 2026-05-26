@@ -1,47 +1,48 @@
-# Website URL -> https://anuj-more.netlify.app/
-# Getting Started with Create React App
+# Anuj More — Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Live site → [anuj-more.netlify.app](https://anuj-more.netlify.app/)**
 
-## Available Scripts
+A single-page portfolio built with React and TypeScript, designed to tell the story behind the work — not just list it.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## What's inside
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+| Section | What it shows |
+|---|---|
+| **Home** | Intro with a flip-card profile and a one-click resume download |
+| **Experience** | 3+ years across Sankey Solutions and Study Monk — real numbers, real impact |
+| **Projects** | Hackathon wins, AI tools, and full-stack apps with live demos and deep-dive modals |
+| **Skills** | Frontend · Backend · System Design · Cloud & DevOps |
+| **Recommendations** | Endorsements from colleagues and managers |
+| **Contact** | Direct links to reach out |
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Highlighted projects
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### RestaurantIQ — Hackathon, FullyHacks 2026
+Geospatial site selection platform for restaurant entrepreneurs. Scores 20 candidate locations across 6 weighted factors using ArcGIS GeoEnrichment, renders a commercial rent pressure heatmap, and surfaces plain-English AI insights per site via GPT-4o-mini. Submitted to the Best Use of ArcGIS track sponsored by Esri.
 
-### `npm run build`
+### Vision Crafter — AI Image Editor
+Full-stack Generative AI editing platform with HTML Canvas, 50-state undo/redo, background removal, AI image extension, and generative scene creation. Built in association with Cal State Fullerton.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### PrepMate — Google Chrome Built-in AI Challenge 2025
+On-device AI interview coach using Gemini Nano and the Web Speech API. All inference runs in the browser — zero latency, zero data sent to a server.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### KleanSQL — Hackathon, Cal Hacks 12.0
+Natural-language-to-SQL analytics platform. Upload a CSV, ask a question in plain English, get clean SQL and visualized results — powered by Anthropic Claude Sonnet and DuckDB.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Tech stack
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+React · TypeScript · CSS Modules · React Icons · Netlify
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## About me
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Software Engineer with 3+ years of industry experience (Sankey Solutions, Study Monk) and an MS in Computer Science at Cal State Fullerton. I build things that are fast, accessible, and actually ship — from event-driven microservices handling 10K–20K API requests/day to hackathon prototypes that go from idea to demo in 24 hours.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[LinkedIn](https://www.linkedin.com/in/anuj-more) · [GitHub](https://github.com/OfficialAnujMore)
