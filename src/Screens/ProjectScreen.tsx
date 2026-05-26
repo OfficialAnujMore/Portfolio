@@ -7,9 +7,9 @@ import CustomText from '../Components/CustomText'
 import CustomButton from '../Components/CustomButton'
 import CustomImagePreview from '../Components/CustomImagePreview'
 import ProjectModal from '../Components/ProjectModal'
-import hirehourImg from '../assets/HireHour.png'
-import roadsideAssistanceImg from '../assets/RoadsideAssistance.png'
-import campusLinkImg from '../assets/CampusLink.png'
+// import hirehourImg from '../assets/HireHour.png'
+// import roadsideAssistanceImg from '../assets/RoadsideAssistance.png'
+// import campusLinkImg from '../assets/CampusLink.png'
 import kleanSQLImg1 from '../assets/KleanSQL.jpg'
 import kleanSQLImg2 from '../assets/KleanSQL2.jpg'
 import kleanSQLImg3 from '../assets/KleanSQL3.jpg'
@@ -17,6 +17,8 @@ import prepmateImg1 from '../assets/PrepMate.jpg'
 import prepmateImg2 from '../assets/PrepMate2.jpg'
 import prepmateImg3 from '../assets/PrepMate3.jpg'
 import visionCrafterAI1 from '../assets/VisionCrafterAI.png'
+import RestaurantIQ1 from '../assets/RestaurantIQ1.jpg'
+import RestaurantIQ2 from '../assets/RestaurantIQ2.jpg'
 
 interface Project {
     id: string
@@ -44,24 +46,83 @@ interface Project {
 const projects: Project[] = [
 
     {
+        id: 'restaurant-iq',
+        title: 'RestaurantIQ – Geospatial Site Selection for Restaurant Entrepreneurs',
+        shortDescription:
+            'A full-stack geospatial site selection platform that helps restaurant entrepreneurs find the optimal location in any US city — using the same data-driven intelligence large chains spend thousands on, available to anyone for free.',
+        fullDescription: {
+            projectOverview:
+                'RestaurantIQ is a full-stack geospatial site selection platform built at FullyHacks 2026 (California State University, Fullerton). Users enter a city and restaurant category, and RestaurantIQ runs a complete ArcGIS analysis pipeline — scoring 20 candidate locations across 6 weighted factors, mapping competitors and anchors, overlaying a commercial rent pressure heatmap, and surfacing the top 5 sites on an interactive map with AI-generated insights per location.',
+            keyContribution: [
+                'Architected a 6-factor spatial scoring engine combining ArcGIS GeoEnrichment demographic data (population density, median household income, daytime population) with competitor proximity, drive-time catchment, and anchor scoring — normalized into a single 0–100 location score.',
+                'Built a commercial rent pressure heatmap by batching 60+ micro-grid points through ArcGIS GeoEnrichment and rendering color-coded pressure markers with interactive popups on an ArcGIS MapView.',
+                'Integrated four Esri ArcGIS APIs end-to-end — Geocoding, Places, GeoEnrichment, and Maps SDK for JS v5 — with all API calls secured server-side.',
+                'Implemented Gap Finder mode to surface underserved neighborhoods where food demand is high but competition is low — directly addressing food desert identification.',
+                'Integrated OpenAI GPT-4o-mini to summarize demographic and competitor data into plain-English site insights — explaining why a location ranks #1, not just that it does.',
+                'Built full JWT + bcrypt authentication with protected routes and saved locations persisted to MongoDB.',
+            ],
+            impact: [
+                'Democratizes data-driven restaurant site selection, giving individual entrepreneurs access to the same intelligence large chains spend thousands on.',
+                'Addresses food desert identification through Gap Finder mode, surfacing underserved neighborhoods with high demand but low competition.',
+                'Submitted to the Best Use of ArcGIS track sponsored by Esri at FullyHacks 2026.',
+            ],
+        },
+        image: RestaurantIQ2,
+        media: [
+            {
+                type: 'video',
+                url: 'https://www.youtube.com/watch?v=VoYTlok4mdE',
+                alt: 'RestaurantIQ Demo Video',
+                caption: 'Complete walkthrough of the platform',
+            },
+            {
+                type: 'image',
+                url: RestaurantIQ1,
+                alt: 'App Preview',
+                caption: 'Landing Screen'
+            },
+            {
+                type: 'image',
+                url: RestaurantIQ2,
+                alt: 'App Preview',
+                caption: 'Dashboard'
+            },
+        ],
+        technologies: [
+            'React',
+            'ArcGIS Maps SDK v5',
+            'Node.js',
+            'Express',
+            'MongoDB',
+            'OpenAI GPT-4o-mini',
+            'US Census Bureau API',
+            'Tailwind CSS',
+            'JWT',
+            'bcrypt',
+        ],
+        githubUrl: 'https://github.com/OfficialAnujMore/Restaurant-IQ-Client',
+        projectUrl: 'https://devpost.com/software/restaurantiq',
+        category: 'AI & Web App',
+        date: 'Apr 2026',
+    },
+    {
         id: 'vision-crafter',
         title: 'Vision Crafter – AI-Powered Image Editing Made Simple',
         shortDescription:
-            "Vision Crafter is a full stack platform currently in development that democratizes professional image editing. It leverages modern AI models and ImageKit to enable users to easily perform complex transformations—such as background removal, object erasure, enhancement, and generative scene extension—through automated workflows.",
+            "Vision Crafter is a full-stack Generative AI image editing platform supporting HTML Canvas-based object manipulation, layering, typography controls, crop presets, and multi-format file exports. It integrates multiple AI/ML models for background removal, AI image extension, and generative image creation directly into the canvas workflow.",
         fullDescription: {
             projectOverview:
-                "Vision Crafter is a full stack AI image-editing platform being designed to transform images using professional-grade features. Currently being developed in association with California State University, Fullerton, it integrates powerful tools like ImageKit alongside modern AI models. The platform is aiming to simplify complex editing tasks, allowing users to crop photos, remove backgrounds, erase specific objects, enhance overall image quality (saturation, contrast), and utilize generative AI to create new objects or extend scenes seamlessly.",
+                "Vision Crafter is a full-stack Generative AI image editing platform built to democratize professional image editing. Developed in association with California State University, Fullerton, it enables complex transformations—background removal, object erasure, generative scene extension, and canvas-based editing—through a React frontend backed by a Node.js and Express.js REST API, with ImageKit handling signed blob storage and CDN delivery.",
             keyContribution: [
-                'Developing a robust full stack architecture utilizing React for a responsive frontend and FastAPI for high-performance backend image processing.',
-                'Integrating ImageKit to manage on-demand transformations, image optimization, and rapid CDN delivery of edited assets.',
-                'Implementing a comprehensive suite of AI-driven features including background removal, object erasure, and generative image extensions.',
-                'Architecting backend services for scalable deployment on AWS (EC2, S3), utilizing PostgreSQL for secure data storage (integration ongoing).',
-                'Designing clean, maintainable backend modules strictly adhering to SOLID principles and industry-standard best practices.',
+                'Developed a full-stack Generative AI image editing platform supporting HTML Canvas-based object manipulation, layering, typography controls, crop presets, and multi-format file exports serving real-time collaborative sessions.',
+                'Integrated multiple AI/ML models including 851-labs/background-remover for background removal, bria/expand-image for AI image extension, and google/nano-banana for generative image creation directly into the canvas workflow.',
+                'Managed global state with React Context API across a 50-state undo/redo stack with debounced auto-save, ensuring zero data loss across sessions.',
+                'Built a secure REST API with Node.js, Express.js, and PostgreSQL via Prisma ORM, implementing JWT authentication layered on Google OAuth with ImageKit for signed blob storage.',
             ],
             impact: [
                 'Simplifies advanced image editing techniques, making professional AI tools accessible to users without technical expertise.',
-                'Provides a scalable foundation for a production-level SaaS image editing application.',
-                'Optimizes user workflows by combining multiple AI editing capabilities into a single, cohesive platform.',
+                'Provides a scalable, production-ready foundation with zero data loss across editing sessions via debounced auto-save.',
+                'Optimizes user workflows by combining multiple AI editing capabilities into a single, cohesive canvas-based platform.',
             ],
         },
         image: visionCrafterAI1,
@@ -75,15 +136,19 @@ const projects: Project[] = [
                 },
             ],
         technologies: [
-            'ReactJS',
-            'FastAPI',
-            'Python',
-            'ImageKit API',
-            'AI/ML Models',
-            'AWS (EC2, S3)',
+            'TypeScript',
+            'React.js',
+            'Node.js',
+            'Express.js',
             'PostgreSQL',
+            'Prisma ORM',
+            'JWT',
+            'Google OAuth',
+            'ImageKit',
+            'AWS',
+            'Generative AI',
         ],
-        githubUrl: 'https://github.com/OfficialAnujMore/visioncrafterai_fe',
+        githubUrl: 'https://github.com/OfficialAnujMore/vision-crafter-ai-frontend',
         projectUrl: '',
         category: 'AI & Web App',
         date: 'Nov 2025 - Present',
@@ -92,22 +157,20 @@ const projects: Project[] = [
         id: 'prepmate',
         title: 'PrepMate – On-Device AI Interview Coach',
         shortDescription:
-            "Developed for Google Chrome Built-in AI Challenge 2025, PrepMate is a personal, on-device AI interview coach designed to make interview practice accessible and effective. Born from the frustration of finding unbiased feedback, it allows users to simulate interviews based on specific job descriptions. By leveraging Google Chrome's built-in AI, PrepMate provides real-time analysis of clarity, structure, and relevance without sending data to external servers.",
+            "Developed for Google Chrome Built-in AI Challenge 2025, PrepMate is an AI-powered interview simulator using Google Gemini Nano API for structured feedback generation and Web Speech API for real-time speech-to-text transcription with sub-second response latency—all processed on-device without sending data to external servers.",
         fullDescription: {
             projectOverview:
-                "PrepMate is a personal, on-device AI interview coach designed to make interview practice accessible and effective. Born from the frustration of finding unbiased feedback, it allows users to simulate interviews based on specific job descriptions. By leveraging Google Chrome's built-in AI, PrepMate provides real-time analysis of clarity, structure, and relevance without sending data to external servers.",
+                "PrepMate is a personal, on-device AI interview coach designed to make interview practice accessible and effective. It allows users to simulate interviews based on specific job descriptions, leveraging Google Gemini Nano API for structured feedback generation and Web Speech API for real-time transcription. All inference runs on-device via Google Chrome's built-in AI, ensuring zero latency from network round-trips and complete data privacy.",
             keyContribution: [
-                'Developed the frontend using ReactJS, Vite, and TypeScript for a fast and responsive user experience.',
-                'Integrated the Google Chrome Writer API (Gemini Nano) to enable offline, on-device AI text generation and analysis.',
-                'Implemented the Web Speech API to facilitate natural voice interaction via SpeechSynthesis (Text-to-Speech) and SpeechRecognition (Speech-to-Text).',
-                'Designed complex prompt engineering strategies to generate context-aware interview questions and evaluate user responses.',
-                'Configured Chrome Origin Trials to successfully deploy experimental browser features in a production environment on Netlify.',
-                'Integrated Firebase for basic analytics to track user engagement and platform usage.',
+                'Built an AI-powered interview simulator using Google Gemini Nano API for structured feedback generation and Web Speech API for real-time speech-to-text transcription with sub-second response latency.',
+                'Designed a low-latency feedback pipeline with streaming transcription and incremental LLM evaluation, enabling a responsive coaching loop without full-response buffering.',
+                'Optimized prompt design and response chunking to reduce model processing time by 5% while maintaining feedback relevance across technical and behavioral interview domains.',
+                'Configured Chrome Origin Trials to deploy experimental browser-native AI features in a production environment on Netlify, with Firebase integrated for usage analytics.',
             ],
             impact: [
-                'Enabled a fully private AI solution with zero latency constraints and no backend inference costs.',
-                'Democratized access to quality interview coaching by providing a free, accessible tool for students and job seekers.',
-                'Achieved natural, conversational flow in mock interviews using browser-native capabilities.',
+                'Achieved sub-second response latency by running all AI inference on-device, eliminating backend inference costs entirely.',
+                'Democratized access to quality interview coaching by providing a free, private tool for students and job seekers.',
+                'Enabled natural, conversational mock interviews through browser-native Speech-to-Text and Text-to-Speech capabilities.',
             ],
         },
         image: prepmateImg1,
@@ -139,17 +202,16 @@ const projects: Project[] = [
                 },
             ],
         technologies: [
-            'ReactJS',
+            'React.js',
             'TypeScript',
             'Vite',
-            'Google Chrome Writer API',
-            'Gemini Nano',
+            'Gemini Nano API',
             'Web Speech API',
             'Firebase',
             'Netlify',
         ],
         githubUrl: 'https://github.com/OfficialAnujMore/prep-mate',
-        projectUrl: 'https://devpost.com/software/prepmate-your-ai-interview-rehearsal-coach',
+        projectUrl: 'https://my-ai-interview-rehearsal-coach.netlify.app/',
         category: 'AI & Web App',
         date: 'Oct 2025 - Nov 2025',
     },
@@ -214,121 +276,121 @@ const projects: Project[] = [
             'Weaviate',
             'SQL',
         ],
-        githubUrl: 'https://github.com/shatayu1210/CalHack_CleanSQL',
+        githubUrl: 'https://github.com/OfficialAnujMore/CalHack_CleanSQL',
         projectUrl: 'https://devpost.com/software/kleansql',
         category: 'AI & Web App',
         date: 'Oct 2025 - Oct 2025',
     },
-    {
-        id: 'hirehour',
-        title: 'HireHour – On-Demand Event Staffing Platform',
-        shortDescription:
-            'A real-time event staffing platform connecting users with nearby service providers for events.',
-        fullDescription: {
-            projectOverview:
-                "HireHour is a real-time event staffing platform that connects users with nearby service providers who can work at their events. Whether it's a corporate gathering, wedding, or community event, HireHour ensures that users can quickly find and hire the right professionals.",
-            keyContribution: [
-                'Developed a cross-platform mobile app using React Native & TypeScript, ensuring smooth performance on both iOS & Android.',
-                'Built a scalable backend with Node.js & PostgreSQL, optimizing database queries for faster response times.',
-                'Integrated location-based search, allowing users to find nearby service providers instantly.',
-                'Implemented real-time push notifications to keep users and service providers updated on job requests and confirmations.',
-                'Deployed and managed the application on DigitalOcean, ensuring high availability and performance.',
-                'Designed a secure authentication system with JWT, enhancing data privacy and user trust.',
-            ],
-            impact: [
-                'Reduced service booking time by enabling instant connections between users and service providers.',
-                'Increased job acceptance rate through automated notifications and an easy-to-use interface.',
-                'Enhanced platform reliability with optimized backend infrastructure and cloud deployment.',
-            ],
-        },
-        image: hirehourImg,
-        technologies: [
-            'React Native',
-            'TypeScript',
-            'JavaScript',
-            'Node.js',
-            'Prisma ORM',
-            'PostgreSQL',
-            'SendGrid',
-            'Push notification',
-            'Payment gateway integration',
-        ],
-        githubUrl: 'https://github.com/OfficialAnujMore/HireHour_FE',
-        projectUrl: '',
-        category: 'MOBILE APP',
-        date: 'Dec 2024 - Present',
-    },
-    {
-        id: 'roadside-assistance',
-        title: 'Roadside Assistance App – Emergency Vehicle Support',
-        shortDescription:
-            'A cross-platform app for instant vehicle breakdown support, featuring real-time location tracking and cloud-based notifications.',
-        fullDescription: {
-            projectOverview:
-                'The Roadside Assistance App is designed to provide instant support to users facing vehicle breakdowns by helping them find the nearest garage within a specified radius. The app ensures real-time location tracking and seamless communication with service providers, reducing wait times and improving roadside assistance efficiency.',
-            keyContribution: [
-                'Developed a cross-platform mobile app using React Native, ensuring smooth performance on both Android & iOS.',
-                'Implemented real-time location tracking via Google Maps API, enabling users to quickly locate nearby service providers.',
-                'Integrated Firebase for push notifications to instantly alert users and service providers about requests and status updates.',
-                'Built a scalable backend with Node.js, optimizing response times for fast service provider matching.',
-                'Designed a user-friendly UI that simplifies navigation and enhances the user experience.',
-            ],
-            impact: [
-                'Reduced assistance response time by efficiently connecting users with nearby garages.',
-                'Enhanced user experience with real-time tracking and automated notifications.',
-                'Improved reliability and performance by leveraging cloud-based infrastructure.',
-            ],
-        },
-        image: roadsideAssistanceImg,
-        technologies: [
-            'React Native',
-            'Firebase',
-            'Google Maps API',
-            'Node.js',
-            'MYSQL',
-        ],
-        githubUrl: 'https://github.com/OfficialAnujMore/Roadside-Assistance',
-        projectUrl: '',
-        category: 'MOBILE APP',
-        date: 'Aug 2020 - Dec 2020',
-    },
-    {
-        id: 'campus-link',
-        title: 'Campus Link - Bridging the Gap Between Parents & Institutions',
-        shortDescription:
-            'A mobile app for seamless communication between parents and educational institutions, with real-time data and notifications.',
-        fullDescription: {
-            projectOverview:
-                "Developed for the IT department of KJ Somaiya Institute of Engineering and Information Technology, this mobile application serves as a centralized platform for seamless communication between parents and the college. The app provides a user-friendly interface to track students' academic progress, attendance records, and upcoming events, fostering better parental engagement.",
-            keyContribution: [
-                'Designed and developed a cross-platform app using React Native, ensuring smooth performance on Android & iOS.',
-                'Implemented real-time data synchronization with Firebase, allowing parents to access updated student records.',
-                'Developed a secure backend with Node.js and PostgreSQL to manage student data efficiently.',
-                'Integrated push notifications to keep parents informed about attendance, exam schedules, and important announcements.',
-                'Designed a responsive and intuitive UI to enhance accessibility and ease of use.',
-            ],
-            impact: [
-                'Enhanced parental engagement by providing instant access to academic records.',
-                'Improved transparency between the institution and parents, strengthening communication.',
-                'Streamlined event notifications to ensure parents never miss crucial college updates.',
-            ],
-        },
-        image: campusLinkImg,
-        technologies: [
-            'React Native',
-            'Firebase',
-            'Node.js',
-            'PostgreSQL',
-            'Android Development',
-            'Android Studio',
-            'Android SDK',
-            'MySQL',
-        ],
-        githubUrl: '',
-        projectUrl: '',
-        category: 'MOBILE APP',
-        date: 'Jan 2020 - Feb 2020',
-    },
+    // {
+    //     id: 'hirehour',
+    //     title: 'HireHour – On-Demand Event Staffing Platform',
+    //     shortDescription:
+    //         'A real-time event staffing platform connecting users with nearby service providers for events.',
+    //     fullDescription: {
+    //         projectOverview:
+    //             "HireHour is a real-time event staffing platform that connects users with nearby service providers who can work at their events. Whether it's a corporate gathering, wedding, or community event, HireHour ensures that users can quickly find and hire the right professionals.",
+    //         keyContribution: [
+    //             'Developed a cross-platform mobile app using React Native & TypeScript, ensuring smooth performance on both iOS & Android.',
+    //             'Built a scalable backend with Node.js & PostgreSQL, optimizing database queries for faster response times.',
+    //             'Integrated location-based search, allowing users to find nearby service providers instantly.',
+    //             'Implemented real-time push notifications to keep users and service providers updated on job requests and confirmations.',
+    //             'Deployed and managed the application on DigitalOcean, ensuring high availability and performance.',
+    //             'Designed a secure authentication system with JWT, enhancing data privacy and user trust.',
+    //         ],
+    //         impact: [
+    //             'Reduced service booking time by enabling instant connections between users and service providers.',
+    //             'Increased job acceptance rate through automated notifications and an easy-to-use interface.',
+    //             'Enhanced platform reliability with optimized backend infrastructure and cloud deployment.',
+    //         ],
+    //     },
+    //     image: hirehourImg,
+    //     technologies: [
+    //         'React Native',
+    //         'TypeScript',
+    //         'JavaScript',
+    //         'Node.js',
+    //         'Prisma ORM',
+    //         'PostgreSQL',
+    //         'SendGrid',
+    //         'Push notification',
+    //         'Payment gateway integration',
+    //     ],
+    //     githubUrl: 'https://github.com/OfficialAnujMore/HireHour_FE',
+    //     projectUrl: '',
+    //     category: 'MOBILE APP',
+    //     date: 'Dec 2024 - Present',
+    // },
+    // {
+    //     id: 'roadside-assistance',
+    //     title: 'Roadside Assistance App – Emergency Vehicle Support',
+    //     shortDescription:
+    //         'A cross-platform app for instant vehicle breakdown support, featuring real-time location tracking and cloud-based notifications.',
+    //     fullDescription: {
+    //         projectOverview:
+    //             'The Roadside Assistance App is designed to provide instant support to users facing vehicle breakdowns by helping them find the nearest garage within a specified radius. The app ensures real-time location tracking and seamless communication with service providers, reducing wait times and improving roadside assistance efficiency.',
+    //         keyContribution: [
+    //             'Developed a cross-platform mobile app using React Native, ensuring smooth performance on both Android & iOS.',
+    //             'Implemented real-time location tracking via Google Maps API, enabling users to quickly locate nearby service providers.',
+    //             'Integrated Firebase for push notifications to instantly alert users and service providers about requests and status updates.',
+    //             'Built a scalable backend with Node.js, optimizing response times for fast service provider matching.',
+    //             'Designed a user-friendly UI that simplifies navigation and enhances the user experience.',
+    //         ],
+    //         impact: [
+    //             'Reduced assistance response time by efficiently connecting users with nearby garages.',
+    //             'Enhanced user experience with real-time tracking and automated notifications.',
+    //             'Improved reliability and performance by leveraging cloud-based infrastructure.',
+    //         ],
+    //     },
+    //     image: roadsideAssistanceImg,
+    //     technologies: [
+    //         'React Native',
+    //         'Firebase',
+    //         'Google Maps API',
+    //         'Node.js',
+    //         'MYSQL',
+    //     ],
+    //     githubUrl: 'https://github.com/OfficialAnujMore/Roadside-Assistance',
+    //     projectUrl: '',
+    //     category: 'MOBILE APP',
+    //     date: 'Aug 2020 - Dec 2020',
+    // },
+    // {
+    //     id: 'campus-link',
+    //     title: 'Campus Link - Bridging the Gap Between Parents & Institutions',
+    //     shortDescription:
+    //         'A mobile app for seamless communication between parents and educational institutions, with real-time data and notifications.',
+    //     fullDescription: {
+    //         projectOverview:
+    //             "Developed for the IT department of KJ Somaiya Institute of Engineering and Information Technology, this mobile application serves as a centralized platform for seamless communication between parents and the college. The app provides a user-friendly interface to track students' academic progress, attendance records, and upcoming events, fostering better parental engagement.",
+    //         keyContribution: [
+    //             'Designed and developed a cross-platform app using React Native, ensuring smooth performance on Android & iOS.',
+    //             'Implemented real-time data synchronization with Firebase, allowing parents to access updated student records.',
+    //             'Developed a secure backend with Node.js and PostgreSQL to manage student data efficiently.',
+    //             'Integrated push notifications to keep parents informed about attendance, exam schedules, and important announcements.',
+    //             'Designed a responsive and intuitive UI to enhance accessibility and ease of use.',
+    //         ],
+    //         impact: [
+    //             'Enhanced parental engagement by providing instant access to academic records.',
+    //             'Improved transparency between the institution and parents, strengthening communication.',
+    //             'Streamlined event notifications to ensure parents never miss crucial college updates.',
+    //         ],
+    //     },
+    //     image: campusLinkImg,
+    //     technologies: [
+    //         'React Native',
+    //         'Firebase',
+    //         'Node.js',
+    //         'PostgreSQL',
+    //         'Android Development',
+    //         'Android Studio',
+    //         'Android SDK',
+    //         'MySQL',
+    //     ],
+    //     githubUrl: '',
+    //     projectUrl: '',
+    //     category: 'MOBILE APP',
+    //     date: 'Jan 2020 - Feb 2020',
+    // },
 ]
 
 const ProjectCard: React.FC<{ project: Project; onClick: () => void }> = ({
